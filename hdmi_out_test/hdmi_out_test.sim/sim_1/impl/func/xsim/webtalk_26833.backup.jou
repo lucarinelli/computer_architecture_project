@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon May 14 00:11:36 2018
+# Process ID: 26833
+# Current directory: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.sim/sim_1/impl/func/xsim
+# Command line: wbtcv -mode batch -source /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.sim/sim_1/impl/func/xsim/xsim.dir/hdmi_controller_tb_func_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.sim/sim_1/impl/func/xsim/webtalk.log
+# Journal file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.sim/sim_1/impl/func/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.sim/sim_1/impl/func/xsim/xsim.dir/hdmi_controller_tb_func_impl/webtalk/xsim_webtalk.tcl -notrace

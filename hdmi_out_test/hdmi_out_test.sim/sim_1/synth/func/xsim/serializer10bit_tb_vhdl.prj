@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"serializer10bit_tb_func_synth.vhd" \
+"../../../../../hdmi_out_test.srcs/sim_1/imports/new/hdmi_controller_tb.vhd" \
+"../../../../../hdmi_out_test.srcs/sim_1/new/serializer10bit_tb.vhd" \
+
+# Do not sort compile order
+nosort

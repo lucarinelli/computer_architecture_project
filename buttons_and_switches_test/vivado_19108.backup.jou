@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu May  3 19:11:10 2018
+# Process ID: 19108
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5084 C:\Users\rinel\Desktop\computer_architecture_project\buttons_and_switches_test\buttons_and_switches_test.xpr
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test/vivado.log
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test/buttons_and_switches_test.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+synth_design -rtl -name rtl_1
+close_design
+open_run synth_1 -name synth_1
+synth_design -rtl -name rtl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file mkdir C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test/buttons_and_switches_test.srcs/constrs_1
+file mkdir C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test/buttons_and_switches_test.srcs/constrs_1/new
+close [ open C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test/buttons_and_switches_test.srcs/constrs_1/new/zynq_constr.xdc w ]
+add_files -fileset constrs_1 C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test/buttons_and_switches_test.srcs/constrs_1/new/zynq_constr.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1

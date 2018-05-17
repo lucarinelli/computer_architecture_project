@@ -1,0 +1,65 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Thu May 17 17:59:35 2018
+| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file hdmi_controller_methodology_drc_routed.rpt -pb hdmi_controller_methodology_drc_routed.pb -rpx hdmi_controller_methodology_drc_routed.rpx
+| Design       : hdmi_controller
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 6
++----------+----------+------------------------------------------------+------------+
+| Rule     | Severity | Description                                    | Violations |
++----------+----------+------------------------------------------------+------------+
+| TIMING-6 | Warning  | No common primary clock between related clocks | 6          |
++----------+----------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_hdmi and clk_out1_clk_wiz_hdmi_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_hdmi] -to [get_clocks clk_out1_clk_wiz_hdmi_1]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_hdmi and clk_out2_clk_wiz_hdmi_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_hdmi] -to [get_clocks clk_out2_clk_wiz_hdmi_1]
+Related violations: <none>
+
+TIMING-6#3 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_hdmi_1 and clk_out1_clk_wiz_hdmi are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_hdmi_1] -to [get_clocks clk_out1_clk_wiz_hdmi]
+Related violations: <none>
+
+TIMING-6#4 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_hdmi_1 and clk_out2_clk_wiz_hdmi are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_hdmi_1] -to [get_clocks clk_out2_clk_wiz_hdmi]
+Related violations: <none>
+
+TIMING-6#5 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_clk_wiz_hdmi and clk_out2_clk_wiz_hdmi_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_hdmi] -to [get_clocks clk_out2_clk_wiz_hdmi_1]
+Related violations: <none>
+
+TIMING-6#6 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_clk_wiz_hdmi_1 and clk_out2_clk_wiz_hdmi are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_hdmi_1] -to [get_clocks clk_out2_clk_wiz_hdmi]
+Related violations: <none>
+
+

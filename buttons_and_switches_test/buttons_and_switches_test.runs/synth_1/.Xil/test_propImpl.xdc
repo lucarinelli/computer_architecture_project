@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/rinel/Desktop/computer_architecture_project/buttons_and_switches_test/buttons_and_switches_test.srcs/constrs_1/new/zynq_constr.xdc rfile:../../../buttons_and_switches_test.srcs/constrs_1/new/zynq_constr.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { L0 }]; #IO_L6N_T0_VREF_34 Sch=led[0]
+set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D19   IOSTANDARD LVCMOS33 } [get_ports { b0 }]; #IO_L4P_T0_35 Sch=btn[0]
+set_property src_info {type:XDC file:1 line:35 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D20   IOSTANDARD LVCMOS33 } [get_ports { b1 }]; #IO_L4N_T0_35 Sch=btn[1]

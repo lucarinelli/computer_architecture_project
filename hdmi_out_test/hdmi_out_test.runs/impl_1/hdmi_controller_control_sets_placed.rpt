@@ -1,0 +1,82 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Thu May 17 17:58:52 2018
+| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file hdmi_controller_control_sets_placed.rpt
+| Design       : hdmi_controller
+| Device       : xc7z020
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    56 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      5 |            2 |
+|      6 |            1 |
+|     10 |            3 |
+|     11 |            1 |
+|     15 |            1 |
+|    16+ |            3 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              32 |           17 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              30 |           12 |
+| Yes          | No                    | No                     |              37 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              29 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+----------------------------------------------------------+------------------+------------------+----------------+
+|          Clock Signal         |                       Enable Signal                      | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------------------+----------------------------------------------------------+------------------+------------------+----------------+
+|  clk_wiz_hdmi_0/inst/clk_out1 | leds[0]_i_1_n_0                                          |                  |                1 |              1 |
+|  clk_wiz_hdmi_0/inst/clk_out2 | tdms_tx/tmds_enc0/serializer_inst/internal[9]_i_1_n_0    |                  |                1 |              5 |
+|  clk_wiz_hdmi_0/inst/clk_out2 | tdms_tx/tmds_enc2/serializer_inst/internal[9]_i_1__1_n_0 |                  |                1 |              5 |
+|  clk_wiz_hdmi_0/inst/clk_out2 | tdms_tx/tmds_enc1/serializer_inst/internal[9]_i_1__0_n_0 |                  |                2 |              6 |
+|  clk_wiz_hdmi_0/inst/clk_out1 | leds11_in                                                | y                |                3 |             10 |
+|  clk_wiz_hdmi_0/inst/clk_out1 | pos1                                                     |                  |                3 |             10 |
+|  clk_wiz_hdmi_0/inst/clk_out1 | pos2                                                     |                  |                3 |             10 |
+|  clk_wiz_hdmi_0/inst/clk_out1 |                                                          | leds11_in        |                6 |             11 |
+|  clk_wiz_hdmi_0/inst/clk_out2 |                                                          |                  |                6 |             15 |
+|  clk_wiz_hdmi_0/inst/clk_out1 |                                                          |                  |               11 |             17 |
+|  clk_wiz_hdmi_0/inst/clk_out1 |                                                          | mode[2]          |                6 |             19 |
+|  clk_wiz_hdmi_0/inst/clk_out1 | p_4_in                                                   | bposy[9]_i_1_n_0 |                5 |             19 |
++-------------------------------+----------------------------------------------------------+------------------+------------------+----------------+
+
+

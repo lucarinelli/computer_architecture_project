@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed May  9 19:58:53 2018
+# Process ID: 12940
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15176 C:\Users\rinel\Desktop\computer_architecture_project\hdmi_out_test\hdmi_out_test.xpr
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/vivado.log
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test\vivado.jou
+#-----------------------------------------------------------
+start_guopen_project C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.xpr
+r
+open_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
