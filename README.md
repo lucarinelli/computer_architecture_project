@@ -1,7 +1,7 @@
 # Computer Architecture Project (No better name yet)
 This is the git repository containing most of the work done by Andrea Fanti and Luca Rinelli for the Computer Architecture course project
 
-##Sub projects index
+## Sub projects index
 Look for a readme file inside the project folders to more detailed explanation
 * __hdmi_out_test__, simple hdmi out test with colors (and an easter egg!)
 * __hdmi_passthrough__, we are trying to apply a simple filter on an input signal and then send it on the output
