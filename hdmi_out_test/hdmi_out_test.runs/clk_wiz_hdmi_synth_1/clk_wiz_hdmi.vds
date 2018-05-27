@@ -1,34 +1,35 @@
 #-----------------------------------------------------------
 # Vivado v2018.1 (64-bit)
-# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sun May 13 17:17:27 2018
-# Process ID: 21551
-# Current directory: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1
-# Command line: vivado -log clk_wiz_hdmi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_hdmi.tcl
-# Log file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/clk_wiz_hdmi.vds
-# Journal file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/vivado.jou
+# Start of session at: Sat May 19 17:31:52 2018
+# Process ID: 15612
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1
+# Command line: vivado.exe -log clk_wiz_hdmi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_hdmi.tcl
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/clk_wiz_hdmi.vds
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1\vivado.jou
 #-----------------------------------------------------------
 source clk_wiz_hdmi.tcl -notrace
+WARNING: [IP_Flow 19-5242] IP Cache entry (cache-ID 312b5f49aad2914f) does not have the required number of cached files and is not valid. Please delete this entry using the TCL command: 'config_ip_cache -remove [get_ips clk_wiz_hdmi]'
 Command: synth_design -top clk_wiz_hdmi -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21576 
+INFO: Helper process launched with PID 8596 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1283.910 ; gain = 84.000 ; free physical = 9513 ; free virtual = 17957
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 386.469 ; gain = 97.871
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_hdmi' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.v:71]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_hdmi_clk_wiz' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_clk_wiz.v:69]
-INFO: [Synth 8-6157] synthesizing module 'IBUF' [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:19472]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_hdmi' [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.v:71]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_hdmi_clk_wiz' [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:19472]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:19472]
-INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:40055]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:19472]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:40055]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT bound to: 8 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
@@ -60,13 +61,13 @@ INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/mnt/maxtor/Xilinx/Vivado/
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (2#1) [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:40055]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_hdmi_clk_wiz' (4#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_clk_wiz.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_hdmi' (5#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (2#1) [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:40055]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_hdmi_clk_wiz' (4#1) [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_hdmi' (5#1) [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.v:71]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1328.520 ; gain = 128.609 ; free physical = 9530 ; free virtual = 17974
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 441.227 ; gain = 152.629
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,10 +80,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1328.520 ; gain = 128.609 ; free physical = 9526 ; free virtual = 17971
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 441.227 ; gain = 152.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1328.520 ; gain = 128.609 ; free physical = 9526 ; free virtual = 17971
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 441.227 ; gain = 152.629
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -91,42 +92,42 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_ooc.xdc] for cell 'inst'
-Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_board.xdc] for cell 'inst'
-Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_board.xdc] for cell 'inst'
-Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.xdc] for cell 'inst'
-Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_wiz_hdmi_propImpl.xdc].
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_board.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi_board.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_wiz_hdmi_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/clk_wiz_hdmi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1612.555 ; gain = 0.000 ; free physical = 9264 ; free virtual = 17708
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 714.348 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1612.555 ; gain = 412.645 ; free physical = 9343 ; free virtual = 17788
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 714.348 ; gain = 425.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1612.555 ; gain = 412.645 ; free physical = 9343 ; free virtual = 17788
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 714.348 ; gain = 425.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1612.555 ; gain = 412.645 ; free physical = 9345 ; free virtual = 17789
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 714.348 ; gain = 425.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1612.555 ; gain = 412.645 ; free physical = 9343 ; free virtual = 17788
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 714.348 ; gain = 425.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -162,7 +163,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:48 . Memory (MB): peak = 1612.555 ; gain = 412.645 ; free physical = 9341 ; free virtual = 17787
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 714.348 ; gain = 425.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,13 +175,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:00 . Memory (MB): peak = 1616.539 ; gain = 416.629 ; free physical = 9212 ; free virtual = 17658
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 772.184 ; gain = 483.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:00 . Memory (MB): peak = 1616.539 ; gain = 416.629 ; free physical = 9212 ; free virtual = 17658
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 772.184 ; gain = 483.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -192,7 +193,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:00 . Memory (MB): peak = 1616.539 ; gain = 416.629 ; free physical = 9212 ; free virtual = 17658
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 772.184 ; gain = 483.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -216,7 +217,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.539 ; gain = 417.629 ; free physical = 9212 ; free virtual = 17658
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -229,7 +230,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.539 ; gain = 417.629 ; free physical = 9212 ; free virtual = 17658
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,25 +242,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.539 ; gain = 417.629 ; free physical = 9212 ; free virtual = 17658
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.539 ; gain = 417.629 ; free physical = 9212 ; free virtual = 17658
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.539 ; gain = 417.629 ; free physical = 9212 ; free virtual = 17658
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.539 ; gain = 417.629 ; free physical = 9212 ; free virtual = 17658
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -288,11 +289,11 @@ Report Instance Areas:
 |2     |  inst   |clk_wiz_hdmi_clk_wiz |     5|
 +------+---------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.539 ; gain = 417.629 ; free physical = 9212 ; free virtual = 17658
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1617.539 ; gain = 133.594 ; free physical = 9270 ; free virtual = 17716
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 1617.547 ; gain = 417.629 ; free physical = 9270 ; free virtual = 17716
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 773.387 ; gain = 211.668
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 773.387 ; gain = 484.789
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -302,12 +303,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+25 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:02 . Memory (MB): peak = 1632.539 ; gain = 452.086 ; free physical = 9252 ; free virtual = 17698
-INFO: [Common 17-1381] The checkpoint '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/clk_wiz_hdmi.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi.xci
-INFO: [Common 17-1381] The checkpoint '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/clk_wiz_hdmi.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:51 . Memory (MB): peak = 797.320 ; gain = 520.191
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/clk_wiz_hdmi.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1/clk_wiz_hdmi.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file clk_wiz_hdmi_utilization_synth.rpt -pb clk_wiz_hdmi_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1636.539 ; gain = 0.000 ; free physical = 9254 ; free virtual = 17701
-INFO: [Common 17-206] Exiting Vivado at Sun May 13 17:18:39 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 797.914 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat May 19 17:32:54 2018...

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="clk_wiz_hdmi_synth_1" LaunchDir="C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/clk_wiz_hdmi_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="clk_wiz_hdmi_synth_1"/>
+	</Run>
+</Runs>
+

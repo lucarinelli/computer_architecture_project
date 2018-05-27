@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu May 17 17:56:56 2018
-# Process ID: 18048
+# Start of session at: Sat May 19 17:33:04 2018
+# Process ID: 12684
 # Current directory: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1
 # Command line: vivado.exe -log hdmi_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_controller.tcl
 # Log file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1/hdmi_controller.vds
@@ -15,13 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9180 
+INFO: Helper process launched with PID 300 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 387.793 ; gain = 98.129
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 387.121 ; gain = 98.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'hdmi_controller' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/new/hdmi_controller.vhd:55]
-INFO: [Synth 8-3491] module 'clk_wiz_hdmi' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1/.Xil/Vivado-18048-DESKTOP-0KG3I12/realtime/clk_wiz_hdmi_stub.vhdl:5' bound to instance 'clk_wiz_hdmi_0' of component 'clk_wiz_hdmi' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/new/hdmi_controller.vhd:127]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_hdmi' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1/.Xil/Vivado-18048-DESKTOP-0KG3I12/realtime/clk_wiz_hdmi_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'clk_wiz_hdmi' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1/.Xil/Vivado-12684-DESKTOP-0KG3I12/realtime/clk_wiz_hdmi_stub.vhdl:5' bound to instance 'clk_wiz_hdmi_0' of component 'clk_wiz_hdmi' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/new/hdmi_controller.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_hdmi' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1/.Xil/Vivado-12684-DESKTOP-0KG3I12/realtime/clk_wiz_hdmi_stub.vhdl:16]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
@@ -85,7 +85,7 @@ WARNING: [Synth 8-3331] design tmds_encoder__parameterized1 has unconnected port
 WARNING: [Synth 8-3331] design tmds_encoder__parameterized1 has unconnected port VSYNC
 WARNING: [Synth 8-3331] design hdmi_controller has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 442.520 ; gain = 152.855
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 441.340 ; gain = 153.098
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -98,10 +98,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 442.520 ; gain = 152.855
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 441.340 ; gain = 153.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 442.520 ; gain = 152.855
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 441.340 ; gain = 153.098
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -122,16 +122,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 811.605 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 810.578 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 811.605 ; gain = 521.941
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 810.578 ; gain = 522.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 811.605 ; gain = 521.941
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 810.578 ; gain = 522.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -140,7 +140,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_sys. (constraint file  c:/Use
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_sys. (constraint file  c:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/ip/clk_wiz_hdmi/clk_wiz_hdmi/clk_wiz_hdmi_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for clk_wiz_hdmi_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 811.605 ; gain = 521.941
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 810.578 ; gain = 522.336
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/new/tmds_encoder.vhd:153]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/new/tmds_encoder.vhd:153]
@@ -161,7 +161,7 @@ INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To p
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/new/tmds_encoder.vhd:153]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.srcs/sources_1/new/tmds_encoder.vhd:175]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 811.605 ; gain = 521.941
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 810.578 ; gain = 522.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -371,7 +371,7 @@ WARNING: [Synth 8-3332] Sequential element (mode_reg[1]) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (bvy_reg[0]) is unused and will be removed from module hdmi_controller.
 WARNING: [Synth 8-3332] Sequential element (bvx_reg[0]) is unused and will be removed from module hdmi_controller.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 811.605 ; gain = 521.941
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 810.578 ; gain = 522.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -386,13 +386,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_hdmi_0/clk_out1' 
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_hdmi_0/clk_out2' to pin 'clk_wiz_hdmi_0/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 811.605 ; gain = 521.941
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 810.578 ; gain = 522.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 822.352 ; gain = 532.688
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 819.918 ; gain = 531.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -429,7 +429,7 @@ INFO: [Synth 8-3886] merging instance 'tdms_tx/tmds_enc2/serializer_inst/interna
 INFO: [Synth 8-3886] merging instance 'tdms_tx/tmds_enc2/serializer_inst/internal_reg[2]' (FDE) to 'tdms_tx/tmds_enc2/serializer_inst/internal_reg[6]'
 INFO: [Synth 8-3886] merging instance 'tdms_tx/tmds_enc2/serializer_inst/internal_reg[5]' (FDE) to 'tdms_tx/tmds_enc2/serializer_inst/internal_reg[7]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -453,7 +453,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -466,7 +466,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -478,25 +478,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -542,11 +542,11 @@ Report Instance Areas:
 |8     |      serializer_inst |serializer10bit              |    19|
 +------+----------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 824.883 ; gain = 535.219
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 824.883 ; gain = 166.133
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 824.883 ; gain = 535.219
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 822.285 ; gain = 164.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 822.285 ; gain = 534.043
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -559,8 +559,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 123 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 824.883 ; gain = 546.688
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 822.285 ; gain = 545.516
 INFO: [Common 17-1381] The checkpoint 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.runs/synth_1/hdmi_controller.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_controller_utilization_synth.rpt -pb hdmi_controller_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 824.883 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu May 17 17:57:56 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 822.285 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat May 19 17:34:30 2018...
