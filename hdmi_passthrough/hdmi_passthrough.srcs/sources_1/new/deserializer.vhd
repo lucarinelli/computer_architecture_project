@@ -3,7 +3,7 @@
 -- Engineer: 
 -- 
 -- Create Date: 05/27/2018 10:41:26 PM
--- Design Name: 
+-- Design Name: Very ignorant deserializer
 -- Module Name: deserializer - Behavioral
 -- Project Name: 
 -- Target Devices: 
@@ -32,12 +32,34 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity deserializer is
---  Port ( );
+    Port (
+        d_in : in std_logic;
+        d_out : out std_logic_vector(9 downto 0);
+        reset : in std_logic;
+        clk : in std_logic
+    );
 end deserializer;
 
 architecture Behavioral of deserializer is
-
+    
+    signal internal: std_logic_vector (9 downto 0) := (others => '1');
+    
 begin
 
+    process(clk)
+        variable count : integer range 0 to 10 := 0;
+    begin
+        if(clk'event and clk='1') then
+            if reset = '1' then 
+                count := 0;
+            end if;
+            if (count=10) then
+                d_out<=internal;
+                count:=0;
+            end if;
+            internal(count-1)<=d_in;
+            count:=count+1;
+        end if;
+    end process;
 
 end Behavioral;
