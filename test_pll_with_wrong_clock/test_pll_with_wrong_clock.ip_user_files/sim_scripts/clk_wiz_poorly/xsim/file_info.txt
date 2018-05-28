@@ -1,0 +1,3 @@
+clk_wiz_poorly_clk_wiz.v,verilog,xil_defaultlib,../../../../test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+clk_wiz_poorly.v,verilog,xil_defaultlib,../../../../test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v
