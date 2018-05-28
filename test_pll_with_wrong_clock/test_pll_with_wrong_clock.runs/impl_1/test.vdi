@@ -1,0 +1,159 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon May 28 23:26:52 2018
+# Process ID: 19680
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.runs/impl_1
+# Command line: vivado.exe -log test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source test.tcl -notrace
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.runs/impl_1/test.vdi
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source test.tcl -notrace
+Command: link_design -top test -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly.dcp' for cell 'cw_poorly'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_pre/clk_wiz_pre.dcp' for cell 'cw_pre'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise.dcp' for cell 'cw_precise'
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. cw_poorly/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. cw_precise/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'cw_poorly/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly/clk_wiz_poorly.edf:264]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'cw_precise/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise/clk_wiz_precise.edf:264]
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly_board.xdc] for cell 'cw_poorly/inst'
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly_board.xdc] for cell 'cw_poorly/inst'
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly.xdc] for cell 'cw_poorly/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly.xdc:57]
+get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1201.828 ; gain = 560.348
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_poorly/clk_wiz_poorly.xdc] for cell 'cw_poorly/inst'
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise_board.xdc] for cell 'cw_precise/inst'
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise_board.xdc] for cell 'cw_precise/inst'
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise.xdc] for cell 'cw_precise/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.134680 which will be rounded to 0.135 to ensure it is an integer multiple of 1 picosecond [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise.xdc:57]
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_precise/clk_wiz_precise.xdc] for cell 'cw_precise/inst'
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_pre/clk_wiz_pre_board.xdc] for cell 'cw_pre/inst'
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_pre/clk_wiz_pre_board.xdc] for cell 'cw_pre/inst'
+Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_pre/clk_wiz_pre.xdc] for cell 'cw_pre/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_pre/clk_wiz_pre.xdc:57]
+Finished Parsing XDC File [c:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/sources_1/ip/clk_wiz_pre/clk_wiz_pre.xdc] for cell 'cw_pre/inst'
+Parsing XDC File [C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/constrs_1/new/consts.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_cd_poorly/clk_o_reg_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/constrs_1/new/consts.xdc:17]
+Finished Parsing XDC File [C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/constrs_1/new/consts.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+15 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1201.828 ; gain = 921.602
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.721 . Memory (MB): peak = 1201.828 ; gain = 0.000
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_cd_poorly/clk_o_reg_0' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.srcs/constrs_1/new/consts.xdc:17]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: e639f323
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: e639f323
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1c1b3a802
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1c1b3a802
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1c1b3a802
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1c1b3a802
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1216.355 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1c1b3a802
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1216.355 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 81363ff9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+33 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1216.355 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.runs/impl_1/test_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file test_drc_opted.rpt -pb test_drc_opted.pb -rpx test_drc_opted.rpx
+Command: report_drc -file test_drc_opted.rpt -pb test_drc_opted.pb -rpx test_drc_opted.rpx
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/rinel/Desktop/computer_architecture_project/test_pll_with_wrong_clock/test_pll_with_wrong_clock.runs/impl_1/test_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC REQP-1712] Input clock driver: Unsupported PLLE2_ADV connectivity. The signal cw_poorly/inst/clk_in1 on the cw_poorly/inst/plle2_adv_inst/CLKIN1 pin of cw_poorly/inst/plle2_adv_inst with COMPENSATION mode ZHOLD must be driven by a clock capable IO.
+ERROR: [DRC REQP-1712] Input clock driver: Unsupported PLLE2_ADV connectivity. The signal cw_precise/inst/clk_in1 on the cw_precise/inst/plle2_adv_inst/CLKIN1 pin of cw_precise/inst/plle2_adv_inst with COMPENSATION mode ZHOLD must be driven by a clock capable IO.
+INFO: [Vivado_Tcl 4-198] DRC finished with 2 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+46 Infos, 5 Warnings, 0 Critical Warnings and 3 Errors encountered.
+place_design failed
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Mon May 28 23:27:30 2018...
