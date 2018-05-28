@@ -50,6 +50,7 @@ begin
         variable count : integer range 0 to 10 := 0;
     begin
         if(clk'event and clk='1') then
+            -- reset probably not needed!
             if reset = '1' then 
                 count := 0;
             end if;

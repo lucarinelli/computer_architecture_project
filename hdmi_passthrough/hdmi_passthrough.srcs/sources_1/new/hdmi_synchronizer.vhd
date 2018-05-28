@@ -9,6 +9,7 @@
 -- Target Devices: 
 -- Tool Versions: 
 -- Description: 
+-- This shall listen on channel 0 and detect hsync and vsync sequences
 -- 
 -- Dependencies: 
 -- 
