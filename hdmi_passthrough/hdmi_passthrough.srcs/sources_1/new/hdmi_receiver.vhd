@@ -72,7 +72,7 @@ architecture Behavioral of hdmi_receiver is
     
 begin
 
-    decoders_gen : for i in 0 to 2 generate
+    deserializes_gen : for i in 0 to 2 generate
         
         deserializer_inst : deserializer
             port map (
@@ -88,9 +88,11 @@ begin
     decoders_gen : for i in 0 to 2 generate
         
         decoder_inst : hdmi_decoder
+            --generic map ()?
             port map (
-                d => channels_10bit_input(i*10 downto i*10+9),
-                q => 
+                d => channels_10bit_input(i*10+9 downto i*10),
+                q => rgb(i*8+7 downto i*8),
+                aux
                 pixel_clock => pixel_clock
             );
         
