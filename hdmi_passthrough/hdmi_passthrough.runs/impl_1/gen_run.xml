@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1527633334">
+  <File Type="PWROPT-DCP" Name="hdmi_receiver_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="hdmi_receiver_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hdmi_receiver.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="hdmi_receiver_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hdmi_receiver_reports.tcl"/>
+  <File Type="BG-DRC" Name="hdmi_receiver.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hdmi_receiver_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hdmi_receiver_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="hdmi_receiver.hwdef"/>
+  <File Type="OPT-DCP" Name="hdmi_receiver_opt.dcp"/>
+  <File Type="OPT-DRC" Name="hdmi_receiver_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="hdmi_receiver_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="hdmi_receiver_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="hdmi_receiver_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="hdmi_receiver_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hdmi_receiver_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hdmi_receiver_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hdmi_receiver_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hdmi_receiver_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hdmi_receiver_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hdmi_receiver_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hdmi_receiver_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="hdmi_receiver_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hdmi_receiver_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hdmi_receiver_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="hdmi_receiver_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="hdmi_receiver_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="hdmi_receiver.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="hdmi_receiver_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hdmi_receiver_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hdmi_receiver_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_receiver_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hdmi_receiver_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hdmi_receiver_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="hdmi_receiver.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="hdmi_receiver_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="hdmi_receiver.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_receiver_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="hdmi_receiver.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_receiver_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="hdmi_receiver.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_receiver_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="hdmi_receiver_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="hdmi_receiver_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hdmi_receiver_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hdmi_receiver_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hdmi_receiver_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hdmi_receiver_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="hdmi_receiver_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="hdmi_receiver.vdi"/>
+  <File Type="ROUTE-CLK" Name="hdmi_receiver_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hdmi_receiver_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hdmi_receiver_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hdmi_receiver_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hdmi_receiver_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hdmi_receiver_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="hdmi_receiver.nky"/>
+  <File Type="BITSTR-BMM" Name="hdmi_receiver_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="hdmi_receiver.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="hdmi_receiver.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="hdmi_receiver.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/deserializer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdmi_encoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdmi_passthrough.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdmi_synchronizer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdmi_transmitter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/serializer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/some_logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdmi_receiver.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hdmi_receiver"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

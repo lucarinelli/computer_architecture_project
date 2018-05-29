@@ -1,0 +1,371 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed May 30 00:35:37 2018
+# Process ID: 1980
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1
+# Command line: vivado.exe -log hdmi_receiver.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_receiver.tcl
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1/hdmi_receiver.vds
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source hdmi_receiver.tcl -notrace
+Command: synth_design -top hdmi_receiver -part xc7z020clg400-1
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3704 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 387.445 ; gain = 97.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hdmi_receiver' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/hdmi_receiver.vhd:54]
+INFO: [Synth 8-3491] module 'deserializer' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/deserializer.vhd:34' bound to instance 'deserializer_inst' of component 'deserializer' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/hdmi_receiver.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'deserializer' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/deserializer.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'deserializer' (1#1) [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/deserializer.vhd:43]
+INFO: [Synth 8-3491] module 'deserializer' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/deserializer.vhd:34' bound to instance 'deserializer_inst' of component 'deserializer' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/hdmi_receiver.vhd:203]
+INFO: [Synth 8-3491] module 'deserializer' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/deserializer.vhd:34' bound to instance 'deserializer_inst' of component 'deserializer' [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/hdmi_receiver.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_receiver' (2#1) [C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/hdmi_receiver.vhd:54]
+WARNING: [Synth 8-3917] design hdmi_receiver has port raw_data_valid driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 442.535 ; gain = 152.797
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 442.535 ; gain = 152.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 442.535 ; gain = 152.797
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 790.789 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 790.789 ; gain = 501.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 790.789 ; gain = 501.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 790.789 ; gain = 501.051
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "d_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "chs_terc4[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chs_terc4[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chs_terc4[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_ch_ctl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_ch_ctl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_ch_ctl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chs_ctl[0]" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 790.789 ; gain = 501.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               24 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 6     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 6     
+	  10 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 17    
+	   5 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 5     
+	  13 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hdmi_receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               24 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 3     
+	  10 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 14    
+	  10 Input      1 Bit        Muxes := 5     
+	  13 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 1     
+Module deserializer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "is_ch_ctl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_ch_ctl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "is_ch_ctl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chs_terc4[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chs_ctl[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chs_terc4[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "chs_terc4[1]" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design hdmi_receiver has port raw_data_valid driven by constant 0
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cur_reg_reg[state][3] )
+WARNING: [Synth 8-3332] Sequential element (cur_reg_reg[state][3]) is unused and will be removed from module hdmi_receiver.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 790.789 ; gain = 501.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 793.734 ; gain = 503.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 793.957 ; gain = 504.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (deserializes_gen[0].deserializer_inst/internal_reg[9]) is unused and will be removed from module hdmi_receiver.
+WARNING: [Synth 8-3332] Sequential element (deserializes_gen[1].deserializer_inst/internal_reg[9]) is unused and will be removed from module hdmi_receiver.
+WARNING: [Synth 8-3332] Sequential element (deserializes_gen[2].deserializer_inst/internal_reg[9]) is unused and will be removed from module hdmi_receiver.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\deserializes_gen[0].deserializer_inst/d_out_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\deserializes_gen[1].deserializer_inst/d_out_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\deserializes_gen[2].deserializer_inst/d_out_reg[9] )
+WARNING: [Synth 8-3332] Sequential element (deserializes_gen[0].deserializer_inst/d_out_reg[9]) is unused and will be removed from module hdmi_receiver.
+WARNING: [Synth 8-3332] Sequential element (deserializes_gen[1].deserializer_inst/d_out_reg[9]) is unused and will be removed from module hdmi_receiver.
+WARNING: [Synth 8-3332] Sequential element (deserializes_gen[2].deserializer_inst/d_out_reg[9]) is unused and will be removed from module hdmi_receiver.
+WARNING: [Synth 8-3332] Sequential element (cur_reg_reg[state][2]) is unused and will be removed from module hdmi_receiver.
+WARNING: [Synth 8-3332] Sequential element (cur_reg_reg[aux_valid]) is unused and will be removed from module hdmi_receiver.
+WARNING: [Synth 8-3332] Sequential element (cur_reg_reg[rgb_valid]) is unused and will be removed from module hdmi_receiver.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cur_reg_reg[state][1] )
+WARNING: [Synth 8-3332] Sequential element (cur_reg_reg[state][1]) is unused and will be removed from module hdmi_receiver.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     3|
+|4     |LUT2   |    21|
+|5     |LUT3   |    25|
+|6     |LUT4   |     6|
+|7     |LUT5   |    51|
+|8     |LUT6   |    25|
+|9     |FDCE   |    17|
+|10    |FDPE   |     1|
+|11    |FDRE   |    99|
+|12    |IBUF   |     6|
+|13    |OBUF   |    68|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------------+---------------+------+
+|      |Instance                                  |Module         |Cells |
++------+------------------------------------------+---------------+------+
+|1     |top                                       |               |   328|
+|2     |  \deserializes_gen[0].deserializer_inst  |deserializer   |    57|
+|3     |  \deserializes_gen[1].deserializer_inst  |deserializer_0 |    76|
+|4     |  \deserializes_gen[2].deserializer_inst  |deserializer_1 |    61|
++------+------------------------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 814.379 ; gain = 176.387
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 814.379 ; gain = 524.641
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 817.840 ; gain = 539.570
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1/hdmi_receiver.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hdmi_receiver_utilization_synth.rpt -pb hdmi_receiver_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 817.840 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 30 00:36:30 2018...

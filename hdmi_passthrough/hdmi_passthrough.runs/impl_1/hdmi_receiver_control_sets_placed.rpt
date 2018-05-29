@@ -1,0 +1,103 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Wed May 30 00:37:22 2018
+| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file hdmi_receiver_control_sets_placed.rpt
+| Design       : hdmi_receiver
+| Device       : xc7z020
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    35 |
+| Unused register locations in slices containing registers |   232 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           27 |
+|      2 |            2 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              45 |           24 |
+| No           | No                    | Yes                    |               2 |            2 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              81 |           38 |
+| Yes          | No                    | Yes                    |              16 |            4 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+--------------------------------------------------------------+------------------+------------------+----------------+
+|        Clock Signal        |                         Enable Signal                        | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------------------+--------------------------------------------------------------+------------------+------------------+----------------+
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[0]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[3]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[6]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[1]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[0]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[2]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[4]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[7]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[8]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[5]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/internal[1]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[4]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[6]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[7]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[3]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[5]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[8]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/internal[2]_i_1__0_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[3]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[6]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[0]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[7]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[5]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[8]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[4]_i_1_n_0    |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[2]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/internal[1]_i_1__1_n_0 |                  |                1 |              1 |
+|  pixel_clock_IBUF_BUFG     | cur_reg[vsync]                                               | reset_IBUF       |                1 |              2 |
+|  pixel_clock_IBUF_BUFG     |                                                              | reset_IBUF       |                2 |              2 |
+|  pixel_clock_x10_IBUF_BUFG |                                                              |                  |                4 |             12 |
+|  pixel_clock_IBUF_BUFG     | deserializes_gen[1].deserializer_inst/watchdog_reg[0]        | reset_IBUF       |                3 |             14 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[1].deserializer_inst/d_out[8]_i_1__0_n_0    |                  |                5 |             18 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[2].deserializer_inst/d_out[8]_i_1__1_n_0    |                  |                3 |             18 |
+|  pixel_clock_x10_IBUF_BUFG | deserializes_gen[0].deserializer_inst/d_out[8]_i_1_n_0       |                  |                3 |             18 |
+|  pixel_clock_IBUF_BUFG     |                                                              |                  |               20 |             33 |
++----------------------------+--------------------------------------------------------------+------------------+------------------+----------------+
+
+
