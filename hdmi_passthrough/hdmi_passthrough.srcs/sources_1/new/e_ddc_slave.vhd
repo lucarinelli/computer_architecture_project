@@ -87,8 +87,7 @@ architecture rtl of E_DDC_SLAVE is
         block_request   : std_logic;
         block_number    : std_logic_vector(7 downto 0);
         --ram_rd_addr     : std_ulogic_vector(log2(BLOCK_SIZE-1)-1 downto 0);
-        --ram_rd_addr     : std_logic_vector(6 downto 0);
-        ram_rd_addr : natural range 0 to 127;
+        ram_rd_addr : natural range 0 to BLOCK_SIZE-1;
     end record;
     
     constant reg_type_def   : reg_type := (
