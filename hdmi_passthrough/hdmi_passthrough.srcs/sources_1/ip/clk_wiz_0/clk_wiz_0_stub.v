@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Wed May 30 08:58:28 2018
+// Date        : Wed May 30 23:08:30 2018
 // Host        : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v

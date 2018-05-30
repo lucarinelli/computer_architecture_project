@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Wed May 30 08:58:28 2018
+// Date        : Wed May 30 23:08:30 2018
 // Host        : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
@@ -93,9 +93,9 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT(20),
+    .CLKFBOUT_MULT(59),
     .CLKFBOUT_PHASE(0.000000),
-    .CLKIN1_PERIOD(13.468000),
+    .CLKIN1_PERIOD(8.000000),
     .CLKIN2_PERIOD(0.000000),
     .CLKOUT0_DIVIDE(20),
     .CLKOUT0_DUTY_CYCLE(0.500000),
@@ -116,7 +116,7 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
     .CLKOUT5_DUTY_CYCLE(0.500000),
     .CLKOUT5_PHASE(0.000000),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(5),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PWRDWN_INVERTED(1'b0),
     .IS_RST_INVERTED(1'b0),

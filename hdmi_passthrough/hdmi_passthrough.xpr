@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="36" Path="/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/hdmi_passthrough/hdmi_passthrough.xpr">
+<Project Version="7" Minor="36" Path="C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="60278ac9713c4213ab73915a17223bcc"/>
@@ -40,13 +40,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="3"/>
-    <Option Name="WTModelSimExportSim" Val="3"/>
-    <Option Name="WTQuestaExportSim" Val="3"/>
-    <Option Name="WTIesExportSim" Val="3"/>
-    <Option Name="WTVcsExportSim" Val="3"/>
-    <Option Name="WTRivieraExportSim" Val="3"/>
-    <Option Name="WTActivehdlExportSim" Val="3"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
+    <Option Name="WTIesExportSim" Val="4"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -105,13 +105,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/signal_sync.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/dual_port_ram.vhd">
       <File Path="$PSRCDIR/sources_1/new/e_ddc_slave.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -122,6 +115,18 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../test_clock/test_clock.srcs/sources_1/imports/new/clk_gen.vhd"/>
           <Attr Name="ImportTime" Val="1526743666"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/signal_sync.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/dual_port_ram.vhd">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -142,6 +147,7 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/docs/PYNQ-Z1_C.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -182,25 +188,17 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
-    <Simulator Name="IES">
-      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
-    </Simulator>
-    <Simulator Name="Xcelium">
-      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
-    </Simulator>
-    <Simulator Name="VCS">
-      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
-    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -218,9 +216,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -1,0 +1,80 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Wed May 30 23:32:24 2018
+| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file hdmi_passthrough_control_sets_placed.rpt
+| Design       : hdmi_passthrough
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    87 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           10 |
+|      2 |            1 |
+|      4 |            1 |
+|      9 |            1 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              19 |           12 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+--------------------------------------------------------------+------------------+------------------+----------------+
+|    Clock Signal   |                         Enable Signal                        | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------+--------------------------------------------------------------+------------------+------------------+----------------+
+|  cw/inst/clk_out1 | hr/cur_reg[vsync]                                            |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[5]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[1]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[2]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[7]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[3]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[0]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[4]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[6]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/internal[8]_i_1_n_0 |                  |                1 |              1 |
+|  cw/inst/clk_out1 |                                                              |                  |                2 |              2 |
+|  cw/inst/clk_out2 |                                                              |                  |                3 |              4 |
+|  cw/inst/clk_out2 | hr/deserializes_gen[0].deserializer_inst/d_out[8]_i_1_n_0    |                  |                2 |              9 |
++-------------------+--------------------------------------------------------------+------------------+------------------+----------------+
+
+

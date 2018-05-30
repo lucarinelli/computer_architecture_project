@@ -16,18 +16,18 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity SIGNAL_SYNC is
     generic (
-        DEFAULT_VALUE   : std_ulogic := '0';
+        DEFAULT_VALUE   : std_logic := '0';
         SHIFT_LEVELS    : positive range 2 to 16 := 2
     );
     port (
-        CLK : in std_ulogic;        
-        DIN : in std_ulogic;
-        DOUT    : out std_ulogic := DEFAULT_VALUE
+        CLK : in std_logic;        
+        DIN : in std_logic;
+        DOUT    : out std_logic := DEFAULT_VALUE
     );
 end SIGNAL_SYNC;
 
 architecture rtl of SIGNAL_SYNC is
-    signal q    : std_ulogic_vector(SHIFT_LEVELS-2 downto 0)
+    signal q    : std_logic_vector(SHIFT_LEVELS-2 downto 0)
                     := (others => DEFAULT_VALUE);
 begin
     

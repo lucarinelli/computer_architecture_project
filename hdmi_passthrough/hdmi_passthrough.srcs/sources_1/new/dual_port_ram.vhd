@@ -16,9 +16,9 @@ entity DUAL_PORT_RAM is
     port (
         CLK : in std_ulogic;
 
-        RD_ADDR : in std_logic_vector(integer(ceil(log2(real(DEPTH))))-1 downto 0);
+        RD_ADDR : in natural range 0 to 1023;
         WR_EN   : in std_logic;
-        WR_ADDR : in std_logic_vector(integer(ceil(log2(real(DEPTH))))-1 downto 0);
+        WR_ADDR : in natural range 0 to 1023;
         DIN     : in std_logic_vector(WIDTH-1 downto 0);
 
         DOUT    : out std_logic_vector(WIDTH-1 downto 0) := (others => '0')
@@ -39,10 +39,10 @@ begin
     begin
         if rising_edge(CLK) then
             
-            DOUT    <= ram(to_integer(signed(RD_ADDR)));
+            DOUT    <= ram(RD_ADDR);
             
             if WR_EN='1' then
-                ram(to_integer(signed(WR_ADDR)))   <= DIN;
+                ram(WR_ADDR)   <= DIN;
             end if;
             
             if WRITE_FIRST and WR_EN='1' and RD_ADDR=WR_ADDR then

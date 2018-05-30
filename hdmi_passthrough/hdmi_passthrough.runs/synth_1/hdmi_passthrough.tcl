@@ -16,6 +16,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -40,6 +42,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/hdmi_receiver.vhd
   C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/e_ddc_slave.vhd
   C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/imports/new/clk_gen.vhd
+  C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/signal_sync.vhd
+  C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/new/dual_port_ram.vhd
 }
 read_ip -quiet C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]

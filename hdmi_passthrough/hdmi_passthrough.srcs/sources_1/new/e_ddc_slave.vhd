@@ -11,6 +11,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use IEEE.math_real."ceil";
+use IEEE.math_real."log2";
 
 entity E_DDC_SLAVE is
     generic (
@@ -22,7 +24,7 @@ entity E_DDC_SLAVE is
         CLK : in std_logic;
         RST : in std_logic;
         
-        DATA_IN_ADDR    : in std_logic_vector(6 downto 0);
+        DATA_IN_ADDR    : in natural range 0 to 63;
         DATA_IN_WR_EN   : in std_logic;
         DATA_IN         : in std_logic_vector(7 downto 0);
         BLOCK_VALID     : in std_logic;
@@ -105,13 +107,44 @@ architecture rtl of E_DDC_SLAVE is
     
     signal cur_reg, next_reg    : reg_type := reg_type_def;
     
-    signal ram_dout     : std_ulogic_vector(7 downto 0) := x"00";
+    signal ram_dout     : std_logic_vector(7 downto 0) := x"00";
     
     signal sda_in_sync  : std_ulogic := '1';
     signal scl_in_sync  : std_ulogic := '1';
     signal sda_in_q     : std_ulogic := '1';
     signal scl_in_q     : std_ulogic := '1';
     signal stop         : std_ulogic := '0';
+    
+    component SIGNAL_SYNC
+        generic (
+            DEFAULT_VALUE   : std_logic := '0';
+            SHIFT_LEVELS    : positive range 2 to 16 := 2
+        );
+        port (
+            CLK : in std_logic;        
+            DIN : in std_logic;
+            DOUT    : out std_logic := DEFAULT_VALUE
+        );
+    end component;
+    
+    component DUAL_PORT_RAM
+        generic (
+            -- default: 1 Kilobyte in bytes
+            WIDTH       : natural := 8;
+            DEPTH       : natural := 1024;
+            WRITE_FIRST : boolean := true
+        );
+        port (
+            CLK : in std_ulogic;
+    
+            RD_ADDR : in natural range 0 to 1023;
+            WR_EN   : in std_logic;
+            WR_ADDR : in natural range 0 to 1023;
+            DIN     : in std_logic_vector(WIDTH-1 downto 0);
+    
+            DOUT    : out std_logic_vector(WIDTH-1 downto 0) := (others => '0')
+        );
+    end component;
     
 begin
     
