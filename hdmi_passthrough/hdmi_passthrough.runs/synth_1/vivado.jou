@@ -2,11 +2,11 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Wed May 30 00:35:37 2018
-# Process ID: 1980
+# Start of session at: Wed May 30 09:13:30 2018
+# Process ID: 10684
 # Current directory: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1
-# Command line: vivado.exe -log hdmi_receiver.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_receiver.tcl
-# Log file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1/hdmi_receiver.vds
+# Command line: vivado.exe -log hdmi_passthrough.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_passthrough.tcl
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1/hdmi_passthrough.vds
 # Journal file: C:/Users/rinel/Desktop/computer_architecture_project/hdmi_passthrough/hdmi_passthrough.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source hdmi_receiver.tcl -notrace
+source hdmi_passthrough.tcl -notrace
