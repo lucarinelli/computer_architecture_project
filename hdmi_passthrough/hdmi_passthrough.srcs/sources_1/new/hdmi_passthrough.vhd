@@ -79,6 +79,8 @@ architecture Behavioral of hdmi_passthrough is
         );
     end component;
     
+    
+    
     signal clk : std_logic := '0';
     signal clkx10 : std_logic := '0';
 

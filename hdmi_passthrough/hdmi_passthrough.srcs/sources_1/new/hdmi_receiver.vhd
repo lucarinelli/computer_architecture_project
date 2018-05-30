@@ -196,6 +196,38 @@ architecture Behavioral of hdmi_receiver is
         );
     end component;
     
+--    component clk_gen
+--        Generic(
+--            freq_in
+--            freq_out
+--            );
+--        Port(
+--            clk_i
+--            clk_o
+--        );
+--    end component;
+    
+--    component E_DDC_SLAVE
+--        port map(
+--            CLK => ,
+--            RST => ,
+            
+--            DATA_IN_ADDR =>,
+--            DATA_IN_WR_EN =>,
+--            DATA_IN =>,
+--            BLOCK_VALID =>,
+--            BLOCK_INVALID =>,
+            
+--            SDA_IN =>
+--            SCL_IN =>
+            
+--            --BLOCK_CHECK     : out std_logic := '0';
+--            --BLOCK_REQUEST   : out std_logic := '0';
+--            --BLOCK_NUMBER    : out std_logic_vector(7 downto 0) := x"00";
+--            --BUSY            : out std_logic := '0'
+--        );
+--    end component;
+    
 begin
 
     deserializes_gen : for i in 0 to 2 generate
