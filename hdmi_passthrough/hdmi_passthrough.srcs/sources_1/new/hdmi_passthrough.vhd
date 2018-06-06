@@ -68,18 +68,7 @@ architecture Behavioral of hdmi_passthrough is
         );
     end component;
     
-    component clk_wiz_0 is
-        Port(
-            -- Clock out ports
-            clk_out1 : out std_logic;
-            clk_out2 : out std_logic;
-            -- Status and control signals
-            reset : in std_logic;
-            locked : out std_logic;
-            -- Clock in ports
-            clk_in1 : in std_logic
-        );
-    end component;
+    
     
     
     

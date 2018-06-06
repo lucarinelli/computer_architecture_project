@@ -1,0 +1,124 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Wed Jun  6 22:32:53 2018
+| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file pass_through_control_sets_placed.rpt
+| Design       : pass_through
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    48 |
+| Unused register locations in slices containing registers |   140 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            4 |
+|      4 |            4 |
+|      5 |            8 |
+|      7 |            6 |
+|      8 |            3 |
+|      9 |            1 |
+|     10 |            4 |
+|     11 |            4 |
+|     12 |            1 |
+|     14 |            1 |
+|     15 |            2 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             316 |          109 |
+| No           | No                    | Yes                    |              34 |           18 |
+| No           | Yes                   | No                     |             114 |           56 |
+| Yes          | No                    | No                     |              41 |           14 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             163 |           48 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+----------------+
+|                   Clock Signal                  |                                        Enable Signal                                       |                                      Set/Reset Signal                                      | Slice Load Count | Bel Load Count |
++-------------------------------------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+----------------+
+|  cw_ref/inst/RefClk200                          |                                                                                            | hdmiin/TMDS_ClockingX/RdyLostReset/SyncAsyncx/oSyncStages[1]                               |                1 |              1 |
+|  cw_ref/inst/RefClk200                          |                                                                                            | hdmiin/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]                              |                1 |              2 |
+|  cw_ref/inst/RefClk200                          |                                                                                            | hdmiin/TMDS_ClockingX/RdyLostReset_i_1_n_0                                                 |                1 |              2 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/LockLostReset_i_1_n_0                                                               |                1 |              2 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/PixelClkOut |                                                                                            | hdmiout/aRstLck                                                                            |                1 |              2 |
+|  cw_ref/inst/RefClk200                          | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SCL/Filter.cntPeriods[3]_i_2_n_0 | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SCL/Filter.cntPeriods[3]_i_1_n_0 |                2 |              4 |
+|  cw_ref/inst/RefClk200                          | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SDA/Filter.cntPeriods[3]_i_2_n_0 | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SDA/Filter.cntPeriods[3]_i_1_n_0 |                2 |              4 |
+|  cw_ref/inst/RefClk200                          | hdmiin/GenerateDDC.DDC_EEPROM/FSM_onehot_sState[3]_i_1_n_0                                 |                                                                                            |                2 |              4 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/PixelClkOut |                                                                                            | hdmiout/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1]                 |                1 |              4 |
+|  cw_ref/inst/RefClk200                          | hdmiin/TMDS_ClockingX/sel                                                                  | hdmiin/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]                              |                2 |              5 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/PixelClkOut |                                                                                            | hdmiout/DataEncoders[0].DataEncoder/p_1_in                                                 |                5 |              5 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenEn                                     | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenRst                                    |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pCenterTap[5]_i_1_n_0                          |                                                                                            |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pCenterTap[5]_i_1_n_0                          |                                                                                            |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenEn                                     | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenRst                                    |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pCenterTap[5]_i_1_n_0                          |                                                                                            |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenEn                                     | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenRst                                    |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknRst                                     |                3 |              7 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pMeRdy_int_i_1_n_0                            |                3 |              7 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknRst                                     |                3 |              7 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknRst                                     |                3 |              7 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pMeRdy_int_i_1_n_0                            |                3 |              7 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pMeRdy_int_i_1_n_0                            |                3 |              7 |
+|  cw_ref/inst/RefClk200                          | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/dataByte[6]_i_1_n_0                      |                                                                                            |                3 |              8 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[2].DecoderX/pDataIn[7]_i_1_n_0                                         |                3 |              8 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[1].DecoderX/pDataIn[7]_i_1_n_0                                         |                3 |              8 |
+|  cw_ref/inst/RefClk200                          |                                                                                            | hdmiin/LockLostReset/SyncAsyncx/oSyncStages[1]                                             |                6 |              9 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdEn                                         | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pMeRdy_int_i_1_n_0                            |                2 |             10 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/PixelClkOut |                                                                                            | hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1_n_0                                 |                3 |             10 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdEn                                         | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pMeRdy_int_i_1_n_0                            |                3 |             10 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdEn                                         | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pMeRdy_int_i_1_n_0                            |                3 |             10 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pState[10]_i_1_n_0                             | hdmiin/DataDecoders[2].DecoderX/pAlignRst_reg_n_0                                          |                3 |             11 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pState[10]_i_1_n_0                             | hdmiin/DataDecoders[1].DecoderX/pAlignRst_reg_n_0                                          |                3 |             11 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/DataDecoders[0].DecoderX/pDataIn[7]_i_1_n_0                                         |                3 |             11 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pState[10]_i_1_n_0                             | hdmiin/DataDecoders[0].DecoderX/pAlignRst_reg_n_0                                          |                4 |             11 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            | hdmiin/LockLostReset/SyncAsyncx/oSyncStages[1]                                             |                6 |             12 |
+|  cw_ref/inst/RefClk200                          | hdmiin/GenerateDDC.DDC_EEPROM/sAddr_rep[6]_i_1_n_0                                         |                                                                                            |                3 |             14 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/PixelClkOut |                                                                                            | hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw[9]_i_1_n_0                                 |               11 |             15 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/PixelClkOut |                                                                                            | hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw[9]_i_1_n_0                                 |               10 |             15 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pAllVld__0                                    |                                                                                            |                2 |             16 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVld__0                                    |                                                                                            |                2 |             16 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pAllVld__0                                    |                                                                                            |                2 |             16 |
+|  cw_ref/inst/RefClk200                          | hdmiin/DataDecoders[0].DecoderX/sel                                                        | hdmiin/DataDecoders[0].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]                      |                6 |             24 |
+|  cw_ref/inst/RefClk200                          | hdmiin/DataDecoders[2].DecoderX/sel                                                        | hdmiin/DataDecoders[2].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]                      |                6 |             24 |
+|  cw_ref/inst/RefClk200                          | hdmiin/DataDecoders[1].DecoderX/sel                                                        | hdmiin/DataDecoders[1].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]                      |                6 |             24 |
+|  cw_ref/inst/RefClk200                          |                                                                                            |                                                                                            |               17 |             38 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/PixelClkOut |                                                                                            |                                                                                            |               49 |            128 |
+|  hdmiin/TMDS_ClockingX/PixelClk                 |                                                                                            |                                                                                            |               43 |            150 |
++-------------------------------------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+----------------+
+
+
