@@ -4,8 +4,8 @@ This is the git repository containing most of the work done by Andrea Fanti and 
 ## Sub projects index
 Look for a readme file inside the project folders to more detailed explanation
 * __hdmi_out_test__, simple hdmi out test with colors (and an easter egg!)
-* __hdmi_passthrough__, we are trying to apply a simple filter on an input signal and then send it on the output
-* others... 
+* __hdmi_test_filter__, simple negative filter on an hdmi input that is then transmitted in output real-time
+* others... not all working or completed!
 
 # Generic guide to program the board (to be moved probably)
 
