@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_3" LaunchPart="xc7z020clg400-1" LaunchTime="1528319100">
+  <File Type="PA-TCL" Name="pass_through.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="pass_through_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="pass_through_reports.tcl"/>
+  <File Type="RDS-RDS" Name="pass_through.vds"/>
+  <File Type="RDS-UTIL" Name="pass_through_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="pass_through_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="pass_through.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pass_through_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="pass_through_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/DVI_Constants.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/DVI_Constants.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/rgb2dvi_v1_2/src/DVI_Constants.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../rgb2dvi_v1_2/src/DVI_Constants.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ChannelBond.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/ChannelBond.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/rgb2dvi_v1_2/src/ClockGen.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../rgb2dvi_v1_2/src/ClockGen.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncAsync.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/SyncAsync.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../rgb2dvi_v1_2/src/SyncAsync.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/GlitchFilter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/GlitchFilter.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TWI_SlaveCtl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/TWI_SlaveCtl.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/EEPROM_8b.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/InputSERDES.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../rgb2dvi_v1_2/src/OutputSERDES.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/PhaseAlign.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ResyncToBUFG.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/ResyncToBUFG.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncAsyncReset.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/SyncAsyncReset.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsyncReset.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../rgb2dvi_v1_2/src/SyncAsyncReset.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncBase.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/SyncBase.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/TMDS_Clocking.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/TMDS_Decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1527866100"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../rgb2dvi_v1_2/src/TMDS_Encoder.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../dvi2rgb_v1_7/src/dvi2rgb.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../rgb2dvi_v1_2/src/rgb2dvi.vhd"/>
+        <Attr Name="ImportTime" Val="1527866101"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pass_through.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="pass_through"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/docs/PYNQ-Z1_C.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../docs/PYNQ-Z1_C.xdc"/>
+        <Attr Name="ImportTime" Val="1526743662"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

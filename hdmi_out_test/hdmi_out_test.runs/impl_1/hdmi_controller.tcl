@@ -65,6 +65,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
   open_checkpoint hdmi_controller_routed.dcp
   set_property webtalk.parent_dir C:/Users/rinel/Desktop/computer_architecture_project/hdmi_out_test/hdmi_out_test.cache/wt [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun  6 23:06:15 2018
+# Process ID: 5172
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/test_hdmi_filter/test_hdmi_filter.runs/impl_3
+# Command line: vivado.exe -log pass_through.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pass_through.tcl -notrace
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/test_hdmi_filter/test_hdmi_filter.runs/impl_3/pass_through.vdi
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/test_hdmi_filter/test_hdmi_filter.runs/impl_3\vivado.jou
+#-----------------------------------------------------------
+source pass_through.tcl -notrace

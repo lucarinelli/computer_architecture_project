@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1526744078">
+  <File Type="PWROPT-DCP" Name="hdmi_controller_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="hdmi_controller_power_routed.rpt"/>
   <File Type="PA-TCL" Name="hdmi_controller.tcl"/>
-  <File Type="PWROPT-DCP" Name="hdmi_controller_pwropt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="hdmi_controller_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="hdmi_controller_reports.tcl"/>
   <File Type="BG-DRC" Name="hdmi_controller.drc"/>
-  <File Type="OPT-HWDEF" Name="hdmi_controller.hwdef"/>
   <File Type="OPT-DCP" Name="hdmi_controller_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="hdmi_controller.hwdef"/>
   <File Type="OPT-DRC" Name="hdmi_controller_drc_opted.rpt"/>
   <File Type="PLACE-DCP" Name="hdmi_controller_placed.dcp"/>
   <File Type="PLACE-IO" Name="hdmi_controller_io_placed.rpt"/>
@@ -23,22 +23,22 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_controller_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="hdmi_controller_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="hdmi_controller_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="hdmi_controller_drc_routed.rpx"/>
   <File Type="BITSTR-MSK" Name="hdmi_controller.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_controller_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="hdmi_controller_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="hdmi_controller.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_controller_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_controller_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-RBT" Name="hdmi_controller.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_controller_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_controller_methodology_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="hdmi_controller.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_controller_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="hdmi_controller_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="hdmi_controller_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="hdmi_controller_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="hdmi_controller_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="hdmi_controller_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="hdmi_controller_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-CLK" Name="hdmi_controller_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="hdmi_controller.vdi"/>
+  <File Type="ROUTE-CLK" Name="hdmi_controller_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="hdmi_controller_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hdmi_controller_postroute_physopt_bb.dcp"/>
   <File Type="BITSTR-NKY" Name="hdmi_controller.nky"/>

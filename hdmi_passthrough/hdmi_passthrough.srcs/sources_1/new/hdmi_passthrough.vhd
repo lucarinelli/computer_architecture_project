@@ -28,8 +28,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library UNISIM;
+use UNISIM.VComponents.all;
 
 entity hdmi_passthrough is
     Port (
@@ -40,7 +40,9 @@ entity hdmi_passthrough is
         
         hdmi_rx_hpd : out std_logic := '1';
         
-        led : out std_logic
+        led : out std_logic_vector(1 downto 0);
+        
+        sysclk : in std_logic
     );
 end hdmi_passthrough;
 
@@ -66,25 +68,46 @@ architecture Behavioral of hdmi_passthrough is
         );
     end component;
     
-    component clk_wiz_0 is
-        Port(
-            -- Clock out ports
-            clk_out1 : out std_logic;
-            clk_out2 : out std_logic;
-            -- Status and control signals
-            reset : in std_logic;
-            locked : out std_logic;
-            -- Clock in ports
-            clk_in1 : in std_logic
-        );
-    end component;
+    
     
     
     
     signal clk : std_logic := '0';
     signal clkx10 : std_logic := '0';
+    
+    signal chs : std_logic_vector(2 downto 0);
 
 begin
+
+--    --clock
+--    IBUFDS_clk : IBUFDS
+--        port map (
+--            O => clk,
+--            IB => hdmi_rx_clk_n,
+--            I => hdmi_rx_clk_p 
+--        );
+        
+    --  CHANNEL 0 (blue) 
+    IBUFDS_0b : IBUFDS
+        port map (
+            O => chs(0),
+            IB => hdmi_rx_d_n(0),
+            I => hdmi_rx_d_p(0)
+        );
+    --  CHANNEL 1 (green)
+    IBUFDS_1g : IBUFDS
+        port map (
+            O => chs(1),
+            IB => hdmi_rx_d_n(1),
+            I => hdmi_rx_d_p(1)
+        );
+    --  CHANNEL 2 (red)
+    IBUFDS_2r : IBUFDS
+        port map (
+            O => chs(2),
+            IB => hdmi_rx_d_n(2),
+            I => hdmi_rx_d_p(2)
+        );
     
     cw : clk_wiz_0 
         Port map(
@@ -95,22 +118,22 @@ begin
             reset => '0',
             --locked : out std_logic;
             -- Clock in ports
-            clk_in1 => hdmi_rx_clk_n
+            clk_in1 => sysclk
         );
         
     hr: hdmi_receiver
         Port map(
-            ch_in => hdmi_rx_d_p,
+            ch_in => chs,
             
             pixel_clock => clk,
             pixel_clock_x10 => clkx10,
             
             reset => '0',
             
-            --vsync : out std_logic := '0';
+            vsync => led(1),
             --hsync : out std_logic := '0';
             --rgb : out std_logic_vector (23 downto 0) := (others => '0');
-            rgb_valid => led
+            rgb_valid => led(0)
             --aux : out std_logic_vector (8 downto 0) := (others => '0');
             --aux_valid : out std_logic := '0';
             --raw_data : out std_logic_vector(29 downto 0) := (others => '0');

@@ -1,0 +1,191 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Wed May 30 23:34:02 2018
+| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file hdmi_passthrough_methodology_drc_routed.rpt -pb hdmi_passthrough_methodology_drc_routed.pb -rpx hdmi_passthrough_methodology_drc_routed.rpx
+| Design       : hdmi_passthrough
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 31
++-----------+----------+------------------------------------------------+------------+
+| Rule      | Severity | Description                                    | Violations |
++-----------+----------+------------------------------------------------+------------+
+| TIMING-6  | Warning  | No common primary clock between related clocks | 8          |
+| TIMING-16 | Warning  | Large setup violation                          | 23         |
++-----------+----------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0 and clk_out1_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_out1_clk_wiz_0_1]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0 and clk_out2_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_out2_clk_wiz_0_1]
+Related violations: <none>
+
+TIMING-6#3 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0_1 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0_1] -to [get_clocks clk_out1_clk_wiz_0]
+Related violations: <none>
+
+TIMING-6#4 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0_1 and clk_out2_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0_1] -to [get_clocks clk_out2_clk_wiz_0]
+Related violations: <none>
+
+TIMING-6#5 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_clk_wiz_0 and clk_out1_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0] -to [get_clocks clk_out1_clk_wiz_0_1]
+Related violations: <none>
+
+TIMING-6#6 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_clk_wiz_0 and clk_out2_clk_wiz_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0] -to [get_clocks clk_out2_clk_wiz_0_1]
+Related violations: <none>
+
+TIMING-6#7 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_clk_wiz_0_1 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0_1] -to [get_clocks clk_out1_clk_wiz_0]
+Related violations: <none>
+
+TIMING-6#8 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_clk_wiz_0_1 and clk_out2_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_clk_wiz_0_1] -to [get_clocks clk_out2_clk_wiz_0]
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.039 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/count_reg[3]/D (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.043 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[5]/CE (clocked by clk_out2_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.048 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/count_reg[0]/D (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.060 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[3]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.065 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/count_reg[2]/D (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.090 ns between hr/deserializes_gen[0].deserializer_inst/count_reg[0]/C (clocked by clk_out2_clk_wiz_0_1) and hr/deserializes_gen[0].deserializer_inst/internal_reg[7]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.124 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/count_reg[1]/D (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.149 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[0]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.189 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[6]/CE (clocked by clk_out2_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.232 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[0]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.232 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[2]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.232 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[4]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.232 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[5]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.232 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[7]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.232 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[8]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.312 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[4]/CE (clocked by clk_out2_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.317 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[1]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.317 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[3]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.317 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/d_out_reg[6]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.372 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[1]/CE (clocked by clk_out2_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.407 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[8]/CE (clocked by clk_out2_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.504 ns between hr/cur_reg_reg[resync]/C (clocked by clk_out1_clk_wiz_0) and hr/deserializes_gen[0].deserializer_inst/internal_reg[2]/CE (clocked by clk_out2_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.529 ns between hr/deserializes_gen[0].deserializer_inst/d_out_reg[1]/C (clocked by clk_out2_clk_wiz_0_1) and hr/cur_reg_reg[vsync]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+
