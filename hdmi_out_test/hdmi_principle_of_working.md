@@ -89,7 +89,7 @@ As I said before, the HDMI assumes -when fired up- a DVI interface is being
 used.
 
 The DVI interface when just turned on can only assume a pretty old, surpassed
-and pixel-prone resolution is available: 640x480 @60Hz with
+and I-can-see-the-pixels resolution is available: 640x480 @60Hz with
 pixel clock = 25.175MHz and horizontal frequency of 31.5KHz
 ([DVI spec.][dvispec], section 2.2.4.2)
 
@@ -103,8 +103,22 @@ This translates to an actual resolution of 800x525.
 <!--
 The algorithm in pseudo-code to transmit on the HDMI is then
 ```
-hsync
-for (45 times)
+init(){
+	x= -160;
+	y= -45;
+}
+when_pixclock_rising(){
+	if (x<=0 || x>= )
+		hsync= 0;
+	
+
+	// updating coordinates
+	x++;
+	if (x == 800){
+		x= 0;
+		y= (y+1)%525;
+	}
+}
 	
 ```
 -->
