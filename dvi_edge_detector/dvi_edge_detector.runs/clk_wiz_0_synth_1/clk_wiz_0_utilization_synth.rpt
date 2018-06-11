@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Jun 11 17:49:32 2018
+| Date         : Mon Jun 11 23:33:01 2018
 | Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file clk_wiz_0_utilization_synth.rpt -pb clk_wiz_0_utilization_synth.pb
 | Design       : clk_wiz_0
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |    0 |     0 |     53200 |  0.00 |
 |   LUT as Logic          |    0 |     0 |     53200 |  0.00 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |    0 |     0 |    106400 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |    106400 |  0.00 |
+| Slice Registers         |   16 |     0 |    106400 |  0.02 |
+|   Register as Flip Flop |   16 |     0 |    106400 |  0.02 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 16    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -113,12 +113,12 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
+| BUFGCTRL   |    3 |     0 |        32 |  9.38 |
 | BUFIO      |    0 |     0 |        16 |  0.00 |
-| MMCME2_ADV |    1 |     0 |         4 | 25.00 |
-| PLLE2_ADV  |    0 |     0 |         4 |  0.00 |
+| MMCME2_ADV |    0 |     0 |         4 |  0.00 |
+| PLLE2_ADV  |    1 |     0 |         4 | 25.00 |
 | BUFMRCE    |    0 |     0 |         8 |  0.00 |
-| BUFHCE     |    0 |     0 |        72 |  0.00 |
+| BUFHCE     |    2 |     0 |        72 |  2.78 |
 | BUFR       |    0 |     0 |        16 |  0.00 |
 +------------+------+-------+-----------+-------+
 
@@ -143,13 +143,16 @@ Table of Contents
 7. Primitives
 -------------
 
-+------------+------+---------------------+
-|  Ref Name  | Used | Functional Category |
-+------------+------+---------------------+
-| BUFG       |    2 |               Clock |
-| MMCME2_ADV |    1 |               Clock |
-| IBUF       |    1 |                  IO |
-+------------+------+---------------------+
++-----------+------+---------------------+
+|  Ref Name | Used | Functional Category |
++-----------+------+---------------------+
+| FDCE      |   16 |        Flop & Latch |
+| BUFH      |    2 |               Clock |
+| BUFGCTRL  |    2 |               Clock |
+| PLLE2_ADV |    1 |               Clock |
+| IBUF      |    1 |                  IO |
+| BUFG      |    1 |               Clock |
++-----------+------+---------------------+
 
 
 8. Black Boxes

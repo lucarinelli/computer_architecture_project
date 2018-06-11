@@ -76,6 +76,7 @@ architecture Behavioral of edge_detector_filter is
     component clk_wiz_0
         Port(
             RefClk200 : out std_logic;
+            MemClk : out std_logic;
             --Status and control signals
             reset : in std_logic;
             locked : out std_logic;
@@ -166,8 +167,54 @@ architecture Behavioral of edge_detector_filter is
         );
     end component;
     
+    component rgb2gray is
+        Port (
+            rgb : in STD_LOGIC_VECTOR (23 downto 0);
+            gray : out STD_LOGIC_VECTOR (7 downto 0);
+            clk : in std_logic
+        );
+    end component;
+    
+    component edge_matrix_applier
+        Generic(
+            counter_bit_size: natural := 11;
+            DEPTH: natural := 4;
+            WIDTH: natural := 1920
+        );
+        Port(
+            grey: in std_logic_vector(7 downto 0);
+            pixel_clock: in std_logic;
+            video_enable: in std_logic;
+            hsync: in std_logic;
+            vsync: in std_logic;
+            
+            bicolor_string: out std_logic_vector(15 downto 0);
+            bicolor_string_ready: out std_logic
+        );
+    end component;
+    
+    component blk_mem_gen_0
+        Port(
+            clka : IN STD_LOGIC;
+            ena : IN STD_LOGIC;
+            wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+            addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+            dina : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+            clkb : IN STD_LOGIC;
+            enb : IN STD_LOGIC;
+            addrb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+            doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+        );
+    end component;
+    
+    signal s_grey_vid : std_logic_vector(7 downto 0) := (others=>'0');
+    
+    signal s_bicolor_string: std_logic_vector(15 downto 0) := (others=>'0');
+    signal s_bicolor_string_ready : std_logic := '0';
+    --signal s_h_cnt_value : std_logic_vector(10 downto 0) := (others=>'0');
+    
     signal s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
-    signal ns_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
+    signal elaborated_s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
     signal s_vid_pVDE : std_logic;
     signal s_vid_pHSync : std_logic;
     signal s_vid_pVSync : std_logic;
@@ -176,6 +223,7 @@ architecture Behavioral of edge_detector_filter is
     signal s_SerialClk : std_logic; -- 5x PixelClk
     
     signal s_RefClk : std_logic; --200 MHz reference clock for IDELAYCTRL, reset, lock monitoring etc.
+    signal s_MemClk : std_logic; --150? MHz
     
     signal s_DDC_SDA_I : std_logic;
     signal s_DDC_SDA_O : std_logic;
@@ -189,13 +237,53 @@ architecture Behavioral of edge_detector_filter is
 
 begin
 
-    ns_vid_pData <= not s_vid_pData;
     led(0) <= s_vid_pVDE;
     led(1) <= not s_vid_pVDE;
+
+    filter: rgb2gray
+        Port map(
+            rgb => s_vid_pData,
+            gray => s_grey_vid,
+            clk => s_PixelClk
+        );
+        
+    ema: edge_matrix_applier
+        Generic map(
+            counter_bit_size => 11,
+            DEPTH => 4,
+            WIDTH => 1920
+        )
+        Port map(
+            grey => s_grey_vid,
+            pixel_clock => s_PixelClk,
+            video_enable => s_vid_pVDE,
+            hsync => s_vid_pHSync,
+            vsync => s_vid_pVSync,
+            
+            bicolor_string => s_bicolor_string,
+            bicolor_string_ready => s_bicolor_string_ready
+        );
+        
+    edges_matrix: blk_mem_gen_0
+        Port map(
+            clka => s_MemClk,
+            ena : IN STD_LOGIC;
+            wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+            addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+            dina : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+            clkb : s_MemClk,
+            enb : IN STD_LOGIC;
+            addrb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+            doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+        );
+    
+    elaborated_s_vid_pData <= s_grey_vid&s_grey_vid&s_grey_vid;
+    
     
     cw_ref: clk_wiz_0
             Port map(
                 RefClk200 => s_RefClk,
+                MemClk => s_MemClk,
                 --Status and control signals
                 reset => '0',
                 sysclk => sysclk
@@ -219,7 +307,7 @@ begin
             aRst_n => aRst_n, --asynchronous reset; must be reset when RefClk is not within spec
             
             -- Video in
-            vid_pData => ns_vid_pData,
+            vid_pData => elaborated_s_vid_pData,
             vid_pVDE => s_vid_pVDE,
             vid_pHSync => s_vid_pHSync,
             vid_pVSync => s_vid_pVSync,

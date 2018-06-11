@@ -44,7 +44,8 @@ architecture Behavioral of rgb2gray is
 begin
     process(clk) begin
         if(rising_edge(clk)) then
-            gray<= std_logic_vector(unsigned(rgb(7 downto 0)) + unsigned(rgb(15 downto 8)) + unsigned(rgb(23 downto 16)));
+            gray<= std_logic_vector(to_unsigned((to_integer(unsigned(rgb(7 downto 0))) + to_integer(unsigned(rgb(15 downto 8))) + to_integer(unsigned(rgb(23 downto 16))))/3,8));
+            --gray<= std_logic_vector((unsigned(rgb(7 downto 0)) + unsigned(rgb(15 downto 8)) + unsigned(rgb(23 downto 16)))/3);
         end if;
     end process;
 end Behavioral;

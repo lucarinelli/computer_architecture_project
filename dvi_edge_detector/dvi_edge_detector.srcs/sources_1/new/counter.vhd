@@ -34,7 +34,7 @@ use UNISIM.VComponents.all;
 
 entity counter is
     Generic (
-        bit_size : natural
+        bit_size : natural := 11
     );
     Port (
         inc : in STD_LOGIC;
@@ -47,17 +47,12 @@ architecture Behavioral of counter is
     signal count : natural range 0 to 2**(bit_size);
 begin
     value <= std_logic_vector(to_unsigned(count,bit_size));
-
-    process(rst)
-    begin
-        if rising_edge(rst) then
-            count <= 0;
-        end if;
-    end process;
     
-    process(inc)
+    process(rst,inc)
     begin
-        if rising_edge(rst) then
+        if rst='1' then
+                count <= 0;
+        elsif rising_edge(inc) then
             count <= count + 1;
         end if;
     end process;
