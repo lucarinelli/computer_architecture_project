@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jun 11 09:56:36 2018
+# Process ID: 5788
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/test_ram
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14576 C:\Users\rinel\Desktop\computer_architecture_project\test_ram\test_ram.xpr
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/test_ram/vivado.log
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/test_ram\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/rinel/Desktop/computer_architecture_project/test_ram/test_ram.xpr
+update_compile_order -fileset sources_1
