@@ -4,10 +4,12 @@
 -- 
 -- Create Date: 06/06/2018 03:59:56 PM
 -- Design Name: 
--- Module Name: BandW_converter - Behavioral
+-- Module Name: cyclo_storer - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
+-- Description V2: receives a signal in input, stores it in RAM using cycling
+--                 indexes
 -- Description: receives a single pixel in input, converts it in black & white,
 -- then stores it in memory
 -- color:       color in input
@@ -43,25 +45,27 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity BandW_converter is
+entity cyclo_storer is
     generic(
-        -- base address to use when writing to ram
-        BASE_ADDR : unsigned(9 downto 0):= "0000000000"
+        ADDR_WIDTH : natural := 16;     -- address bus width
+        DATA_WIDTH : natural := 8;      -- data bus width
+        BASE_ADDR  : std_logic_vector(integer range <>); -- base address to write to RAM
+        ROW_NUM    : natural := 8;      -- number of rows
+        ROW_LEN    : natural := 1920;   -- length of each row
     );
-    Port (
-        pix_clk : in std_logic;
-        color : in std_logic_vector (23 downto 0);
-        store_enable: in std_logic;
-        sync: in std_logic;
-        abus: out std_logic_vector(9 downto 0);
-        dout : out std_logic_vector(7 downto 0);
-        d_ready : out std_logic := '0'
-    );
-end BandW_converter;
+    port(
+        clk : in std_logic; -- clock
 
+        -- to be linked to RAM
+        abus : in std_logic_vector(ADDR_WIDTH-1 downto 0);
+        dout : in std_logic_vector(DATA_WIDTH-1 downto 0);
+        ready : out std_logic:= '0'; -- '1'-> data is ready to be stored on RAM
 
+        wr_en : in std_logic:= '0' -- write enable (on RAM) (keeping this low is like zeroing clk)
+    )
+end cyclo_storer;
 
-architecture Behavioral of BandW_converter is
+architecture Behavioral of cyclo_storer is
     type byte_array is array (integer range <>) of std_logic_vector(7 downto 0);
 
     signal addr : unsigned(9 downto 0):= "0000000000";
@@ -85,5 +89,5 @@ begin
     end process;
 end Behavioral;
 
---vim:tabstop=4 shiftwidth=4
---vim:expandtab
+-- vim:tabstop=4 shiftwidth=4
+-- vim:expandtab

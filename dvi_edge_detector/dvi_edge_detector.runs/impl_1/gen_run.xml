@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1528298826">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1528384712">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="dual_port_ram.drc"/>
   <File Type="BG-BGN" Name="dual_port_ram.bgn"/>
@@ -26,43 +26,43 @@
   <File Type="ROUTE-STATUS-PB" Name="dual_port_ram_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="dual_port_ram_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="dual_port_ram_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="dual_port_ram_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="dual_port_ram_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dual_port_ram_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dual_port_ram_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="dual_port_ram_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="dual_port_ram_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="dual_port_ram_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="dual_port_ram_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="dual_port_ram_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="dual_port_ram_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="dual_port_ram_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="dual_port_ram_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="dual_port_ram_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="dual_port_ram_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="dual_port_ram_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="dual_port_ram_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="dual_port_ram_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="dual_port_ram_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="dual_port_ram_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="dual_port_ram_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="dual_port_ram_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="dual_port_ram_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="dual_port_ram_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="dual_port_ram_io_placed.rpt"/>
   <File Type="RDI-RDI" Name="dual_port_ram.vdi"/>
   <File Type="PWROPT-TIMING" Name="dual_port_ram_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="dual_port_ram_utilization_placed.pb"/>
-  <File Type="PHYSOPT-TIMING" Name="dual_port_ram_timing_summary_physopted.rpt"/>
   <File Type="PWROPT-DRC" Name="dual_port_ram_drc_pwropted.rpt"/>
-  <File Type="PLACE-UTIL" Name="dual_port_ram_utilization_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="dual_port_ram_timing_summary_postplace_pwropted.rpt"/>
   <File Type="OPT-TIMING" Name="dual_port_ram_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="dual_port_ram.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="dual_port_ram_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="dual_port_ram_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="dual_port_ram_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="dual_port_ram_timing_summary_init.rpt"/>
   <File Type="PWROPT-DCP" Name="dual_port_ram_pwropt.dcp"/>
   <File Type="REPORTS-TCL" Name="dual_port_ram_reports.tcl"/>
-  <File Type="OPT-DCP" Name="dual_port_ram_opt.dcp"/>
   <File Type="PLACE-DCP" Name="dual_port_ram_placed.dcp"/>
   <File Type="PA-TCL" Name="dual_port_ram.tcl"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="dual_port_ram_methodology_drc_opted.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="dual_port_ram_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="dual_port_ram_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="dual_port_ram_timing_summary_placed.rpt"/>
-  <File Type="INIT-TIMING" Name="dual_port_ram_timing_summary_init.rpt"/>
-  <File Type="OPT-DRC" Name="dual_port_ram_drc_opted.rpt"/>
-  <File Type="PLACE-CTRL" Name="dual_port_ram_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="dual_port_ram_incremental_reuse_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="dual_port_ram_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="dual_port_ram_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="dual_port_ram_drc_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="dual_port_ram_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="dual_port_ram_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="dual_port_ram_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="dual_port_ram_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="dual_port_ram_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="dual_port_ram_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dual_port_ram_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="dual_port_ram_drc_routed.rpx"/>
-  <File Type="ROUTE-PWR" Name="dual_port_ram_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dual_port_ram_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="dual_port_ram_power_summary_routed.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/dual_port_ram.vhd">
@@ -80,6 +80,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/edge_filter.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="dual_port_ram"/>
@@ -93,9 +100,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
