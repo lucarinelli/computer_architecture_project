@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1528298743">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1528384712">
+  <File Type="VDS-TIMING-PB" Name="dual_port_ram_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="dual_port_ram_timing_summary_synth.rpt"/>
+>>>>>>> e9d3328018a97bf465d508d760c30077dcbf9afd
   <File Type="RDS-DCP" Name="dual_port_ram.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="dual_port_ram_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="dual_port_ram_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="dual_port_ram_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="dual_port_ram.vds"/>
   <File Type="REPORTS-TCL" Name="dual_port_ram_reports.tcl"/>
   <File Type="PA-TCL" Name="dual_port_ram.tcl"/>
+<<<<<<< HEAD
   <File Type="RDS-RDS" Name="dual_port_ram.vds"/>
+=======
+>>>>>>> e9d3328018a97bf465d508d760c30077dcbf9afd
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/dual_port_ram.vhd">
@@ -17,6 +30,13 @@
     <File Path="$PSRCDIR/sources_1/new/BandW_converter.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/edge_filter.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

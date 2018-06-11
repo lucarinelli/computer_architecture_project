@@ -9,8 +9,8 @@ use IEEE.math_real."log2";
 entity dual_port_ram is
     generic (
         -- default: 1 Kilobyte in bytes
-        WIDTH       : natural := 8;
-        DEPTH       : natural := 1024;
+        WIDTH       : natural := 16;
+        DEPTH       : natural := 20040;
         WRITE_FIRST : boolean := true
     );
     port (
