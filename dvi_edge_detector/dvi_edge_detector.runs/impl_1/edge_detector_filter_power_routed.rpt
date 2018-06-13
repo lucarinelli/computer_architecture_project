@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Mon Jun 11 20:05:11 2018
+| Date             : Wed Jun 13 21:50:56 2018
 | Host             : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command          : report_power -file edge_detector_filter_power_routed.rpt -pb edge_detector_filter_power_summary_routed.pb -rpx edge_detector_filter_power_routed.rpx
 | Design           : edge_detector_filter
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.372        |
+| Total On-Chip Power (W)  | 0.378        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.265        |
+| Dynamic (W)              | 0.271        |
 | Device Static (W)        | 0.107        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.7         |
-| Junction Temperature (C) | 29.3         |
+| Max Ambient (C)          | 80.6         |
+| Junction Temperature (C) | 29.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.006 |        8 |       --- |             --- |
-| Slice Logic              |     0.002 |     1393 |       --- |             --- |
-|   LUT as Logic           |     0.002 |      482 |     53200 |            0.91 |
-|   Register               |    <0.001 |      594 |    106400 |            0.56 |
+| Clocks                   |     0.005 |        8 |       --- |             --- |
+| Slice Logic              |     0.001 |     1401 |       --- |             --- |
+|   LUT as Logic           |     0.001 |      479 |     53200 |            0.90 |
 |   CARRY4                 |    <0.001 |       21 |     13300 |            0.16 |
+|   Register               |    <0.001 |      598 |    106400 |            0.56 |
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
-|   F7/F8 Muxes            |    <0.001 |       12 |     53200 |            0.02 |
+|   F7/F8 Muxes            |    <0.001 |       14 |     53200 |            0.03 |
 |   Others                 |    <0.001 |      102 |       --- |             --- |
 |   BUFR                   |     0.000 |        1 |        88 |            1.14 |
-|   LUT as Shift Register  |     0.000 |        2 |     17400 |            0.01 |
-| Signals                  |     0.002 |     1017 |       --- |             --- |
+| Signals                  |     0.001 |     1029 |       --- |             --- |
 | MMCM                     |     0.114 |        2 |         4 |           50.00 |
-| PLL                      |     0.110 |        1 |         4 |           25.00 |
+| PLL                      |     0.118 |        1 |         4 |           25.00 |
 | I/O                      |     0.032 |       22 |       125 |           17.60 |
 | Static Power             |     0.107 |          |           |                 |
-| Total                    |     0.372 |          |           |                 |
+| Total                    |     0.378 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,8 +77,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.023 |      0.008 |
-| Vccaux    |       1.800 |     0.146 |       0.135 |      0.011 |
+| Vccint    |       1.000 |     0.029 |       0.021 |      0.008 |
+| Vccaux    |       1.800 |     0.150 |       0.139 |      0.011 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -143,8 +142,8 @@ Table of Contents
 +-----------------------+---------------------------------+-----------------+
 | RefClk200_clk_wiz_0   | cw_ref/inst/RefClk200_clk_wiz_0 |             5.0 |
 | RefClk200_clk_wiz_0_1 | cw_ref/inst/RefClk200_clk_wiz_0 |             5.0 |
-| clkfbout_clk_wiz_0    | cw_ref/inst/clkfbout_clk_wiz_0  |             8.0 |
-| clkfbout_clk_wiz_0_1  | cw_ref/inst/clkfbout_clk_wiz_0  |             8.0 |
+| clkfbout_clk_wiz_0    | cw_ref/inst/clkfbout_clk_wiz_0  |            40.0 |
+| clkfbout_clk_wiz_0_1  | cw_ref/inst/clkfbout_clk_wiz_0  |            40.0 |
 | sys_clk_pin           | sysclk                          |             8.0 |
 | sysclk                | sysclk                          |             8.0 |
 +-----------------------+---------------------------------+-----------------+
@@ -159,9 +158,9 @@ Table of Contents
 +------------------------------------+-----------+
 | Name                               | Power (W) |
 +------------------------------------+-----------+
-| edge_detector_filter               |     0.265 |
-|   cw_ref                           |     0.111 |
-|     inst                           |     0.111 |
+| edge_detector_filter               |     0.271 |
+|   cw_ref                           |     0.118 |
+|     inst                           |     0.118 |
 |   filter                           |     0.000 |
 |   hdmiin                           |     0.097 |
 |     DataDecoders[0].DecoderX       |     0.011 |

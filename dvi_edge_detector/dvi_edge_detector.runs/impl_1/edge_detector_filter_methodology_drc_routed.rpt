@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Jun 11 20:05:09 2018
+| Date         : Wed Jun 13 21:50:54 2018
 | Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file edge_detector_filter_methodology_drc_routed.rpt -pb edge_detector_filter_methodology_drc_routed.pb -rpx edge_detector_filter_methodology_drc_routed.rpx
 | Design       : edge_detector_filter
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 504
+             Violations found: 506
 +-----------+----------+------------------------------------------------+------------+
 | Rule      | Severity | Description                                    | Violations |
 +-----------+----------+------------------------------------------------+------------+
 | CKBF-1    | Warning  | connects_I_driver_BUFR                         | 1          |
 | TIMING-6  | Warning  | No common primary clock between related clocks | 2          |
-| TIMING-17 | Warning  | Non-clocked sequential cell                    | 500        |
+| TIMING-17 | Warning  | Non-clocked sequential cell                    | 502        |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects    | 1          |
 +-----------+----------+------------------------------------------------+------------+
 
@@ -2052,500 +2052,510 @@ Related violations: <none>
 
 TIMING-17#401 Warning
 Non-clocked sequential cell  
-The clock pin hdmiin/GenerateBUFG.ResyncToBUFG_X/poVDE_reg/C is not reached by a timing clock
+The clock pin hdmiin/GenerateBUFG.ResyncToBUFG_X/poHSync_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#402 Warning
 Non-clocked sequential cell  
-The clock pin hdmiin/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C is not reached by a timing clock
+The clock pin hdmiin/GenerateBUFG.ResyncToBUFG_X/poVDE_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#403 Warning
 Non-clocked sequential cell  
-The clock pin hdmiin/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/C is not reached by a timing clock
+The clock pin hdmiin/GenerateBUFG.ResyncToBUFG_X/poVSync_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#404 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C is not reached by a timing clock
+The clock pin hdmiin/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#405 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/C is not reached by a timing clock
+The clock pin hdmiin/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#406 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/PLL_LockSyncAsync/oSyncStages_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#407 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/PLL_LockSyncAsync/oSyncStages_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#408 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/pLockWasLost_reg/C is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/PLL_LockSyncAsync/oSyncStages_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#409 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/pLocked_q_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/PLL_LockSyncAsync/oSyncStages_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#410 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/pLocked_q_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/pLockWasLost_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#411 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockGenInternal.ClockGenX/pLocked_q_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/pLocked_q_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#412 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockSerializer/SerializerMaster/CLK is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/pLocked_q_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#413 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/ClockGenInternal.ClockGenX/pLocked_q_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#414 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/ClockSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/ClockSerializer/SerializerMaster/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#415 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/ClockSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#416 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/ClockSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#417 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#418 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#419 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pC0_1_reg_srl2/CLK is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#420 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pC0_2_reg/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#421 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pC1_1_reg_srl2/CLK is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pC0_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#422 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pC1_2_reg/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pC0_2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#423 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pC1_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#424 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pC1_2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#425 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#426 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#427 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#428 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[5]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#429 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[6]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#430 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[7]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#431 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[8]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#432 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[9]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#433 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pVde_1_reg/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#434 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataEncoder/pVde_2_reg/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#435 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataSerializer/SerializerMaster/CLK is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pVde_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#436 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataEncoder/pVde_2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#437 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[0].DataSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataSerializer/SerializerMaster/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#438 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#439 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[0].DataSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#440 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#441 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#442 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#443 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#444 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#445 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#446 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#447 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[5]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#448 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[6]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#449 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[7]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#450 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[9]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#451 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataSerializer/SerializerMaster/CLK is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#452 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataEncoder/pDataOutRaw_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#453 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[1].DataSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataSerializer/SerializerMaster/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#454 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#455 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[1].DataSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#456 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#457 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#458 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#459 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#460 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#461 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#462 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#463 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#464 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#465 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#466 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#467 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#468 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#469 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#470 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#471 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#472 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#473 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#474 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[5]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#475 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[6]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#476 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[7]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#477 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[8]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#478 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[9]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#479 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#480 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOutRaw_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#481 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#482 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#483 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#484 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[5]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#485 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[6]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#486 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[7]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#487 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#488 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[1]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#489 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[2]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#490 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[3]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#491 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[4]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#492 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[5]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#493 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[6]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#494 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[7]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#495 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[8]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#496 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataSerializer/SerializerMaster/CLK is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#497 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#498 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/DataEncoders[2].DataSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataSerializer/SerializerMaster/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#499 Warning
 Non-clocked sequential cell  
-The clock pin hdmiout/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C is not reached by a timing clock
+The clock pin hdmiout/DataEncoders[2].DataSerializer/SerializerMaster/CLKDIV is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#500 Warning
+Non-clocked sequential cell  
+The clock pin hdmiout/DataEncoders[2].DataSerializer/SerializerSlave/CLKDIV is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#501 Warning
+Non-clocked sequential cell  
+The clock pin hdmiout/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#502 Warning
 Non-clocked sequential cell  
 The clock pin hdmiout/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/C is not reached by a timing clock
 Related violations: <none>

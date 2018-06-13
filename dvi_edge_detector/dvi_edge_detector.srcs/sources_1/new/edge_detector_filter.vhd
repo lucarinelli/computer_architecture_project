@@ -179,7 +179,9 @@ architecture Behavioral of edge_detector_filter is
         Generic(
             counter_bit_size: natural := 11;
             DEPTH: natural := 4;
-            WIDTH: natural := 1920
+            WIDTH: natural := 1920;
+            RES_HEIGHT: natural := 1080;
+            THRESHOLD: natural := 4900
         );
         Port(
             grey: in std_logic_vector(7 downto 0);
@@ -188,9 +190,35 @@ architecture Behavioral of edge_detector_filter is
             hsync: in std_logic;
             vsync: in std_logic;
             
-            bicolor_string: out std_logic_vector(15 downto 0);
-            bicolor_string_ready: out std_logic
+            bicolor: out std_logic;
+            bicolor_ready: out std_logic
         );
+    end component;
+    
+    component deserializer
+        Generic(
+            WIDTH : natural := 32
+        );
+        Port (
+            d_in : in std_logic;
+            d_out : out std_logic_vector(WIDTH-1 downto 0);
+            d_out_valid : out std_logic := '0';
+            reset : in std_logic;
+            pixel_clock : in std_logic;
+            d_in_valid : in std_logic
+        );
+    end component;
+    
+    component memory_addr_calc
+        generic (
+            BLOCK_NUM : natural := 60
+        );
+        Port ( row_start : in STD_LOGIC; -- 1 -> row is starting
+               idx_reset : in STD_LOGIC; -- resets indexes (active low)
+               valid : in STD_LOGIC; -- 1 when word is ready
+               wena : out STD_LOGIC; -- write enable
+               addr : out STD_LOGIC_VECTOR (15 downto 0);
+               clk : in std_logic);
     end component;
     
     component blk_mem_gen_0
@@ -202,16 +230,15 @@ architecture Behavioral of edge_detector_filter is
             dina : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
             clkb : IN STD_LOGIC;
             enb : IN STD_LOGIC;
-            addrb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-            doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+            addrb : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+            doutb : OUT STD_LOGIC_VECTOR(127 DOWNTO 0)
         );
     end component;
     
     signal s_grey_vid : std_logic_vector(7 downto 0) := (others=>'0');
     
-    signal s_bicolor_string: std_logic_vector(15 downto 0) := (others=>'0');
-    signal s_bicolor_string_ready : std_logic := '0';
-    --signal s_h_cnt_value : std_logic_vector(10 downto 0) := (others=>'0');
+    signal s_bicolor: std_logic := '0';
+    signal s_bicolor_ready : std_logic := '0';
     
     signal s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
     signal elaborated_s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
@@ -224,6 +251,12 @@ architecture Behavioral of edge_detector_filter is
     
     signal s_RefClk : std_logic; --200 MHz reference clock for IDELAYCTRL, reset, lock monitoring etc.
     signal s_MemClk : std_logic; --150? MHz
+    
+    signal s_bicolor_deser : std_logic_vector(31 downto 0);
+    signal s_bicolor_deser_valid : std_logic;
+    
+    signal s_waddr_bram : std_logic_vector(15 downto 0);
+    signal s_write_bram : std_logic;
     
     signal s_DDC_SDA_I : std_logic;
     signal s_DDC_SDA_O : std_logic;
@@ -260,21 +293,47 @@ begin
             hsync => s_vid_pHSync,
             vsync => s_vid_pVSync,
             
-            bicolor_string => s_bicolor_string,
-            bicolor_string_ready => s_bicolor_string_ready
+            bicolor => s_bicolor,
+            bicolor_ready => s_bicolor_ready
         );
         
+    des: deserializer
+        Generic map(
+            WIDTH => 32
+        )
+        Port map(
+            d_in => s_bicolor,
+            d_out => s_bicolor_deser,
+            d_out_valid => s_bicolor_deser_valid,
+            reset => '0',
+            pixel_clock => s_PixelClk,
+            d_in_valid => s_bicolor_ready
+        );
+    
+    addresser : memory_addr_calc
+            generic map(
+                BLOCK_NUM=> 60
+            )
+            Port map (
+               row_start => s_vid_pHSync,
+               idx_reset => s_vid_pVSync,
+               valid => s_bicolor_deser_valid, 
+               wena => s_write_bram,
+               addr => s_waddr_bram,
+               clk => s_PixelClk
+            );
+    
     edges_matrix: blk_mem_gen_0
         Port map(
             clka => s_MemClk,
-            ena : IN STD_LOGIC;
-            wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-            addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-            dina : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-            clkb : s_MemClk,
-            enb : IN STD_LOGIC;
-            addrb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-            doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+            ena => s_write_bram,
+            wea => "1",
+            addra => s_waddr_bram,
+            dina => s_bicolor_deser,
+            clkb => s_MemClk,
+            enb => '0',
+            addrb => (others => '0')
+            --doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
         );
     
     elaborated_s_vid_pData <= s_grey_vid&s_grey_vid&s_grey_vid;

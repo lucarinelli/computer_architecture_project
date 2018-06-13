@@ -12,11 +12,11 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # XDC: The top module name and the constraint reference have the same name: 'clk_wiz_0'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
-# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
+# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc
 # XDC: The top module name and the constraint reference have the same name: 'clk_wiz_0'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
-# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc
+# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'clk_wiz_0'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
@@ -31,10 +31,10 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # XDC: The top module name and the constraint reference have the same name: 'clk_wiz_0'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
-# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
+# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc
 # XDC: The top module name and the constraint reference have the same name: 'clk_wiz_0'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 
-# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc
+# XDC: c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'clk_wiz_0'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet

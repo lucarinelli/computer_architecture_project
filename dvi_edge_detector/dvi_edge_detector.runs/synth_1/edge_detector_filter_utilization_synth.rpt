@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Jun 11 20:03:13 2018
+| Date         : Wed Jun 13 21:49:03 2018
 | Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file edge_detector_filter_utilization_synth.rpt -pb edge_detector_filter_utilization_synth.pb
 | Design       : edge_detector_filter
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  514 |     0 |     53200 |  0.97 |
-|   LUT as Logic             |  488 |     0 |     53200 |  0.92 |
-|   LUT as Memory            |   26 |     0 |     17400 |  0.15 |
+| Slice LUTs*                | 1498 |     0 |     53200 |  2.82 |
+|   LUT as Logic             | 1474 |     0 |     53200 |  2.77 |
+|   LUT as Memory            |   24 |     0 |     17400 |  0.14 |
 |     LUT as Distributed RAM |   24 |     0 |           |       |
-|     LUT as Shift Register  |    2 |     0 |           |       |
-| Slice Registers            |  586 |     0 |    106400 |  0.55 |
-|   Register as Flip Flop    |  586 |     0 |    106400 |  0.55 |
-|   Register as Latch        |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |   12 |     0 |     26600 |  0.05 |
+|     LUT as Shift Register  |    0 |     0 |           |       |
+| Slice Registers            |  959 |     0 |    106400 |  0.90 |
+|   Register as Flip Flop    |  703 |     0 |    106400 |  0.66 |
+|   Register as Latch        |  256 |     0 |    106400 |  0.24 |
+| F7 Muxes                   |   15 |     0 |     26600 |  0.06 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 28    |          Yes |           - |          Set |
-| 10    |          Yes |           - |        Reset |
-| 26    |          Yes |         Set |            - |
-| 522   |          Yes |       Reset |            - |
+| 266   |          Yes |           - |        Reset |
+| 38    |          Yes |         Set |            - |
+| 627   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -79,11 +79,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |       220 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    5 |     0 |       220 |  2.27 |
+|   DSP48E1 only |    5 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -118,7 +119,7 @@ Table of Contents
 +--------------+------+-------+-----------+-------+
 |   Site Type  | Used | Fixed | Available | Util% |
 +--------------+------+-------+-----------+-------+
-| BUFGCTRL     |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL     |    2 |     0 |        32 |  6.25 |
 | BUFIO        |    1 |     0 |        16 |  6.25 |
 |   BUFIO only |    1 |     0 |           |       |
 | MMCME2_ADV   |    2 |     0 |         4 | 50.00 |
@@ -152,45 +153,47 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  522 |        Flop & Latch |
-| LUT6       |  204 |                 LUT |
-| LUT3       |  112 |                 LUT |
-| LUT5       |  104 |                 LUT |
-| LUT4       |  100 |                 LUT |
-| LUT2       |   66 |                 LUT |
+| FDRE       |  627 |        Flop & Latch |
+| LUT6       |  585 |                 LUT |
+| LUT5       |  495 |                 LUT |
+| LDCE       |  256 |        Flop & Latch |
+| LUT2       |  201 |                 LUT |
+| LUT3       |  199 |                 LUT |
+| LUT4       |  160 |                 LUT |
+| CARRY4     |   76 |          CarryLogic |
+| LUT1       |   44 |                 LUT |
+| FDSE       |   38 |        Flop & Latch |
 | RAMD32     |   36 |  Distributed Memory |
-| LUT1       |   28 |                 LUT |
 | FDPE       |   28 |        Flop & Latch |
-| FDSE       |   26 |        Flop & Latch |
-| CARRY4     |   21 |          CarryLogic |
+| MUXF7      |   15 |               MuxFx |
 | RAMS32     |   12 |  Distributed Memory |
-| MUXF7      |   12 |               MuxFx |
 | FDCE       |   10 |        Flop & Latch |
 | OSERDESE2  |    8 |                  IO |
 | ISERDESE2  |    6 |                  IO |
+| DSP48E1    |    5 |    Block Arithmetic |
 | OBUFDS     |    4 |                  IO |
 | IBUFDS     |    4 |                  IO |
 | OBUF       |    3 |                  IO |
 | IDELAYE2   |    3 |                  IO |
-| SRL16E     |    2 |  Distributed Memory |
 | OBUFT      |    2 |                  IO |
 | MMCME2_ADV |    2 |               Clock |
 | IBUF       |    2 |                  IO |
+| BUFG       |    2 |               Clock |
 | IDELAYCTRL |    1 |                  IO |
 | BUFR       |    1 |               Clock |
 | BUFIO      |    1 |               Clock |
-| BUFG       |    1 |               Clock |
 +------------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+-----------+------+
-|  Ref Name | Used |
-+-----------+------+
-| clk_wiz_0 |    1 |
-+-----------+------+
++---------------+------+
+|    Ref Name   | Used |
++---------------+------+
+| clk_wiz_0     |    1 |
+| blk_mem_gen_0 |    1 |
++---------------+------+
 
 
 9. Instantiated Netlists

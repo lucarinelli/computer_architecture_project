@@ -36,7 +36,8 @@ entity edge_matrix_applier is
         counter_bit_size: natural := 11;
         DEPTH: natural := 4;
         WIDTH: natural := 1920;
-        RES_HEIGHT: natural := 1080
+        RES_HEIGHT: natural := 1080;
+        THRESHOLD: natural := 4900
     );
     Port(
         grey: in std_logic_vector(7 downto 0);
@@ -45,10 +46,8 @@ entity edge_matrix_applier is
         hsync: in std_logic;
         vsync: in std_logic;
         
-        bicolor_string: out std_logic_vector(31 downto 0);
-        bicolor_string_ready: out std_logic;
-        bicolor_x_start : out natural range 0 to WIDTH;
-        bicolor_y : out natural range 0 to RES_HEIGHT
+        bicolor: out std_logic;
+        bicolor_ready: out std_logic
     );
 end edge_matrix_applier;
 
@@ -80,6 +79,7 @@ architecture Behavioral of edge_matrix_applier is
         y => 0,
         filling => 0,
         computing => 0
+        
     );
 
     type ram_type is
@@ -91,7 +91,18 @@ architecture Behavioral of edge_matrix_applier is
     signal curr_reg : reg_type := reg_type_def;
     signal next_reg : reg_type := reg_type_def;
     
-    signal s_bicolor_string: std_logic_vector(15 downto 0) := (others=>'0');
+    function sobel_x (ram: ram_type; x: natural; y: natural range 0 to 3) return integer is
+    begin
+        return to_integer(unsigned(ram(x+1,y+1)))+to_integer(unsigned(ram(x+1,y)))*2+to_integer(unsigned(ram(x+1,y-1)))
+               -to_integer(unsigned(ram(x-1,y-1)))-to_integer(unsigned(ram(x-1,y)))*2-to_integer(unsigned(ram(x-1,y+1)));
+    end function;
+    
+    function sobel_y (ram: ram_type; x: natural; y: natural range 0 to 3) return integer is
+    begin
+        return to_integer(unsigned(ram(x+1,y+1)))+to_integer(unsigned(ram(x,y+1)))*2+to_integer(unsigned(ram(x-1,y+1)))
+               -to_integer(unsigned(ram(x+1,y-1)))-to_integer(unsigned(ram(x,y-1)))*2-to_integer(unsigned(ram(x-1,y-1)));
+    end function;
+    
      
 begin
 
@@ -185,14 +196,69 @@ begin
     
     compute_proc: process(curr_reg.state)
         --buffer/deserializer -> memory
+--        bicolor_string: out std_logic_vector(31 downto 0);
+--        bicolor_string_ready: out std_logic;
+--        bicolor_x_start : out natural range 0 to WIDTH;
+--        bicolor_y : out natural range 0 to RES_HEIGHT
+        variable result : natural;
+        variable xcomp : natural;
+        variable ycomp : natural;
+        variable buff_i : natural;
     begin
+        
         case curr_reg.state is
             when WAIT_AFTER_FIRST =>
+                    if xcomp > WIDTH-1 then
+                        xcomp := 0;
+                    end if;
+                    result := sobel_x(ram,xcomp,curr_reg.computing)**2+sobel_y(ram,xcomp,curr_reg.computing)**2;
+                    if result > THRESHOLD then
+                        bicolor<= '1';
+                    else 
+                        bicolor<= '0';
+                    end if;
+                    bicolor_ready<='1';
+                    xcomp := xcomp+1;
             when FILL_AND_COMPUTE =>
+                    if xcomp < WIDTH then
+                        result := sobel_x(ram,xcomp,curr_reg.computing)**2+sobel_y(ram,xcomp,curr_reg.computing)**2;
+                        if result > THRESHOLD then
+                            bicolor<= '1';
+                        else 
+                            bicolor<= '0';
+                        end if;
+                        xcomp := xcomp+1;
+                        ycomp := ycomp+1;
+                    else bicolor_ready<='0';
+                    end if;
             when WAIT_NORMAL_CASE =>
+                if xcomp > WIDTH-1 then
+                    xcomp := 0;
+                end if;
+                result := sobel_x(ram,xcomp,curr_reg.computing)**2+sobel_y(ram,xcomp,curr_reg.computing)**2;
+                if result > THRESHOLD then
+                    bicolor<= '1';
+                else 
+                    bicolor<= '0';
+                end if;
+                bicolor_ready<='1';
+                xcomp := xcomp+1;
             when COMPUTE_FILL_ZERO =>
+                if xcomp < WIDTH and ycomp < RES_HEIGHT then
+                    result := sobel_x(ram,xcomp,curr_reg.computing)**2+sobel_y(ram,xcomp,curr_reg.computing)**2;
+                    if result > THRESHOLD then
+                        bicolor<= '1';
+                    else 
+                        bicolor<= '0';
+                    end if;
+                    xcomp := xcomp+1;
+                    ycomp := ycomp+1;
+                else bicolor_ready<='0';
+                end if;
             when others =>
-                
+                xcomp := 0;
+                ycomp := 0;
+                buff_i :=0;
         end case;
     end process;
     
