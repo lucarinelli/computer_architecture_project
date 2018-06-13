@@ -1,5 +1,9 @@
 # Computer Architecture Project (No better name yet)
-This is the git repository containing most of the work done by Andrea Fanti and Luca Rinelli for the Computer Architecture course project
+This is the git repository containing most of the work done by Andrea Fanti and Luca Rinelli for the Computer Architecture course project. We are using a PYNQ-Z1 by Digilent, based on the Xilinx Zynq-7000.
+
+## "Real-time" edge detection (HDMI/DVI passthrough) 
+The goal is to take the stream from the HDMI IN, retransmit it on the HDMI OUT in real time and at the same time perform the edge detection using Sobel operator, the result of the edge detection are showed on the frame immediately after the one on which it is computed. See the folder __dvi_edge_detector__.
+* Missing for testing: component to read the memory and decide what to stream in output.
 
 ## Sub projects index
 Look for a readme file inside the project folders to more detailed explanation
