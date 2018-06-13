@@ -1,4 +1,4 @@
-# Computer Architecture Project (No better name yet)
+# Computer Architecture Project
 This is the git repository containing most of the work done by Andrea Fanti and Luca Rinelli for the Computer Architecture course project. We are using a PYNQ-Z1 by Digilent, based on the Xilinx Zynq-7000.
 
 ## "Real-time" edge detection (HDMI/DVI passthrough) 
