@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Wed Jun 13 21:49:03 2018
+| Date         : Thu Jun 14 01:13:48 2018
 | Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file edge_detector_filter_utilization_synth.rpt -pb edge_detector_filter_utilization_synth.pb
 | Design       : edge_detector_filter
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1498 |     0 |     53200 |  2.82 |
-|   LUT as Logic             | 1474 |     0 |     53200 |  2.77 |
+| Slice LUTs*                | 1660 |     0 |     53200 |  3.12 |
+|   LUT as Logic             | 1636 |     0 |     53200 |  3.08 |
 |   LUT as Memory            |   24 |     0 |     17400 |  0.14 |
 |     LUT as Distributed RAM |   24 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  959 |     0 |    106400 |  0.90 |
-|   Register as Flip Flop    |  703 |     0 |    106400 |  0.66 |
-|   Register as Latch        |  256 |     0 |    106400 |  0.24 |
-| F7 Muxes                   |   15 |     0 |     26600 |  0.06 |
-| F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
+| Slice Registers            | 1371 |     0 |    106400 |  1.29 |
+|   Register as Flip Flop    |  789 |     0 |    106400 |  0.74 |
+|   Register as Latch        |  582 |     0 |    106400 |  0.55 |
+| F7 Muxes                   |   47 |     0 |     26600 |  0.18 |
+| F8 Muxes                   |   17 |     0 |     13300 |  0.13 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 28    |          Yes |           - |          Set |
-| 266   |          Yes |           - |        Reset |
-| 38    |          Yes |         Set |            - |
-| 627   |          Yes |       Reset |            - |
+| 592   |          Yes |           - |        Reset |
+| 39    |          Yes |         Set |            - |
+| 712   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -82,8 +82,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |    5 |     0 |       220 |  2.27 |
-|   DSP48E1 only |    5 |       |           |       |
+| DSPs           |    6 |     0 |       220 |  2.73 |
+|   DSP48E1 only |    6 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -119,7 +119,7 @@ Table of Contents
 +--------------+------+-------+-----------+-------+
 |   Site Type  | Used | Fixed | Available | Util% |
 +--------------+------+-------+-----------+-------+
-| BUFGCTRL     |    2 |     0 |        32 |  6.25 |
+| BUFGCTRL     |    4 |     0 |        32 | 12.50 |
 | BUFIO        |    1 |     0 |        16 |  6.25 |
 |   BUFIO only |    1 |     0 |           |       |
 | MMCME2_ADV   |    2 |     0 |         4 | 50.00 |
@@ -153,32 +153,33 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  627 |        Flop & Latch |
-| LUT6       |  585 |                 LUT |
-| LUT5       |  495 |                 LUT |
-| LDCE       |  256 |        Flop & Latch |
-| LUT2       |  201 |                 LUT |
-| LUT3       |  199 |                 LUT |
-| LUT4       |  160 |                 LUT |
-| CARRY4     |   76 |          CarryLogic |
-| LUT1       |   44 |                 LUT |
-| FDSE       |   38 |        Flop & Latch |
+| FDRE       |  712 |        Flop & Latch |
+| LUT6       |  690 |                 LUT |
+| LDCE       |  582 |        Flop & Latch |
+| LUT5       |  500 |                 LUT |
+| LUT3       |  235 |                 LUT |
+| LUT4       |  201 |                 LUT |
+| LUT2       |  199 |                 LUT |
+| CARRY4     |   79 |          CarryLogic |
+| MUXF7      |   47 |               MuxFx |
+| LUT1       |   42 |                 LUT |
+| FDSE       |   39 |        Flop & Latch |
 | RAMD32     |   36 |  Distributed Memory |
 | FDPE       |   28 |        Flop & Latch |
-| MUXF7      |   15 |               MuxFx |
+| MUXF8      |   17 |               MuxFx |
 | RAMS32     |   12 |  Distributed Memory |
 | FDCE       |   10 |        Flop & Latch |
 | OSERDESE2  |    8 |                  IO |
 | ISERDESE2  |    6 |                  IO |
-| DSP48E1    |    5 |    Block Arithmetic |
+| DSP48E1    |    6 |    Block Arithmetic |
 | OBUFDS     |    4 |                  IO |
 | IBUFDS     |    4 |                  IO |
+| BUFG       |    4 |               Clock |
 | OBUF       |    3 |                  IO |
 | IDELAYE2   |    3 |                  IO |
 | OBUFT      |    2 |                  IO |
 | MMCME2_ADV |    2 |               Clock |
 | IBUF       |    2 |                  IO |
-| BUFG       |    2 |               Clock |
 | IDELAYCTRL |    1 |                  IO |
 | BUFR       |    1 |               Clock |
 | BUFIO      |    1 |               Clock |

@@ -235,6 +235,26 @@ architecture Behavioral of edge_detector_filter is
         );
     end component;
     
+    component merge
+        Generic (
+            WIDTH : natural := 1920;
+            HEIGHT : natural := 1080;
+            BUFF_SIZE : natural := 128;
+            MEM_ADDR_SIZE : natural := 14;
+            REFILL_AT_INDEX : natural := 63;
+            BLOCK_NUM : natural := 60
+        );
+        Port ( vsync : in STD_LOGIC;
+               hsync : in STD_LOGIC;
+               de : in STD_LOGIC;
+               mem_d_in : in STD_LOGIC_VECTOR (127 downto 0);
+               pixel_clock : in STD_LOGIC;
+               mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
+               mem_ren : out STD_LOGIC;
+               rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
+               rgb_out : out STD_LOGIC_VECTOR (23 downto 0));
+    end component;
+    
     signal s_grey_vid : std_logic_vector(7 downto 0) := (others=>'0');
     
     signal s_bicolor: std_logic := '0';
@@ -257,6 +277,9 @@ architecture Behavioral of edge_detector_filter is
     
     signal s_waddr_bram : std_logic_vector(15 downto 0);
     signal s_write_bram : std_logic;
+    signal s_mem_doutb : std_logic_vector(127 downto 0);
+    signal s_mem_addrb : std_logic_vector(13 downto 0);
+    signal s_mem_ren : std_logic := '0';
     
     signal s_DDC_SDA_I : std_logic;
     signal s_DDC_SDA_O : std_logic;
@@ -331,12 +354,32 @@ begin
             addra => s_waddr_bram,
             dina => s_bicolor_deser,
             clkb => s_MemClk,
-            enb => '0',
-            addrb => (others => '0')
-            --doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+            enb => s_mem_ren,
+            addrb => s_mem_addrb,
+            doutb => s_mem_doutb
         );
+        
+    merger: merge
+        Generic map(
+            WIDTH => 1920,
+            HEIGHT => 1080,
+            BUFF_SIZE => 128,
+            MEM_ADDR_SIZE => 14,
+            REFILL_AT_INDEX => 63,
+            BLOCK_NUM => 60
+        )
+        Port map( vsync => s_vid_pVSync,
+               hsync => s_vid_pHSync,
+               de => s_vid_pVDE,
+               mem_d_in => s_mem_doutb,
+               pixel_clock => s_PixelClk,
+               mem_raddr => s_mem_addrb,
+               mem_ren => s_mem_ren,
+               rgb_in => s_vid_pData,
+               rgb_out => elaborated_s_vid_pData
+       );
     
-    elaborated_s_vid_pData <= s_grey_vid&s_grey_vid&s_grey_vid;
+    --elaborated_s_vid_pData <= s_grey_vid&s_grey_vid&s_grey_vid;
     
     
     cw_ref: clk_wiz_0

@@ -79,7 +79,6 @@ architecture Behavioral of edge_matrix_applier is
         y => 0,
         filling => 0,
         computing => 0
-        
     );
 
     type ram_type is

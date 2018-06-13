@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Wed Jun 13 21:50:15 2018
+| Date         : Thu Jun 14 01:15:56 2018
 | Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file edge_detector_filter_control_sets_placed.rpt
 | Design       : edge_detector_filter
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    43 |
-| Unused register locations in slices containing registers |   138 |
+| Number of unique control sets                            |    85 |
+| Unused register locations in slices containing registers |   199 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,18 +34,19 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            1 |
-|      2 |            4 |
-|      4 |            4 |
+|      1 |            3 |
+|      2 |            7 |
+|      4 |            6 |
 |      5 |           10 |
-|      7 |            3 |
-|      8 |            4 |
+|      7 |            4 |
+|      8 |           26 |
 |      9 |            1 |
 |     10 |            1 |
-|     11 |            4 |
-|     12 |            1 |
-|     14 |            1 |
-|    16+ |            9 |
+|     11 |            6 |
+|     12 |            3 |
+|     14 |            2 |
+|     15 |            1 |
+|    16+ |           15 |
 +--------+--------------+
 
 
@@ -55,64 +56,106 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             265 |           93 |
-| No           | No                    | Yes                    |              34 |           17 |
-| No           | Yes                   | No                     |             110 |           35 |
-| Yes          | No                    | No                     |              41 |           12 |
+| No           | No                    | No                     |            1005 |          531 |
+| No           | No                    | Yes                    |              34 |           18 |
+| No           | Yes                   | No                     |             111 |           37 |
+| Yes          | No                    | No                     |              87 |           34 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             148 |           35 |
+| Yes          | Yes                   | No                     |             164 |           42 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
-|                Clock Signal               |                                         Enable Signal                                         |                              Set/Reset Signal                              | Slice Load Count | Bel Load Count |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
-|  cw_ref/inst/RefClk200                    |                                                                                               | hdmiin/TMDS_ClockingX/RdyLostReset/SyncAsyncx/oSyncStages[1]               |                1 |              1 |
-|  cw_ref/inst/RefClk200                    |                                                                                               | hdmiin/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]              |                1 |              2 |
-|  cw_ref/inst/RefClk200                    |                                                                                               | hdmiin/TMDS_ClockingX/RdyLostReset/aRst_int                                |                1 |              2 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/TMDS_ClockingX/in0                                                  |                1 |              2 |
-|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                               | hdmiout/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
-|  cw_ref/inst/RefClk200                    | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SDA/Filter.cntPeriods[3]_i_2_n_1    | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSDA/SS[0]            |                1 |              4 |
-|  cw_ref/inst/RefClk200                    | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SCL/Filter.cntPeriods[3]_i_2__0_n_1 | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSCL/SS[0]            |                1 |              4 |
-|  cw_ref/inst/RefClk200                    | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/FSM_onehot_sState_reg[0]                    |                                                                            |                1 |              4 |
-|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                               | hdmiout/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdEn                                            | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                1 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenEn                                        | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenRst                    |                2 |              5 |
-|  cw_ref/inst/RefClk200                    | hdmiin/TMDS_ClockingX/rDlyRstCnt[4]_i_1_n_1                                                   | hdmiin/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]              |                1 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pCenterTap[5]_i_1__0_n_1                          |                                                                            |                2 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdEn                                            | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                1 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenEn                                        | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenRst                    |                2 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pCenterTap[5]_i_1__1_n_1                          |                                                                            |                2 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdEn                                            | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                1 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenEn                                        | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenRst                    |                1 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pCenterTap[5]_i_1_n_1                             |                                                                            |                2 |              5 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknRst                     |                2 |              7 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknRst                     |                2 |              7 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknRst                     |                3 |              7 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pDataIn_reg[7]_0[0]           |                1 |              8 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pDataIn_reg[7]_0[0]           |                2 |              8 |
-|  cw_ref/inst/RefClk200_clk_wiz_0_en_clk   |                                                                                               |                                                                            |                1 |              8 |
-|  cw_ref/inst/RefClk200                    | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/dataByte[7]_i_1_n_1                         |                                                                            |                2 |              8 |
-|  cw_ref/inst/RefClk200                    |                                                                                               | hdmiin/LockLostReset/SyncAsyncx/oSyncStages[1]                             |                4 |              9 |
-|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                               | hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1__1_n_1              |                4 |             10 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/SR[0]                         |                3 |             11 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pState[10]_i_1_n_1                                | hdmiin/DataDecoders[2].DecoderX/pAlignRst_reg_n_1                          |                2 |             11 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pState[10]_i_1__0_n_1                             | hdmiin/DataDecoders[1].DecoderX/pAlignRst_reg_n_1                          |                2 |             11 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pState[10]_i_1__1_n_1                             | hdmiin/DataDecoders[0].DecoderX/pAlignRst_reg_n_1                          |                2 |             11 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/LockLostReset/SyncAsyncx/oSyncStages[1]                             |                7 |             12 |
-|  cw_ref/inst/RefClk200                    | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/E[0]                                        |                                                                            |                3 |             14 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                5 |             21 |
-|  cw_ref/inst/RefClk200                    | hdmiin/DataDecoders[1].DecoderX/rTimeoutCnt[0]_i_1__0_n_1                                     | hdmiin/DataDecoders[1].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]      |                6 |             24 |
-|  cw_ref/inst/RefClk200                    | hdmiin/DataDecoders[2].DecoderX/rTimeoutCnt[0]_i_1_n_1                                        | hdmiin/DataDecoders[2].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]      |                6 |             24 |
-|  cw_ref/inst/RefClk200                    | hdmiin/DataDecoders[0].DecoderX/rTimeoutCnt[0]_i_1__1_n_1                                     | hdmiin/DataDecoders[0].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]      |                6 |             24 |
-|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                               | hdmiout/DataEncoders[0].DataEncoder/SR[0]                                  |               13 |             31 |
-|  cw_ref/inst/RefClk200                    |                                                                                               |                                                                            |               19 |             38 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pAllVld                                           |                                                                            |                6 |             48 |
-|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK   |                                                                                               |                                                                            |               28 |             73 |
-|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |                                                                                               |                                                                            |               45 |            146 |
-+-------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
++------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
+|                                 Clock Signal                                 |                                         Enable Signal                                         |                              Set/Reset Signal                              | Slice Load Count | Bel Load Count |
++------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
+|  cw_ref/inst/RefClk200                                                       |                                                                                               | hdmiin/TMDS_ClockingX/RdyLostReset/SyncAsyncx/oSyncStages[1]               |                1 |              1 |
+|  ema/bicolor_ready_reg_i_1_n_1                                               |                                                                                               |                                                                            |                1 |              1 |
+|  ema/bicolor_reg_i_2_n_1                                                     |                                                                                               |                                                                            |                1 |              1 |
+|  ema/next_reg_reg[computing][1]_i_2_n_1                                      |                                                                                               |                                                                            |                2 |              2 |
+|  cw_ref/inst/RefClk200                                                       |                                                                                               | hdmiin/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]              |                1 |              2 |
+|  cw_ref/inst/RefClk200                                                       |                                                                                               | hdmiin/TMDS_ClockingX/RdyLostReset/aRst_int                                |                1 |              2 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/TMDS_ClockingX/in0                                                  |                1 |              2 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      |                                                                                               | hdmiout/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
+|  ema/next_reg_reg[filling][1]_i_2_n_1                                        |                                                                                               |                                                                            |                1 |              2 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/FSM_sequential_curr_reg_reg[state][1][0] |                                                                                               |                                                                            |                2 |              2 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SDA/Filter.cntPeriods[3]_i_2_n_1    | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSDA/SS[0]            |                1 |              4 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SCL/Filter.cntPeriods[3]_i_2__0_n_1 | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSCL/SS[0]            |                1 |              4 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/FSM_onehot_sState_reg[0]                    |                                                                            |                1 |              4 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      |                                                                                               | hdmiout/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
+|  ema/next_reg_reg[state][3]_i_2_n_1                                          |                                                                                               |                                                                            |                1 |              4 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      | ema/bicolor_ready                                                                             | des/count[4]_i_1_n_1                                                       |                2 |              4 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pCenterTap[5]_i_1__1_n_1                          |                                                                            |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenEn                                        | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenRst                    |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdEn                                            | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                1 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdEn                                            | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                1 |              5 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/TMDS_ClockingX/rDlyRstCnt[4]_i_1_n_1                                                   | hdmiin/TMDS_ClockingX/LockLostReset/SyncAsyncx/oSyncStages[1]              |                1 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdEn                                            | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                1 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pCenterTap[5]_i_1__0_n_1                          |                                                                            |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenEn                                        | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenRst                    |                2 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenEn                                        | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenRst                    |                1 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pCenterTap[5]_i_1_n_1                             |                                                                            |                3 |              5 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknRst                     |                3 |              7 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknRst                     |                2 |              7 |
+|  merger/next_reg[buff_index]                                                 |                                                                                               |                                                                            |                5 |              7 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknRst                     |                3 |              7 |
+|  cw_ref/inst/MemClk_clk_wiz_0_en_clk                                         |                                                                                               |                                                                            |                1 |              8 |
+|  ema/ram_reg[2,2][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[2,3][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[3,0][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[3,2][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                7 |              8 |
+|  ema/ram_reg[3,3][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/dataByte[7]_i_1_n_1                         |                                                                            |                1 |              8 |
+|  ema/ram_reg[3,4][7]_i_2_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  cw_ref/inst/RefClk200_clk_wiz_0_en_clk                                      |                                                                                               |                                                                            |                1 |              8 |
+|  merger/next_reg_reg[x_block_n][5]_i_2_n_1                                   |                                                                                               |                                                                            |                5 |              8 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pDataIn_reg[7]_0[0]           |                1 |              8 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pDataIn_reg[7]_0[0]           |                2 |              8 |
+|  ema/ram_reg[3,1][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram[0,0]                                                                |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram[1,0]                                                                |                                                                                               |                                                                            |                5 |              8 |
+|  ema/ram_reg[0,2][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[0,4][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram[2,0]                                                                |                                                                                               |                                                                            |                5 |              8 |
+|  ema/ram_reg[0,3][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[0,1][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[1,4][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[1,1][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[1,2][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                7 |              8 |
+|  ema/ram_reg[1,3][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[2,4][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  ema/ram_reg[2,1][7]_i_1_n_1                                                 |                                                                                               |                                                                            |                8 |              8 |
+|  cw_ref/inst/RefClk200                                                       |                                                                                               | hdmiin/LockLostReset/SyncAsyncx/oSyncStages[1]                             |                5 |              9 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      |                                                                                               | hdmiout/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1_n_1                 |                4 |             10 |
+|  ema/next_reg_reg[x][10]_i_2_n_1                                             |                                                                                               |                                                                            |                5 |             11 |
+|  ema/next_reg_reg[y][10]_i_2_n_1                                             |                                                                                               |                                                                            |                3 |             11 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pState[10]_i_1_n_1                                | hdmiin/DataDecoders[2].DecoderX/pAlignRst_reg_n_1                          |                2 |             11 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pState[10]_i_1__0_n_1                             | hdmiin/DataDecoders[1].DecoderX/pAlignRst_reg_n_1                          |                2 |             11 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/SR[0]                         |                2 |             11 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pState[10]_i_1__1_n_1                             | hdmiin/DataDecoders[0].DecoderX/pAlignRst_reg_n_1                          |                4 |             11 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/E[0]                                     |                                                                                               |                                                                            |                4 |             12 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      | hdmiin/GenerateBUFG.ResyncToBUFG_X/pC0_1_reg                                                  | hdmiin/GenerateBUFG.ResyncToBUFG_X/clear                                   |                3 |             12 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/LockLostReset/SyncAsyncx/oSyncStages[1]                             |                7 |             12 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/GenerateDDC.DDC_EEPROM/I2C_SlaveController/E[0]                                        |                                                                            |                3 |             14 |
+|  cw_ref/inst/MemClk                                                          | merger/enb                                                                                    |                                                                            |                4 |             14 |
+|  merger/mem_raddr_reg[13]_i_1_n_1                                            |                                                                                               |                                                                            |                6 |             15 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               | hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pRdEn_reg                      |                6 |             21 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/DataDecoders[2].DecoderX/rTimeoutCnt[0]_i_1_n_1                                        | hdmiin/DataDecoders[2].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]      |                6 |             24 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/DataDecoders[1].DecoderX/rTimeoutCnt[0]_i_1__0_n_1                                     | hdmiin/DataDecoders[1].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]      |                6 |             24 |
+|  cw_ref/inst/RefClk200                                                       | hdmiin/DataDecoders[0].DecoderX/rTimeoutCnt[0]_i_1__1_n_1                                     | hdmiin/DataDecoders[0].DecoderX/SyncBaseRst/SyncAsyncx/oSyncStages[1]      |                6 |             24 |
+|  merger/rgb_out_reg[23]_i_2_n_1                                              |                                                                                               |                                                                            |               10 |             24 |
+|  ema/ycomp_reg[30]_i_2_n_1                                                   |                                                                                               |                                                                            |               14 |             31 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      | des/d_out[31]_i_1_n_1                                                                         |                                                                            |               18 |             32 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      |                                                                                               | hdmiout/DataEncoders[0].DataEncoder/SR[0]                                  |               14 |             32 |
+|  n_0_619_BUFG                                                                |                                                                                               |                                                                            |               18 |             35 |
+|  cw_ref/inst/RefClk200                                                       |                                                                                               |                                                                            |               21 |             38 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    | hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pAllVld                                           |                                                                            |                6 |             48 |
+|  sw_buf[0]_1                                                                 |                                                                                               |                                                                            |               76 |            128 |
+|  sw_buf[1]_0                                                                 |                                                                                               |                                                                            |               66 |            128 |
+|  hdmiin/TMDS_ClockingX/oSyncStages_reg[1]                                    |                                                                                               |                                                                            |               51 |            146 |
+|  hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK                                      |                                                                                               |                                                                            |               85 |            223 |
++------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+----------------+
 
 

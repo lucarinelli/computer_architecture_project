@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1528919238">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1528931667">
   <File Type="PWROPT-DCP" Name="edge_detector_filter_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="edge_detector_filter_power_routed.rpt"/>
   <File Type="PA-TCL" Name="edge_detector_filter.tcl"/>
@@ -222,6 +222,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/memory_addr_calc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/merge.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
