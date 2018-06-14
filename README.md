@@ -3,7 +3,7 @@ This is the git repository containing most of the work done by Andrea Fanti and 
 
 ## "Real-time" edge detection (HDMI/DVI passthrough) 
 The goal is to take the stream from the HDMI IN, retransmit it on the HDMI OUT in real time and at the same time perform the edge detection using Sobel operator, the result of the edge detection are showed on the frame immediately after the one on which it is computed. See the folder __dvi_edge_detector__.
-* State: correcting warings on gate clocks, no signal on the monitor
+* State: correcting warnings on gate clocks, no signal on the monitor
 
 ## Sub projects index
 Look for a readme file inside the project folders to more detailed explanation
