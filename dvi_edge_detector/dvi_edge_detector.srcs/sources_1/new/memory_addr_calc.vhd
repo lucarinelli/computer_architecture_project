@@ -45,8 +45,8 @@ entity memory_addr_calc is
 end memory_addr_calc;
 
 architecture Behavioral of memory_addr_calc is
-    signal x : natural range 0 to BLOCK_NUM-1; -- block index
-    signal y : integer range -1 to 1079;
+    signal x : natural range 0 to BLOCK_NUM-1 := 0; -- block index
+    signal y : integer range -1 to 1079 := -1;
 begin
     process (clk,idx_reset,row_start,valid) begin
         if rising_edge(clk) then
@@ -58,11 +58,10 @@ begin
                 x<= 0;
             elsif valid='1' then
                 addr <= std_logic_vector(to_unsigned(BLOCK_NUM*y+ x, 16));
+                wena <= '1';
             end if;
         end if;
     end process;
-    
-    wena <= valid;
 end Behavioral;
 
 

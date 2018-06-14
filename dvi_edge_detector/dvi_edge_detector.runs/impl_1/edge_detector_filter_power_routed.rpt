@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Thu Jun 14 01:16:59 2018
+| Date             : Thu Jun 14 14:32:36 2018
 | Host             : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command          : report_power -file edge_detector_filter_power_routed.rpt -pb edge_detector_filter_power_summary_routed.pb -rpx edge_detector_filter_power_routed.rpx
 | Design           : edge_detector_filter
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.393        |
+| Total On-Chip Power (W)  | 0.399        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.283        |
+| Dynamic (W)              | 0.289        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.5         |
-| Junction Temperature (C) | 29.5         |
+| Max Ambient (C)          | 80.4         |
+| Junction Temperature (C) | 29.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,23 +53,23 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.007 |       10 |       --- |             --- |
-| Slice Logic              |     0.007 |     4565 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     2109 |     53200 |            3.96 |
+| Slice Logic              |     0.006 |     4640 |       --- |             --- |
+|   LUT as Logic           |     0.006 |     2175 |     53200 |            4.09 |
+|   Register               |    <0.001 |     1400 |    106400 |            1.32 |
 |   F7/F8 Muxes            |    <0.001 |      388 |     53200 |            0.73 |
-|   Register               |    <0.001 |     1401 |    106400 |            1.32 |
-|   CARRY4                 |    <0.001 |       79 |     13300 |            0.59 |
+|   CARRY4                 |    <0.001 |       86 |     13300 |            0.65 |
 |   BUFG                   |    <0.001 |        7 |        32 |           21.88 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   Others                 |    <0.001 |      291 |       --- |             --- |
 |   BUFR                   |     0.000 |        1 |        88 |            1.14 |
-| Signals                  |     0.009 |     5104 |       --- |             --- |
-| Block RAM                |     0.006 |       58 |       140 |           41.43 |
+| Signals                  |     0.007 |     5184 |       --- |             --- |
+| Block RAM                |     0.014 |       58 |       140 |           41.43 |
 | MMCM                     |     0.114 |        2 |         4 |           50.00 |
 | PLL                      |     0.107 |        1 |         4 |           25.00 |
-| DSPs                     |    <0.001 |        6 |       220 |            2.73 |
+| DSPs                     |    <0.001 |        7 |       220 |            3.18 |
 | I/O                      |     0.032 |       22 |       125 |           17.60 |
 | Static Power             |     0.110 |          |           |                 |
-| Total                    |     0.393 |          |           |                 |
+| Total                    |     0.399 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.050 |       0.041 |      0.010 |
+| Vccint    |       1.000 |     0.056 |       0.046 |      0.010 |
 | Vccaux    |       1.800 |     0.145 |       0.134 |      0.011 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -88,7 +88,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.003 |       0.001 |      0.003 |
+| Vccbram   |       1.000 |     0.004 |       0.001 |      0.003 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -162,19 +162,19 @@ Table of Contents
 +----------------------------------------------+-----------+
 | Name                                         | Power (W) |
 +----------------------------------------------+-----------+
-| edge_detector_filter                         |     0.283 |
+| edge_detector_filter                         |     0.289 |
 |   addresser                                  |    <0.001 |
 |   cw_ref                                     |     0.108 |
 |     inst                                     |     0.108 |
 |   des                                        |    <0.001 |
-|   edges_matrix                               |     0.010 |
-|     U0                                       |     0.010 |
-|       inst_blk_mem_gen                       |     0.010 |
-|         gnbram.gnativebmg.native_blk_mem_gen |     0.010 |
-|           valid.cstr                         |     0.010 |
-|             bindec_a.bindec_inst_a           |    <0.001 |
+|   edges_matrix                               |     0.017 |
+|     U0                                       |     0.017 |
+|       inst_blk_mem_gen                       |     0.017 |
+|         gnbram.gnativebmg.native_blk_mem_gen |     0.017 |
+|           valid.cstr                         |     0.017 |
+|             bindec_a.bindec_inst_a           |     0.000 |
 |             bindec_b.bindec_inst_b           |    <0.001 |
-|             has_mux_b.B                      |     0.002 |
+|             has_mux_b.B                      |     0.001 |
 |             ramloop[0].ram.r                 |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[10].ram.r                |    <0.001 |
@@ -197,8 +197,8 @@ Table of Contents
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[19].ram.r                |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
-|             ramloop[1].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
+|             ramloop[1].ram.r                 |     0.001 |
+|               prim_noinit.ram                |     0.001 |
 |             ramloop[20].ram.r                |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[21].ram.r                |    <0.001 |
@@ -241,8 +241,8 @@ Table of Contents
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[39].ram.r                |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
-|             ramloop[3].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
+|             ramloop[3].ram.r                 |     0.001 |
+|               prim_noinit.ram                |     0.001 |
 |             ramloop[40].ram.r                |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[41].ram.r                |    <0.001 |
@@ -281,16 +281,16 @@ Table of Contents
 |               prim_noinit.ram                |    <0.001 |
 |             ramloop[57].ram.r                |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
-|             ramloop[5].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
+|             ramloop[5].ram.r                 |     0.001 |
+|               prim_noinit.ram                |     0.001 |
 |             ramloop[6].ram.r                 |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
-|             ramloop[7].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
+|             ramloop[7].ram.r                 |     0.001 |
+|               prim_noinit.ram                |     0.001 |
 |             ramloop[8].ram.r                 |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
-|             ramloop[9].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
+|             ramloop[9].ram.r                 |     0.001 |
+|               prim_noinit.ram                |     0.001 |
 |   ema                                        |     0.002 |
 |   filter                                     |    <0.001 |
 |   hdmiin                                     |     0.098 |

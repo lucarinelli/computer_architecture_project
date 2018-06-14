@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Thu Jun 14 01:13:48 2018
+| Date         : Thu Jun 14 14:29:38 2018
 | Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file edge_detector_filter_utilization_synth.rpt -pb edge_detector_filter_utilization_synth.pb
 | Design       : edge_detector_filter
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1660 |     0 |     53200 |  3.12 |
-|   LUT as Logic             | 1636 |     0 |     53200 |  3.08 |
+| Slice LUTs*                | 1677 |     0 |     53200 |  3.15 |
+|   LUT as Logic             | 1653 |     0 |     53200 |  3.11 |
 |   LUT as Memory            |   24 |     0 |     17400 |  0.14 |
 |     LUT as Distributed RAM |   24 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 1371 |     0 |    106400 |  1.29 |
+| Slice Registers            | 1370 |     0 |    106400 |  1.29 |
 |   Register as Flip Flop    |  789 |     0 |    106400 |  0.74 |
-|   Register as Latch        |  582 |     0 |    106400 |  0.55 |
+|   Register as Latch        |  581 |     0 |    106400 |  0.55 |
 | F7 Muxes                   |   47 |     0 |     26600 |  0.18 |
 | F8 Muxes                   |   17 |     0 |     13300 |  0.13 |
 +----------------------------+------+-------+-----------+-------+
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 28    |          Yes |           - |          Set |
-| 592   |          Yes |           - |        Reset |
+| 591   |          Yes |           - |        Reset |
 | 39    |          Yes |         Set |            - |
 | 712   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -82,8 +82,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |    6 |     0 |       220 |  2.73 |
-|   DSP48E1 only |    6 |       |           |       |
+| DSPs           |    7 |     0 |       220 |  3.18 |
+|   DSP48E1 only |    7 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -154,15 +154,15 @@ Table of Contents
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
 | FDRE       |  712 |        Flop & Latch |
-| LUT6       |  690 |                 LUT |
-| LDCE       |  582 |        Flop & Latch |
-| LUT5       |  500 |                 LUT |
-| LUT3       |  235 |                 LUT |
-| LUT4       |  201 |                 LUT |
-| LUT2       |  199 |                 LUT |
-| CARRY4     |   79 |          CarryLogic |
+| LUT6       |  693 |                 LUT |
+| LDCE       |  581 |        Flop & Latch |
+| LUT5       |  503 |                 LUT |
+| LUT3       |  242 |                 LUT |
+| LUT4       |  208 |                 LUT |
+| LUT2       |  198 |                 LUT |
+| CARRY4     |   86 |          CarryLogic |
 | MUXF7      |   47 |               MuxFx |
-| LUT1       |   42 |                 LUT |
+| LUT1       |   43 |                 LUT |
 | FDSE       |   39 |        Flop & Latch |
 | RAMD32     |   36 |  Distributed Memory |
 | FDPE       |   28 |        Flop & Latch |
@@ -170,8 +170,8 @@ Table of Contents
 | RAMS32     |   12 |  Distributed Memory |
 | FDCE       |   10 |        Flop & Latch |
 | OSERDESE2  |    8 |                  IO |
+| DSP48E1    |    7 |    Block Arithmetic |
 | ISERDESE2  |    6 |                  IO |
-| DSP48E1    |    6 |    Block Arithmetic |
 | OBUFDS     |    4 |                  IO |
 | IBUFDS     |    4 |                  IO |
 | BUFG       |    4 |               Clock |

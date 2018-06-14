@@ -199,10 +199,10 @@ begin
 --        bicolor_string_ready: out std_logic;
 --        bicolor_x_start : out natural range 0 to WIDTH;
 --        bicolor_y : out natural range 0 to RES_HEIGHT
-        variable result : natural;
-        variable xcomp : natural;
-        variable ycomp : natural;
-        variable buff_i : natural;
+        variable result : natural :=0;
+        variable xcomp : natural :=0;
+        variable ycomp : natural :=-1;
+        variable buff_i : natural := 0;
     begin
         
         case curr_reg.state is

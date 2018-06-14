@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu Jun 14 01:14:35 2018
-# Process ID: 6240
+# Start of session at: Thu Jun 14 14:25:16 2018
+# Process ID: 18840
 # Current directory: C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/impl_1
 # Command line: vivado.exe -log edge_detector_filter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source edge_detector_filter.tcl -notrace
 # Log file: C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/impl_1/edge_detector_filter.vdi

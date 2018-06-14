@@ -88,7 +88,7 @@ architecture Behavioral of merge is
     
 begin
 
-    state_machine_proc: process(curr_reg.state,vsync) begin
+    state_machine_proc: process(curr_reg.state,vsync,hsync) begin
         case curr_reg.state is
             when WAIT_FOR_VSYNC =>
                 if vsync='0' then
@@ -101,10 +101,11 @@ begin
                     next_reg.x_block_n <= next_reg.x_block_n + 1;
                     next_reg.loading <= 1;
                     next_reg.streaming <= 0;
+                else
+                    mem_raddr <= std_logic_vector(to_unsigned(BLOCK_NUM*(curr_reg.y+1)+ curr_reg.x_block_n, MEM_ADDR_SIZE));
+                    mem_ren <= '1';
+                    sw_buf(curr_reg.loading) <= mem_d_in;
                 end if;
-                mem_raddr <= std_logic_vector(to_unsigned(BLOCK_NUM*curr_reg.y+ curr_reg.x_block_n, MEM_ADDR_SIZE));
-                mem_ren <= '1';
-                sw_buf(curr_reg.loading) <= mem_d_in;
             when WAIT_FOR_VIDEO =>
                 if hsync='1' then
                     next_reg <= reg_type_def;
@@ -125,8 +126,11 @@ begin
                     next_reg.state <= WAIT_FOR_HSYNC;
                     next_reg.y <= next_reg.y + 1;
                     next_reg.x <= 0;
+                    next_reg.buff_index <= 0;
+                    next_reg.streaming <= 1;
+                    next_reg.loading <= 0;
                 else
-                    if curr_reg.buff_index > REFILL_AT_INDEX then
+                    if curr_reg.buff_index = REFILL_AT_INDEX then
                         mem_raddr <= std_logic_vector(to_unsigned(BLOCK_NUM*curr_reg.y+ curr_reg.x_block_n, MEM_ADDR_SIZE));
                         mem_ren <= '1';
                         sw_buf(curr_reg.loading) <= mem_d_in;

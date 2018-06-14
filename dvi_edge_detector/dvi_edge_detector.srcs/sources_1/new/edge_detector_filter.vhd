@@ -262,23 +262,23 @@ architecture Behavioral of edge_detector_filter is
     
     signal s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
     signal elaborated_s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
-    signal s_vid_pVDE : std_logic;
-    signal s_vid_pHSync : std_logic;
-    signal s_vid_pVSync : std_logic;
-    signal s_PixelClk : std_logic; --pixel-clock recovered from the DVI interface
+    signal s_vid_pVDE : std_logic :='0';
+    signal s_vid_pHSync : std_logic:='0';
+    signal s_vid_pVSync : std_logic:='1';
+    signal s_PixelClk : std_logic:='0'; --pixel-clock recovered from the DVI interface
     
-    signal s_SerialClk : std_logic; -- 5x PixelClk
+    signal s_SerialClk : std_logic:='0'; -- 5x PixelClk
     
-    signal s_RefClk : std_logic; --200 MHz reference clock for IDELAYCTRL, reset, lock monitoring etc.
-    signal s_MemClk : std_logic; --150? MHz
+    signal s_RefClk : std_logic:='0'; --200 MHz reference clock for IDELAYCTRL, reset, lock monitoring etc.
+    signal s_MemClk : std_logic:='0'; --150? MHz
     
-    signal s_bicolor_deser : std_logic_vector(31 downto 0);
-    signal s_bicolor_deser_valid : std_logic;
+    signal s_bicolor_deser : std_logic_vector(31 downto 0) := (others=>'0');
+    signal s_bicolor_deser_valid : std_logic := '0';
     
-    signal s_waddr_bram : std_logic_vector(15 downto 0);
-    signal s_write_bram : std_logic;
-    signal s_mem_doutb : std_logic_vector(127 downto 0);
-    signal s_mem_addrb : std_logic_vector(13 downto 0);
+    signal s_waddr_bram : std_logic_vector(15 downto 0) := (others=>'0');
+    signal s_write_bram : std_logic := '0';
+    signal s_mem_doutb : std_logic_vector(127 downto 0) := (others=>'0');
+    signal s_mem_addrb : std_logic_vector(13 downto 0) := (others=>'0');
     signal s_mem_ren : std_logic := '0';
     
     signal s_DDC_SDA_I : std_logic;

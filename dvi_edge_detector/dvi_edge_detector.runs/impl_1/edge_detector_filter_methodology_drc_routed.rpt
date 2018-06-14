@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Thu Jun 14 01:16:56 2018
+| Date         : Thu Jun 14 14:32:33 2018
 | Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file edge_detector_filter_methodology_drc_routed.rpt -pb edge_detector_filter_methodology_drc_routed.pb -rpx edge_detector_filter_methodology_drc_routed.rpx
 | Design       : edge_detector_filter
@@ -23,15 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1303
+             Violations found: 1301
 +-----------+----------+------------------------------------------------+------------+
 | Rule      | Severity | Description                                    | Violations |
 +-----------+----------+------------------------------------------------+------------+
 | CKBF-1    | Warning  | connects_I_driver_BUFR                         | 1          |
 | SYNTH-14  | Warning  | DSP cannot absorb non-zero init register       | 12         |
 | TIMING-6  | Warning  | No common primary clock between related clocks | 4          |
-| TIMING-17 | Warning  | Non-clocked sequential cell                    | 703        |
-| TIMING-20 | Warning  | Non-clocked latch                              | 582        |
+| TIMING-17 | Warning  | Non-clocked sequential cell                    | 702        |
+| TIMING-20 | Warning  | Non-clocked latch                              | 581        |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects    | 1          |
 +-----------+----------+------------------------------------------------+------------+
 
@@ -3632,11 +3632,6 @@ Non-clocked sequential cell
 The clock pin merger/curr_reg_reg[y][9]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#703 Warning
-Non-clocked sequential cell  
-The clock pin merger/mem_raddr0/CLK is not reached by a timing clock
-Related violations: <none>
-
 TIMING-20#1 Warning
 Non-clocked latch  
 The latch ema/bicolor_ready_reg cannot be properly analyzed as its control pin ema/bicolor_ready_reg/G is not reached by a timing clock
@@ -5009,1540 +5004,1535 @@ Related violations: <none>
 
 TIMING-20#275 Warning
 Non-clocked latch  
-The latch merger/mem_ren_reg cannot be properly analyzed as its control pin merger/mem_ren_reg/G is not reached by a timing clock
+The latch merger/next_reg_reg[buff_index][0] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#276 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[buff_index][0] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][0]/G is not reached by a timing clock
+The latch merger/next_reg_reg[buff_index][1] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#277 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[buff_index][1] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][1]/G is not reached by a timing clock
+The latch merger/next_reg_reg[buff_index][2] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#278 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[buff_index][2] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][2]/G is not reached by a timing clock
+The latch merger/next_reg_reg[buff_index][3] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#279 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[buff_index][3] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][3]/G is not reached by a timing clock
+The latch merger/next_reg_reg[buff_index][4] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#280 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[buff_index][4] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][4]/G is not reached by a timing clock
+The latch merger/next_reg_reg[buff_index][5] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#281 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[buff_index][5] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][5]/G is not reached by a timing clock
+The latch merger/next_reg_reg[buff_index][6] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#282 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[buff_index][6] cannot be properly analyzed as its control pin merger/next_reg_reg[buff_index][6]/G is not reached by a timing clock
+The latch merger/next_reg_reg[loading][0] cannot be properly analyzed as its control pin merger/next_reg_reg[loading][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#283 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[loading][0] cannot be properly analyzed as its control pin merger/next_reg_reg[loading][0]/G is not reached by a timing clock
+The latch merger/next_reg_reg[streaming][0] cannot be properly analyzed as its control pin merger/next_reg_reg[streaming][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#284 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[streaming][0] cannot be properly analyzed as its control pin merger/next_reg_reg[streaming][0]/G is not reached by a timing clock
+The latch merger/next_reg_reg[x_block_n][0] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#285 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[x_block_n][0] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][0]/G is not reached by a timing clock
+The latch merger/next_reg_reg[x_block_n][1] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#286 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[x_block_n][1] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][1]/G is not reached by a timing clock
+The latch merger/next_reg_reg[x_block_n][2] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#287 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[x_block_n][2] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][2]/G is not reached by a timing clock
+The latch merger/next_reg_reg[x_block_n][3] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#288 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[x_block_n][3] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][3]/G is not reached by a timing clock
+The latch merger/next_reg_reg[x_block_n][4] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#289 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[x_block_n][4] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][4]/G is not reached by a timing clock
+The latch merger/next_reg_reg[x_block_n][5] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#290 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[x_block_n][5] cannot be properly analyzed as its control pin merger/next_reg_reg[x_block_n][5]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][0] cannot be properly analyzed as its control pin merger/next_reg_reg[y][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#291 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][0] cannot be properly analyzed as its control pin merger/next_reg_reg[y][0]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][10] cannot be properly analyzed as its control pin merger/next_reg_reg[y][10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#292 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][10] cannot be properly analyzed as its control pin merger/next_reg_reg[y][10]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][11] cannot be properly analyzed as its control pin merger/next_reg_reg[y][11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#293 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][11] cannot be properly analyzed as its control pin merger/next_reg_reg[y][11]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][1] cannot be properly analyzed as its control pin merger/next_reg_reg[y][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#294 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][1] cannot be properly analyzed as its control pin merger/next_reg_reg[y][1]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][2] cannot be properly analyzed as its control pin merger/next_reg_reg[y][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#295 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][2] cannot be properly analyzed as its control pin merger/next_reg_reg[y][2]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][3] cannot be properly analyzed as its control pin merger/next_reg_reg[y][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#296 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][3] cannot be properly analyzed as its control pin merger/next_reg_reg[y][3]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][4] cannot be properly analyzed as its control pin merger/next_reg_reg[y][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#297 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][4] cannot be properly analyzed as its control pin merger/next_reg_reg[y][4]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][5] cannot be properly analyzed as its control pin merger/next_reg_reg[y][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#298 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][5] cannot be properly analyzed as its control pin merger/next_reg_reg[y][5]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][6] cannot be properly analyzed as its control pin merger/next_reg_reg[y][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#299 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][6] cannot be properly analyzed as its control pin merger/next_reg_reg[y][6]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][7] cannot be properly analyzed as its control pin merger/next_reg_reg[y][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#300 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][7] cannot be properly analyzed as its control pin merger/next_reg_reg[y][7]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][8] cannot be properly analyzed as its control pin merger/next_reg_reg[y][8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#301 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][8] cannot be properly analyzed as its control pin merger/next_reg_reg[y][8]/G is not reached by a timing clock
+The latch merger/next_reg_reg[y][9] cannot be properly analyzed as its control pin merger/next_reg_reg[y][9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#302 Warning
 Non-clocked latch  
-The latch merger/next_reg_reg[y][9] cannot be properly analyzed as its control pin merger/next_reg_reg[y][9]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[0] cannot be properly analyzed as its control pin merger/rgb_out_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#303 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[0] cannot be properly analyzed as its control pin merger/rgb_out_reg[0]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[10] cannot be properly analyzed as its control pin merger/rgb_out_reg[10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#304 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[10] cannot be properly analyzed as its control pin merger/rgb_out_reg[10]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[11] cannot be properly analyzed as its control pin merger/rgb_out_reg[11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#305 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[11] cannot be properly analyzed as its control pin merger/rgb_out_reg[11]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[12] cannot be properly analyzed as its control pin merger/rgb_out_reg[12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#306 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[12] cannot be properly analyzed as its control pin merger/rgb_out_reg[12]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[13] cannot be properly analyzed as its control pin merger/rgb_out_reg[13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#307 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[13] cannot be properly analyzed as its control pin merger/rgb_out_reg[13]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[14] cannot be properly analyzed as its control pin merger/rgb_out_reg[14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#308 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[14] cannot be properly analyzed as its control pin merger/rgb_out_reg[14]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[15] cannot be properly analyzed as its control pin merger/rgb_out_reg[15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#309 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[15] cannot be properly analyzed as its control pin merger/rgb_out_reg[15]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[16] cannot be properly analyzed as its control pin merger/rgb_out_reg[16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#310 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[16] cannot be properly analyzed as its control pin merger/rgb_out_reg[16]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[17] cannot be properly analyzed as its control pin merger/rgb_out_reg[17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#311 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[17] cannot be properly analyzed as its control pin merger/rgb_out_reg[17]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[18] cannot be properly analyzed as its control pin merger/rgb_out_reg[18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#312 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[18] cannot be properly analyzed as its control pin merger/rgb_out_reg[18]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[19] cannot be properly analyzed as its control pin merger/rgb_out_reg[19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#313 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[19] cannot be properly analyzed as its control pin merger/rgb_out_reg[19]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[1] cannot be properly analyzed as its control pin merger/rgb_out_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#314 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[1] cannot be properly analyzed as its control pin merger/rgb_out_reg[1]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[20] cannot be properly analyzed as its control pin merger/rgb_out_reg[20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#315 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[20] cannot be properly analyzed as its control pin merger/rgb_out_reg[20]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[21] cannot be properly analyzed as its control pin merger/rgb_out_reg[21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#316 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[21] cannot be properly analyzed as its control pin merger/rgb_out_reg[21]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[22] cannot be properly analyzed as its control pin merger/rgb_out_reg[22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#317 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[22] cannot be properly analyzed as its control pin merger/rgb_out_reg[22]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[23] cannot be properly analyzed as its control pin merger/rgb_out_reg[23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#318 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[23] cannot be properly analyzed as its control pin merger/rgb_out_reg[23]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[2] cannot be properly analyzed as its control pin merger/rgb_out_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#319 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[2] cannot be properly analyzed as its control pin merger/rgb_out_reg[2]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[3] cannot be properly analyzed as its control pin merger/rgb_out_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#320 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[3] cannot be properly analyzed as its control pin merger/rgb_out_reg[3]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[4] cannot be properly analyzed as its control pin merger/rgb_out_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#321 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[4] cannot be properly analyzed as its control pin merger/rgb_out_reg[4]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[5] cannot be properly analyzed as its control pin merger/rgb_out_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#322 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[5] cannot be properly analyzed as its control pin merger/rgb_out_reg[5]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[6] cannot be properly analyzed as its control pin merger/rgb_out_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#323 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[6] cannot be properly analyzed as its control pin merger/rgb_out_reg[6]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[7] cannot be properly analyzed as its control pin merger/rgb_out_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#324 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[7] cannot be properly analyzed as its control pin merger/rgb_out_reg[7]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[8] cannot be properly analyzed as its control pin merger/rgb_out_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#325 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[8] cannot be properly analyzed as its control pin merger/rgb_out_reg[8]/G is not reached by a timing clock
+The latch merger/rgb_out_reg[9] cannot be properly analyzed as its control pin merger/rgb_out_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#326 Warning
 Non-clocked latch  
-The latch merger/rgb_out_reg[9] cannot be properly analyzed as its control pin merger/rgb_out_reg[9]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][0] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#327 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][0] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][0]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][100] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][100]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#328 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][100] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][100]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][101] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][101]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#329 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][101] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][101]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][102] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][102]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#330 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][102] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][102]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][103] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][103]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#331 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][103] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][103]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][104] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][104]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#332 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][104] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][104]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][105] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][105]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#333 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][105] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][105]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][106] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][106]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#334 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][106] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][106]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][107] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][107]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#335 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][107] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][107]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][108] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][108]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#336 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][108] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][108]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][109] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][109]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#337 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][109] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][109]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][10] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#338 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][10] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][10]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][110] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][110]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#339 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][110] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][110]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][111] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][111]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#340 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][111] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][111]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][112] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][112]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#341 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][112] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][112]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][113] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][113]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#342 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][113] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][113]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][114] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][114]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#343 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][114] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][114]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][115] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][115]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#344 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][115] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][115]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][116] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][116]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#345 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][116] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][116]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][117] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][117]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#346 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][117] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][117]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][118] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][118]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#347 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][118] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][118]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][119] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][119]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#348 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][119] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][119]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][11] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#349 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][11] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][11]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][120] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][120]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#350 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][120] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][120]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][121] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][121]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#351 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][121] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][121]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][122] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][122]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#352 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][122] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][122]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][123] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][123]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#353 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][123] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][123]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][124] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][124]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#354 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][124] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][124]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][125] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][125]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#355 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][125] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][125]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][126] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][126]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#356 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][126] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][126]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][127] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][127]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#357 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][127] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][127]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][12] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#358 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][12] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][12]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][13] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#359 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][13] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][13]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][14] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#360 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][14] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][14]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][15] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#361 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][15] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][15]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][16] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#362 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][16] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][16]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][17] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#363 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][17] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][17]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][18] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#364 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][18] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][18]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][19] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#365 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][19] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][19]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][1] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#366 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][1] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][1]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][20] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#367 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][20] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][20]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][21] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#368 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][21] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][21]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][22] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#369 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][22] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][22]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][23] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#370 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][23] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][23]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][24] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][24]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#371 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][24] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][24]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][25] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][25]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#372 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][25] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][25]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][26] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][26]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#373 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][26] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][26]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][27] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][27]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#374 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][27] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][27]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][28] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][28]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#375 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][28] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][28]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][29] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][29]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#376 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][29] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][29]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][2] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#377 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][2] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][2]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][30] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][30]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#378 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][30] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][30]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][31] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][31]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#379 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][31] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][31]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][32] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][32]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#380 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][32] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][32]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][33] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][33]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#381 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][33] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][33]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][34] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][34]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#382 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][34] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][34]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][35] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][35]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#383 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][35] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][35]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][36] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][36]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#384 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][36] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][36]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][37] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][37]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#385 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][37] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][37]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][38] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][38]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#386 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][38] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][38]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][39] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][39]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#387 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][39] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][39]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][3] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#388 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][3] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][3]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][40] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][40]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#389 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][40] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][40]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][41] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][41]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#390 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][41] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][41]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][42] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][42]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#391 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][42] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][42]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][43] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][43]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#392 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][43] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][43]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][44] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][44]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#393 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][44] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][44]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][45] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][45]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#394 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][45] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][45]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][46] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][46]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#395 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][46] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][46]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][47] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][47]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#396 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][47] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][47]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][48] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][48]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#397 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][48] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][48]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][49] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][49]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#398 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][49] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][49]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][4] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#399 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][4] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][4]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][50] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][50]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#400 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][50] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][50]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][51] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][51]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#401 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][51] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][51]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][52] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][52]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#402 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][52] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][52]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][53] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][53]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#403 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][53] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][53]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][54] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][54]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#404 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][54] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][54]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][55] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][55]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#405 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][55] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][55]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][56] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][56]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#406 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][56] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][56]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][57] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][57]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#407 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][57] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][57]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][58] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][58]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#408 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][58] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][58]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][59] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][59]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#409 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][59] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][59]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][5] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#410 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][5] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][5]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][60] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][60]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#411 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][60] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][60]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][61] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][61]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#412 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][61] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][61]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][62] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][62]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#413 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][62] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][62]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][63] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][63]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#414 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][63] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][63]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][64] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][64]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#415 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][64] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][64]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][65] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][65]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#416 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][65] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][65]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][66] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][66]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#417 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][66] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][66]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][67] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][67]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#418 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][67] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][67]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][68] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][68]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#419 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][68] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][68]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][69] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][69]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#420 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][69] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][69]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][6] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#421 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][6] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][6]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][70] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][70]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#422 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][70] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][70]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][71] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][71]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#423 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][71] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][71]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][72] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][72]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#424 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][72] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][72]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][73] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][73]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#425 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][73] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][73]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][74] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][74]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#426 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][74] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][74]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][75] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][75]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#427 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][75] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][75]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][76] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][76]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#428 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][76] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][76]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][77] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][77]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#429 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][77] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][77]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][78] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][78]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#430 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][78] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][78]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][79] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][79]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#431 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][79] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][79]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][7] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#432 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][7] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][7]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][80] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][80]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#433 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][80] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][80]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][81] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][81]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#434 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][81] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][81]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][82] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][82]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#435 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][82] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][82]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][83] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][83]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#436 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][83] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][83]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][84] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][84]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#437 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][84] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][84]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][85] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][85]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#438 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][85] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][85]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][86] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][86]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#439 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][86] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][86]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][87] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][87]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#440 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][87] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][87]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][88] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][88]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#441 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][88] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][88]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][89] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][89]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#442 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][89] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][89]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][8] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#443 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][8] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][8]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][90] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][90]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#444 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][90] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][90]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][91] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][91]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#445 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][91] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][91]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][92] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][92]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#446 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][92] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][92]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][93] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][93]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#447 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][93] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][93]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][94] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][94]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#448 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][94] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][94]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][95] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][95]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#449 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][95] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][95]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][96] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][96]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#450 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][96] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][96]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][97] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][97]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#451 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][97] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][97]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][98] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][98]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#452 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][98] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][98]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][99] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][99]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#453 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][99] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][99]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[0][9] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#454 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[0][9] cannot be properly analyzed as its control pin merger/sw_buf_reg[0][9]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][0] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#455 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][0] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][0]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][100] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][100]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#456 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][100] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][100]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][101] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][101]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#457 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][101] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][101]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][102] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][102]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#458 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][102] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][102]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][103] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][103]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#459 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][103] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][103]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][104] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][104]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#460 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][104] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][104]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][105] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][105]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#461 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][105] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][105]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][106] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][106]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#462 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][106] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][106]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][107] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][107]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#463 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][107] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][107]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][108] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][108]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#464 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][108] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][108]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][109] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][109]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#465 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][109] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][109]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][10] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#466 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][10] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][10]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][110] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][110]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#467 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][110] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][110]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][111] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][111]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#468 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][111] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][111]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][112] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][112]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#469 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][112] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][112]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][113] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][113]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#470 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][113] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][113]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][114] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][114]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#471 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][114] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][114]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][115] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][115]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#472 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][115] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][115]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][116] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][116]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#473 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][116] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][116]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][117] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][117]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#474 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][117] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][117]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][118] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][118]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#475 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][118] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][118]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][119] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][119]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#476 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][119] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][119]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][11] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#477 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][11] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][11]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][120] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][120]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#478 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][120] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][120]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][121] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][121]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#479 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][121] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][121]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][122] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][122]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#480 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][122] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][122]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][123] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][123]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#481 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][123] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][123]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][124] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][124]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#482 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][124] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][124]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][125] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][125]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#483 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][125] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][125]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][126] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][126]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#484 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][126] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][126]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][127] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][127]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#485 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][127] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][127]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][12] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#486 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][12] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][12]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][13] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#487 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][13] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][13]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][14] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#488 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][14] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][14]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][15] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#489 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][15] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][15]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][16] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#490 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][16] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][16]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][17] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#491 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][17] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][17]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][18] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#492 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][18] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][18]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][19] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#493 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][19] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][19]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][1] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#494 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][1] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][1]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][20] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#495 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][20] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][20]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][21] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#496 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][21] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][21]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][22] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#497 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][22] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][22]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][23] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#498 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][23] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][23]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][24] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][24]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#499 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][24] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][24]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][25] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][25]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#500 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][25] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][25]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][26] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][26]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#501 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][26] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][26]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][27] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][27]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#502 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][27] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][27]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][28] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][28]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#503 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][28] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][28]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][29] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][29]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#504 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][29] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][29]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][2] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#505 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][2] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][2]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][30] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][30]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#506 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][30] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][30]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][31] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][31]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#507 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][31] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][31]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][32] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][32]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#508 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][32] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][32]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][33] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][33]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#509 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][33] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][33]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][34] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][34]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#510 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][34] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][34]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][35] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][35]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#511 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][35] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][35]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][36] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][36]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#512 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][36] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][36]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][37] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][37]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#513 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][37] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][37]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][38] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][38]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#514 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][38] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][38]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][39] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][39]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#515 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][39] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][39]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][3] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#516 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][3] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][3]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][40] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][40]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#517 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][40] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][40]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][41] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][41]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#518 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][41] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][41]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][42] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][42]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#519 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][42] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][42]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][43] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][43]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#520 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][43] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][43]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][44] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][44]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#521 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][44] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][44]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][45] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][45]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#522 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][45] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][45]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][46] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][46]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#523 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][46] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][46]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][47] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][47]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#524 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][47] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][47]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][48] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][48]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#525 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][48] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][48]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][49] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][49]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#526 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][49] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][49]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][4] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#527 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][4] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][4]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][50] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][50]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#528 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][50] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][50]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][51] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][51]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#529 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][51] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][51]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][52] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][52]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#530 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][52] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][52]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][53] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][53]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#531 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][53] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][53]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][54] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][54]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#532 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][54] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][54]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][55] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][55]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#533 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][55] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][55]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][56] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][56]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#534 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][56] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][56]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][57] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][57]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#535 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][57] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][57]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][58] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][58]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#536 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][58] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][58]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][59] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][59]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#537 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][59] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][59]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][5] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#538 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][5] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][5]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][60] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][60]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#539 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][60] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][60]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][61] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][61]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#540 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][61] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][61]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][62] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][62]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#541 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][62] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][62]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][63] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][63]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#542 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][63] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][63]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][64] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][64]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#543 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][64] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][64]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][65] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][65]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#544 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][65] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][65]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][66] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][66]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#545 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][66] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][66]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][67] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][67]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#546 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][67] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][67]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][68] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][68]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#547 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][68] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][68]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][69] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][69]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#548 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][69] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][69]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][6] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#549 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][6] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][6]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][70] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][70]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#550 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][70] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][70]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][71] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][71]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#551 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][71] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][71]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][72] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][72]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#552 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][72] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][72]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][73] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][73]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#553 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][73] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][73]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][74] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][74]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#554 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][74] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][74]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][75] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][75]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#555 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][75] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][75]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][76] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][76]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#556 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][76] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][76]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][77] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][77]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#557 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][77] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][77]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][78] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][78]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#558 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][78] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][78]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][79] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][79]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#559 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][79] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][79]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][7] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#560 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][7] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][7]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][80] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][80]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#561 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][80] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][80]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][81] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][81]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#562 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][81] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][81]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][82] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][82]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#563 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][82] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][82]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][83] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][83]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#564 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][83] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][83]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][84] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][84]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#565 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][84] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][84]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][85] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][85]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#566 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][85] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][85]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][86] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][86]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#567 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][86] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][86]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][87] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][87]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#568 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][87] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][87]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][88] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][88]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#569 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][88] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][88]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][89] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][89]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#570 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][89] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][89]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][8] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#571 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][8] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][8]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][90] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][90]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#572 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][90] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][90]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][91] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][91]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#573 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][91] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][91]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][92] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][92]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#574 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][92] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][92]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][93] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][93]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#575 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][93] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][93]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][94] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][94]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#576 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][94] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][94]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][95] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][95]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#577 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][95] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][95]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][96] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][96]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#578 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][96] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][96]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][97] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][97]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#579 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][97] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][97]/G is not reached by a timing clock
+The latch merger/sw_buf_reg[1][98] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][98]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#580 Warning
 Non-clocked latch  
-The latch merger/sw_buf_reg[1][98] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][98]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#581 Warning
-Non-clocked latch  
 The latch merger/sw_buf_reg[1][99] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][99]/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#582 Warning
+TIMING-20#581 Warning
 Non-clocked latch  
 The latch merger/sw_buf_reg[1][9] cannot be properly analyzed as its control pin merger/sw_buf_reg[1][9]/G is not reached by a timing clock
 Related violations: <none>
