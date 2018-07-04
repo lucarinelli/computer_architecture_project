@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu Jun 14 14:27:36 2018
-# Process ID: 14864
+# Start of session at: Mon Jul  2 17:49:41 2018
+# Process ID: 8904
 # Current directory: C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1
 # Command line: vivado.exe -log edge_detector_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source edge_detector_filter.tcl
 # Log file: C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12992 
+INFO: Helper process launched with PID 7004 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 389.957 ; gain = 100.836
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 390.016 ; gain = 100.543
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:128]
 WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:161]
@@ -52,8 +52,8 @@ INFO: [Synth 8-3491] module 'memory_addr_calc' declared at 'C:/Users/rinel/Deskt
 INFO: [Synth 8-638] synthesizing module 'memory_addr_calc' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:47]
 	Parameter BLOCK_NUM bound to: 60 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'memory_addr_calc' (4#1) [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:47]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-14864-DESKTOP-0KG3I12/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'edges_matrix' of component 'blk_mem_gen_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:349]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-14864-DESKTOP-0KG3I12/realtime/blk_mem_gen_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8904-DESKTOP-0KG3I12/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'edges_matrix' of component 'blk_mem_gen_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:349]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8904-DESKTOP-0KG3I12/realtime/blk_mem_gen_0_stub.vhdl:20]
 	Parameter WIDTH bound to: 1920 - type: integer 
 	Parameter HEIGHT bound to: 1080 - type: integer 
 	Parameter BUFF_SIZE bound to: 128 - type: integer 
@@ -68,15 +68,13 @@ INFO: [Synth 8-638] synthesizing module 'merge' [C:/Users/rinel/Desktop/computer
 	Parameter MEM_ADDR_SIZE bound to: 14 - type: integer 
 	Parameter REFILL_AT_INDEX bound to: 63 - type: integer 
 	Parameter BLOCK_NUM bound to: 60 - type: integer 
-WARNING: [Synth 8-614] signal 'next_reg' is read in the process but is not in the sensitivity list [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:91]
-WARNING: [Synth 8-614] signal 'mem_d_in' is read in the process but is not in the sensitivity list [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:91]
-WARNING: [Synth 8-614] signal 'de' is read in the process but is not in the sensitivity list [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:91]
-WARNING: [Synth 8-614] signal 'sw_buf' is read in the process but is not in the sensitivity list [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:91]
-WARNING: [Synth 8-614] signal 'rgb_in' is read in the process but is not in the sensitivity list [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:91]
-WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[x] was removed.  [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:158]
+WARNING: [Synth 8-614] signal 'next_reg' is read in the process but is not in the sensitivity list [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:101]
+WARNING: [Synth 8-614] signal 'de' is read in the process but is not in the sensitivity list [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[streaming] was removed.  [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:183]
+WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[loading] was removed.  [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:183]
 INFO: [Synth 8-256] done synthesizing module 'merge' (5#1) [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:54]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-14864-DESKTOP-0KG3I12/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'cw_ref' of component 'clk_wiz_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:385]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-14864-DESKTOP-0KG3I12/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8904-DESKTOP-0KG3I12/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'cw_ref' of component 'clk_wiz_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:385]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8904-DESKTOP-0KG3I12/realtime/clk_wiz_0_stub.vhdl:16]
 	Parameter kGenerateSerialClk bound to: 1 - type: bool 
 	Parameter kClkPrimitive bound to: MMCM - type: string 
 	Parameter kClkRange bound to: 1 - type: integer 
@@ -445,10 +443,104 @@ WARNING: [Synth 8-3331] design dvi2rgb has unconnected port pRst_n
 WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port SerialClk
 WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port aRst
 WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
-WARNING: [Synth 8-3331] design deserializer has unconnected port reset
-WARNING: [Synth 8-3331] design edge_matrix_applier has unconnected port hsync
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[127]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[126]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[125]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[124]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[123]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[122]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[121]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[120]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[119]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[118]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[117]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[116]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[115]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[114]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[113]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[112]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[111]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[110]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[109]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[108]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[107]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[106]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[105]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[104]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[103]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[102]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[101]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[100]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[99]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[98]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[97]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[96]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[95]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[94]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[93]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[92]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[91]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[90]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[89]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[88]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[87]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[86]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[85]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[84]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[83]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[82]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[81]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[80]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[79]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[78]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[77]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[76]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[75]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[74]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[73]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[72]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[71]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[70]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[69]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[68]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[67]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[66]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[65]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[64]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[63]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[62]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[61]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[60]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[59]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[58]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[57]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[56]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[55]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[54]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[53]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[52]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[51]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[50]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[49]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[48]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[47]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[46]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[45]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[44]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[43]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[42]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[41]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[40]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[39]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[38]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[37]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[36]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[35]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[34]
+WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[33]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -461,10 +553,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -487,16 +579,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1063.313 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1063.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -506,7 +598,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk. (constraint file  c:/U
 Applied set_property DONT_TOUCH = true for cw_ref. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for edges_matrix. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:208]
 INFO: [Synth 8-5546] ROM "next_reg[state]" won't be mapped to RAM because it is too sparse
@@ -520,11 +612,10 @@ INFO: [Synth 8-5544] ROM "ram_reg[1,0]" won't be mapped to Block RAM because add
 INFO: [Synth 8-5544] ROM "ram_reg[2,0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ram_reg[3,0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "d_out_valid" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:92]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:92]
-INFO: [Synth 8-5546] ROM "next_reg[streaming]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "mem_raddr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-802] inferred FSM for state register 'curr_reg_reg[state]' in module 'merge'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:102]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:98]
+INFO: [Synth 8-5546] ROM "next_reg[x_block_n]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_ren_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'pState_reg' in module 'PhaseAlign'
 INFO: [Synth 8-5546] ROM "pCtlTknOvf" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "pDelayOvf" won't be mapped to RAM because it is too sparse
@@ -590,29 +681,15 @@ WARNING: [Synth 8-327] inferring latch for variable 'ycomp_reg' [C:/Users/rinel/
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[y]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:111]
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[filling]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:111]
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:111]
-WARNING: [Synth 8-327] inferring latch for variable 'mem_raddr_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_reg_reg[state]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_reg_reg[state]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-          wait_for_vsync |                               00 |                               00
-          wait_for_hsync |                               01 |                               01
-          wait_for_video |                               10 |                               10
-               streaming |                               11 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'curr_reg_reg[state]' using encoding 'sequential' in module 'merge'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_reg_reg[state]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'mem_ren_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:106]
-WARNING: [Synth 8-327] inferring latch for variable 'rgb_out_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:118]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[y]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x_block_n]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[loading]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[buff_index]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[streaming]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'sw_buf_reg[1]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:107]
-WARNING: [Synth 8-327] inferring latch for variable 'sw_buf_reg[0]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:107]
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'fsm19E8B4157800'
+WARNING: [Synth 8-327] inferring latch for variable 'mem_raddr_reg_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:98]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_ren_reg_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:99]
+WARNING: [Synth 8-327] inferring latch for variable 'rgb_out_reg_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:96]
+WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[state]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[y]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x_block_n]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[buff_index]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x]' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'fsm1FEB80F5EB00'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -635,7 +712,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sState_reg' using encoding 'one-hot' in module 'EEPROM_8b'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -650,10 +727,10 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     31 Bit       Adders := 2     
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
 	   5 Input     11 Bit       Adders := 4     
 	   3 Input     11 Bit       Adders := 4     
-	   2 Input     11 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 3     
 	   3 Input     10 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 5     
 	   2 Input      6 Bit       Adders := 4     
@@ -671,7 +748,7 @@ Detailed RTL Component Info :
 	               24 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 2     
+	               11 Bit    Registers := 3     
 	               10 Bit    Registers := 9     
 	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 9     
@@ -679,20 +756,20 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 5     
 	                5 Bit    Registers := 17    
 	                4 Bit    Registers := 12    
-	                3 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 25    
-	                1 Bit    Registers := 129   
+	                1 Bit    Registers := 127   
 +---RAMs : 
 	              320 Bit         RAMs := 3     
 +---Muxes : 
-	   2 Input    128 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
 	   5 Input     31 Bit        Muxes := 3     
 	   2 Input     24 Bit        Muxes := 1     
-	   4 Input     14 Bit        Muxes := 1     
-	   4 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 4     
+	   6 Input     14 Bit        Muxes := 1     
+	   6 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 6     
 	  10 Input     11 Bit        Muxes := 2     
+	   6 Input     11 Bit        Muxes := 1     
 	  12 Input     11 Bit        Muxes := 3     
 	   4 Input     10 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 12    
@@ -703,24 +780,24 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 7     
 	   5 Input      8 Bit        Muxes := 3     
 	 129 Input      8 Bit        Muxes := 1     
+	   6 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 3     
-	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      6 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 2     
 	   2 Input      6 Bit        Muxes := 6     
 	   2 Input      5 Bit        Muxes := 12    
 	  11 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 7     
 	   4 Input      4 Bit        Muxes := 1     
-	   7 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 15    
 	  10 Input      2 Bit        Muxes := 2     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 11    
-	   2 Input      1 Bit        Muxes := 145   
+	   2 Input      1 Bit        Muxes := 130   
 	  10 Input      1 Bit        Muxes := 21    
-	   4 Input      1 Bit        Muxes := 23    
+	   6 Input      1 Bit        Muxes := 7     
 	  12 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 4     
 	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -783,26 +860,28 @@ Module merge
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
 	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input    128 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 1     
-	   4 Input     14 Bit        Muxes := 1     
-	   4 Input     12 Bit        Muxes := 1     
+	   6 Input     14 Bit        Muxes := 1     
+	   6 Input     12 Bit        Muxes := 1     
+	   6 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   6 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
-	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      6 Bit        Muxes := 2     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 18    
-	   4 Input      1 Bit        Muxes := 13    
+	   6 Input      6 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 7     
 Module SyncAsync 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -988,12 +1067,12 @@ DSP Report: operator bicolor2 is absorbed into DSP bicolor2.
 DSP Report: Generating DSP bicolor1, operation Mode is: PCIN+A*B.
 DSP Report: operator bicolor1 is absorbed into DSP bicolor1.
 DSP Report: operator bicolor2 is absorbed into DSP bicolor1.
-INFO: [Synth 8-5546] ROM "mem_raddr" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_reg[streaming]" won't be mapped to RAM because it is too sparse
-DSP Report: Generating DSP mem_raddr1, operation Mode is: A*(B:0x3c).
-DSP Report: operator mem_raddr1 is absorbed into DSP mem_raddr1.
-DSP Report: Generating DSP mem_raddr1, operation Mode is: A*(B:0x3c).
-DSP Report: operator mem_raddr1 is absorbed into DSP mem_raddr1.
+INFO: [Synth 8-5546] ROM "mem_ren_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_reg[x_block_n]" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP mem_raddr_reg1, operation Mode is: A*(B:0x3c).
+DSP Report: operator mem_raddr_reg1 is absorbed into DSP mem_raddr_reg1.
+DSP Report: Generating DSP mem_raddr_reg1, operation Mode is: A*(B:0x3c).
+DSP Report: operator mem_raddr_reg1 is absorbed into DSP mem_raddr_reg1.
 INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:115]
 INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:149]
 INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
@@ -1045,42 +1124,119 @@ DSP Report: register addresser/addr_reg is absorbed into DSP addresser/addr_reg.
 DSP Report: operator addresser/addr0 is absorbed into DSP addresser/addr_reg.
 DSP Report: operator addresser/addr1 is absorbed into DSP addresser/addr_reg.
 WARNING: [Synth 8-3917] design edge_detector_filter has port hdmi_rx_hpd driven by constant 1
-WARNING: [Synth 8-3331] design dvi2rgb has unconnected port aRst_n
-WARNING: [Synth 8-3331] design dvi2rgb has unconnected port pRst_n
-WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
-WARNING: [Synth 8-3331] design rgb2dvi has unconnected port SerialClk
-WARNING: [Synth 8-3331] design deserializer has unconnected port reset
-WARNING: [Synth 8-3331] design edge_matrix_applier has unconnected port hsync
-INFO: [Synth 8-3886] merging instance 'addresser/x_reg[0]' (FDRE) to 'addresser/x_reg[5]'
-INFO: [Synth 8-3886] merging instance 'addresser/x_reg[1]' (FDRE) to 'addresser/x_reg[5]'
-INFO: [Synth 8-3886] merging instance 'addresser/x_reg[2]' (FDRE) to 'addresser/x_reg[5]'
-INFO: [Synth 8-3886] merging instance 'addresser/x_reg[3]' (FDRE) to 'addresser/x_reg[5]'
-INFO: [Synth 8-3886] merging instance 'addresser/x_reg[4]' (FDRE) to 'addresser/x_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\addresser/x_reg[5] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (merger/mem_ren_reg)
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\addresser/wena_reg )
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[15]' (LD) to 'merger/rgb_out_reg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[9]' (LD) to 'merger/rgb_out_reg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[11]' (LD) to 'merger/rgb_out_reg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[10]' (LD) to 'merger/rgb_out_reg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[12]' (LD) to 'merger/rgb_out_reg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[14]' (LD) to 'merger/rgb_out_reg_reg[13]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[13]' (LD) to 'merger/rgb_out_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[7]' (LD) to 'merger/rgb_out_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[1]' (LD) to 'merger/rgb_out_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[3]' (LD) to 'merger/rgb_out_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[2]' (LD) to 'merger/rgb_out_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[4]' (LD) to 'merger/rgb_out_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[6]' (LD) to 'merger/rgb_out_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[5]' (LD) to 'merger/rgb_out_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[23]' (LD) to 'merger/rgb_out_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[17]' (LD) to 'merger/rgb_out_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[19]' (LD) to 'merger/rgb_out_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[18]' (LD) to 'merger/rgb_out_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[20]' (LD) to 'merger/rgb_out_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[22]' (LD) to 'merger/rgb_out_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[21]' (LD) to 'merger/rgb_out_reg_reg[16]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (hdmiout/\DataEncoders[1].DataEncoder/pC0_1_reg )
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pC0_2_reg' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[7]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[6]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[5]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[4]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[3]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/pDataOut_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n1d_1_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[7]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[6]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[5]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[4]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[3]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/pDataOut_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1d_1_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[7]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[6]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[5]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[4]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[3]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[3]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1d_1_reg[2]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/pC0_1_reg'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (hdmiout/\DataEncoders[1].DataEncoder/pC0_1_reg )
-WARNING: [Synth 8-3332] Sequential element (mem_ren_reg) is unused and will be removed from module merge.
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n0q_m_2_reg[3]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n0q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pC0_1_reg' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n0q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n0q_m_2_reg[3]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n0q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n0q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[3]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[8]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[7]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[6]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[5]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[4]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[3]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[7]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[6]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[5]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[4]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[3]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[7]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[6]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[5]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[4]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[3]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hdmiout/\DataEncoders[2].DataEncoder/n1q_m_2_reg[2] )
 WARNING: [Synth 8-3332] Sequential element (DataEncoders[0].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
-WARNING: [Synth 8-3332] Sequential element (DataEncoders[1].DataEncoder/pC0_1_reg) is unused and will be removed from module rgb2dvi.
 WARNING: [Synth 8-3332] Sequential element (DataEncoders[1].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
 WARNING: [Synth 8-3332] Sequential element (DataEncoders[2].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
-WARNING: [Synth 8-3332] Sequential element (addresser/wena_reg) is unused and will be removed from module edge_detector_filter.
-WARNING: [Synth 8-3332] Sequential element (addresser/x_reg[5]) is unused and will be removed from module edge_detector_filter.
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pAllVld_q_reg' (FD) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVld_q_reg'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVld_q_reg' (FD) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pAllVld_q_reg'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
+WARNING: [Synth 8-3332] Sequential element (DataEncoders[2].DataEncoder/n1q_m_2_reg[2]) is unused and will be removed from module rgb2dvi.
 WARNING: [Synth 8-3332] Sequential element (DataDecoders[2].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
 WARNING: [Synth 8-3332] Sequential element (DataDecoders[1].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
 WARNING: [Synth 8-3332] Sequential element (DataDecoders[0].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:20 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1127,13 +1283,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'cw_ref/MemClk' to pin 'cw
 INFO: [Synth 8-5578] Moved timing constraint from pin 'cw_ref/RefClk200' to pin 'cw_ref/bbstub_RefClk200/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:39 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:15 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:40 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1160,23 +1316,15 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[1]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[0]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[2]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[4]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[1]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[0]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[2]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[4]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[1]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[0]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[2]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[4]'
+WARNING: [Synth 8-3332] Sequential element (addresser/wena_reg) is unused and will be removed from module edge_detector_filter.
+WARNING: [Synth 8-3332] Sequential element (addresser/x_reg[5]) is unused and will be removed from module edge_detector_filter.
+WARNING: [Synth 8-3332] Sequential element (addresser/x_reg[4]) is unused and will be removed from module edge_detector_filter.
+WARNING: [Synth 8-3332] Sequential element (addresser/x_reg[3]) is unused and will be removed from module edge_detector_filter.
+WARNING: [Synth 8-3332] Sequential element (addresser/x_reg[2]) is unused and will be removed from module edge_detector_filter.
+WARNING: [Synth 8-3332] Sequential element (addresser/x_reg[1]) is unused and will be removed from module edge_detector_filter.
+WARNING: [Synth 8-3332] Sequential element (addresser/x_reg[0]) is unused and will be removed from module edge_detector_filter.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:43 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1200,7 +1348,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1213,7 +1361,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1225,25 +1373,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1263,49 +1411,48 @@ Report Cell Usage:
 +------+---------------------+------+
 |1     |blk_mem_gen_0_bbox_0 |     1|
 |2     |clk_wiz_0_bbox_1     |     1|
-|3     |BUFG                 |     4|
+|3     |BUFG                 |     2|
 |4     |BUFIO                |     1|
 |5     |BUFR                 |     1|
-|6     |CARRY4               |    86|
+|6     |CARRY4               |    90|
 |7     |DSP48E1              |     6|
 |8     |DSP48E1_1            |     1|
 |9     |IDELAYCTRL           |     1|
 |10    |IDELAYE2             |     3|
 |11    |ISERDESE2            |     3|
 |12    |ISERDESE2_1          |     3|
-|13    |LUT1                 |    44|
-|14    |LUT2                 |   198|
-|15    |LUT3                 |   242|
-|16    |LUT4                 |   208|
-|17    |LUT5                 |   503|
-|18    |LUT6                 |   693|
+|13    |LUT1                 |    53|
+|14    |LUT2                 |   209|
+|15    |LUT3                 |   201|
+|16    |LUT4                 |   163|
+|17    |LUT5                 |   500|
+|18    |LUT6                 |   578|
 |19    |MMCME2_ADV           |     2|
-|20    |MUXF7                |    47|
-|21    |MUXF8                |    17|
-|22    |OSERDESE2            |     4|
-|23    |OSERDESE2_1          |     4|
-|24    |RAM32M               |     6|
-|25    |FDCE                 |    10|
-|26    |FDPE                 |    28|
-|27    |FDRE                 |   712|
-|28    |FDSE                 |    39|
-|29    |LD                   |   581|
-|30    |IBUFDS               |     4|
-|31    |IOBUF                |     2|
-|32    |OBUF                 |     3|
-|33    |OBUFDS               |     4|
+|20    |MUXF7                |    11|
+|21    |OSERDESE2            |     4|
+|22    |OSERDESE2_1          |     4|
+|23    |RAM32M               |     6|
+|24    |FDCE                 |    10|
+|25    |FDPE                 |    28|
+|26    |FDRE                 |   635|
+|27    |FDSE                 |    33|
+|28    |LD                   |   313|
+|29    |IBUFDS               |     4|
+|30    |IOBUF                |     2|
+|31    |OBUF                 |     3|
+|32    |OBUFDS               |     4|
 +------+---------------------+------+
 
 Report Instance Areas: 
 +------+-------------------------------------+-----------------------------+------+
 |      |Instance                             |Module                       |Cells |
 +------+-------------------------------------+-----------------------------+------+
-|1     |top                                  |                             |  3591|
+|1     |top                                  |                             |  3005|
 |2     |  addresser                          |memory_addr_calc             |    17|
-|3     |  des                                |deserializer                 |   119|
-|4     |  ema                                |edge_matrix_applier          |  1326|
-|5     |  filter                             |rgb2gray                     |    16|
-|6     |  hdmiin                             |dvi2rgb                      |  1077|
+|3     |  des                                |deserializer                 |   120|
+|4     |  ema                                |edge_matrix_applier          |  1317|
+|5     |  filter                             |rgb2gray                     |    48|
+|6     |  hdmiin                             |dvi2rgb                      |  1051|
 |7     |    \DataDecoders[0].DecoderX        |TMDS_Decoder                 |   267|
 |8     |      ChannelBondX                   |ChannelBond_27               |    60|
 |9     |      InputSERDES_X                  |InputSERDES_28               |     4|
@@ -1330,7 +1477,7 @@ Report Instance Areas:
 |28    |        SyncAsyncx                   |SyncAsync__parameterized1_19 |     2|
 |29    |      SyncBaseRst                    |SyncBase__parameterized0     |     3|
 |30    |        SyncAsyncx                   |SyncAsync_18                 |     2|
-|31    |    \GenerateBUFG.ResyncToBUFG_X     |ResyncToBUFG                 |    88|
+|31    |    \GenerateBUFG.ResyncToBUFG_X     |ResyncToBUFG                 |    62|
 |32    |    \GenerateDDC.DDC_EEPROM          |EEPROM_8b                    |   161|
 |33    |      I2C_SlaveController            |TWI_SlaveCtl                 |   109|
 |34    |        GlitchF_SCL                  |GlitchFilter                 |    12|
@@ -1345,44 +1492,44 @@ Report Instance Areas:
 |43    |      MMCM_LockSync                  |SyncAsync__parameterized2    |     4|
 |44    |      RdyLostReset                   |ResetBridge_11               |     3|
 |45    |        SyncAsyncx                   |SyncAsync_12                 |     2|
-|46    |  hdmiout                            |rgb2dvi                      |   352|
+|46    |  hdmiout                            |rgb2dvi                      |    92|
 |47    |    \ClockGenInternal.ClockGenX      |ClockGen                     |    12|
 |48    |      LockLostReset                  |ResetBridge_5                |     3|
 |49    |        SyncAsyncx                   |SyncAsync_6                  |     2|
 |50    |      PLL_LockSyncAsync              |SyncAsync__parameterized1    |     2|
 |51    |    ClockSerializer                  |OutputSERDES                 |     3|
-|52    |    \DataEncoders[0].DataEncoder     |TMDS_Encoder                 |   115|
+|52    |    \DataEncoders[0].DataEncoder     |TMDS_Encoder                 |    30|
 |53    |    \DataEncoders[0].DataSerializer  |OutputSERDES_0               |     3|
-|54    |    \DataEncoders[1].DataEncoder     |TMDS_Encoder_1               |   105|
+|54    |    \DataEncoders[1].DataEncoder     |TMDS_Encoder_1               |    18|
 |55    |    \DataEncoders[1].DataSerializer  |OutputSERDES_2               |     3|
-|56    |    \DataEncoders[2].DataEncoder     |TMDS_Encoder_3               |   106|
+|56    |    \DataEncoders[2].DataEncoder     |TMDS_Encoder_3               |    18|
 |57    |    \DataEncoders[2].DataSerializer  |OutputSERDES_4               |     3|
 |58    |    LockLostReset                    |ResetBridge                  |     2|
 |59    |      SyncAsyncx                     |SyncAsync                    |     2|
-|60    |  merger                             |merge                        |   544|
+|60    |  merger                             |merge                        |   219|
 +------+-------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 75 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:31 . Memory (MB): peak = 1063.313 ; gain = 774.191
-Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:01:45 . Memory (MB): peak = 1063.313 ; gain = 774.191
+Synthesis finished with 0 errors, 0 critical warnings and 226 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1063.137 ; gain = 773.664
+Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1063.137 ; gain = 773.664
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 766 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 449 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 589 instances were transformed.
+  A total of 321 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
-  LD => LDCE: 581 instances
+  LD => LDCE: 313 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-233 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+303 Infos, 185 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:01:50 . Memory (MB): peak = 1063.313 ; gain = 785.660
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 1063.137 ; gain = 785.137
 INFO: [Common 17-1381] The checkpoint 'C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file edge_detector_filter_utilization_synth.rpt -pb edge_detector_filter_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.167 . Memory (MB): peak = 1063.313 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 14 14:29:38 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1063.137 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  2 17:51:16 2018...

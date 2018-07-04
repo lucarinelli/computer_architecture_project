@@ -55,6 +55,7 @@ architecture Behavioral of merge is
     type state_type is (
         WAIT_FOR_VSYNC,
         WAIT_FOR_HSYNC,
+        WAIT_HSYNC_DOWN,
         WAIT_FOR_VIDEO,
         STREAMING
     );
@@ -86,25 +87,38 @@ architecture Behavioral of merge is
     
     signal sw_buf  : swap_buff_t := (others => (others => '0'));
     
+    signal rgb_out_reg : std_logic_vector(23 downto 0) := (others => '1');
+    signal mem_raddr_reg : std_logic_vector(MEM_ADDR_SIZE-1 downto 0) := (others => '0');
+    signal mem_ren_reg : std_logic := '0';
+    
 begin
 
+    rgb_out <= rgb_out_reg;
+    sw_buf(curr_reg.loading) <= mem_d_in;
+    mem_raddr<=mem_raddr_reg;
+    mem_ren<=mem_ren_reg;
+    
     state_machine_proc: process(curr_reg.state,vsync,hsync) begin
         case curr_reg.state is
             when WAIT_FOR_VSYNC =>
                 if vsync='0' then
                     next_reg.state <= WAIT_FOR_HSYNC;
                 end if;
+                mem_ren_reg <= '0';
             when WAIT_FOR_HSYNC =>
                 if hsync='1' then
-                    next_reg.y <= next_reg.y + 1;
-                    next_reg.state <= WAIT_FOR_VIDEO;
+                    next_reg.y <= curr_reg.y + 1;
+                    next_reg.state <= WAIT_HSYNC_DOWN;
                     next_reg.x_block_n <= next_reg.x_block_n + 1;
                     next_reg.loading <= 1;
                     next_reg.streaming <= 0;
                 else
-                    mem_raddr <= std_logic_vector(to_unsigned(BLOCK_NUM*(curr_reg.y+1)+ curr_reg.x_block_n, MEM_ADDR_SIZE));
-                    mem_ren <= '1';
-                    sw_buf(curr_reg.loading) <= mem_d_in;
+                    mem_raddr_reg <= std_logic_vector(to_unsigned(BLOCK_NUM*(curr_reg.y+1)+ curr_reg.x_block_n, MEM_ADDR_SIZE));
+                    mem_ren_reg <= '1';
+                end if;
+            when WAIT_HSYNC_DOWN =>
+                if hsync='0' then
+                    next_reg.state <= WAIT_FOR_VIDEO;
                 end if;
             when WAIT_FOR_VIDEO =>
                 if hsync='1' then
@@ -114,26 +128,31 @@ begin
                     next_reg.buff_index <= curr_reg.buff_index + 1;
                     next_reg.state <= STREAMING;
                     
-                    if sw_buf(curr_reg.streaming)(curr_reg.buff_index) = '1' then
-                        rgb_out <= "000000001111111100000000";
-                    else
-                        rgb_out <= rgb_in;                    
+                    --if sw_buf(curr_reg.streaming)(curr_reg.buff_index) = '1' then
+                        --rgb_out_reg <= "000000000000000011111111";
+                    --else
+                        --rgb_out_reg <= rgb_in;                    
+                    --end if;
+                    
+                    if curr_reg.x mod 20 < 10 then
+                        rgb_out_reg <= "000000000000000011111111";
+                    else 
+                        rgb_out_reg <= "111111110000000000000000";
                     end if;
                     
                 end if;
             when STREAMING =>
                 if de='0' then
                     next_reg.state <= WAIT_FOR_HSYNC;
-                    next_reg.y <= next_reg.y + 1;
                     next_reg.x <= 0;
                     next_reg.buff_index <= 0;
                     next_reg.streaming <= 1;
                     next_reg.loading <= 0;
                 else
                     if curr_reg.buff_index = REFILL_AT_INDEX then
-                        mem_raddr <= std_logic_vector(to_unsigned(BLOCK_NUM*curr_reg.y+ curr_reg.x_block_n, MEM_ADDR_SIZE));
-                        mem_ren <= '1';
-                        sw_buf(curr_reg.loading) <= mem_d_in;
+                        mem_raddr_reg <= std_logic_vector(to_unsigned(BLOCK_NUM*curr_reg.y+ curr_reg.x_block_n, MEM_ADDR_SIZE));
+                        mem_ren_reg <= '1';
+                        
                     end if;
                     if curr_reg.buff_index=BUFF_SIZE-1 then
                         next_reg.loading <= curr_reg.streaming;
@@ -143,10 +162,16 @@ begin
                     next_reg.x <= curr_reg.x + 1;
                     next_reg.buff_index <= curr_reg.buff_index + 1;
                     
-                    if sw_buf(curr_reg.streaming)(curr_reg.buff_index) = '1' then
-                        rgb_out <= "000000001111111100000000";
-                    else
-                        rgb_out <= rgb_in;                    
+                    --if sw_buf(curr_reg.streaming)(curr_reg.buff_index) = '1' then
+                        --rgb_out_reg <= "000000000000000011111111";
+                    --else
+                        --rgb_out_reg <= rgb_in;                    
+                    --end if;
+                    
+                    if (curr_reg.x mod 20) < 10 then
+                        rgb_out_reg <= "000000000000000011111111";
+                    else 
+                        rgb_out_reg <= "111111110000000000000000";
                     end if;
                     
                 end if;

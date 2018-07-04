@@ -409,7 +409,7 @@ begin
             aRst_n => aRst_n, --asynchronous reset; must be reset when RefClk is not within spec
             
             -- Video in
-            vid_pData => elaborated_s_vid_pData,
+            vid_pData => elaborated_s_vid_pData,--s_vid_pData,--(others=>'1'),--elaborated_s_vid_pData,
             vid_pVDE => s_vid_pVDE,
             vid_pHSync => s_vid_pHSync,
             vid_pVSync => s_vid_pVSync,

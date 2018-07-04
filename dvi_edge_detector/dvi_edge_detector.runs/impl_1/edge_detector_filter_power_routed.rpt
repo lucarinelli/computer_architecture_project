@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Thu Jun 14 14:32:36 2018
+| Date             : Mon Jul  2 17:52:53 2018
 | Host             : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
 | Command          : report_power -file edge_detector_filter_power_routed.rpt -pb edge_detector_filter_power_summary_routed.pb -rpx edge_detector_filter_power_routed.rpx
 | Design           : edge_detector_filter
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.399        |
+| Total On-Chip Power (W)  | 0.368        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.289        |
-| Device Static (W)        | 0.110        |
+| Dynamic (W)              | 0.262        |
+| Device Static (W)        | 0.107        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.4         |
-| Junction Temperature (C) | 29.6         |
+| Max Ambient (C)          | 80.8         |
+| Junction Temperature (C) | 29.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,24 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.007 |       10 |       --- |             --- |
-| Slice Logic              |     0.006 |     4640 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     2175 |     53200 |            4.09 |
-|   Register               |    <0.001 |     1400 |    106400 |            1.32 |
-|   F7/F8 Muxes            |    <0.001 |      388 |     53200 |            0.73 |
-|   CARRY4                 |    <0.001 |       86 |     13300 |            0.65 |
-|   BUFG                   |    <0.001 |        7 |        32 |           21.88 |
+| Clocks                   |     0.005 |        8 |       --- |             --- |
+| Slice Logic              |     0.002 |     1255 |       --- |             --- |
+|   LUT as Logic           |     0.001 |      427 |     53200 |            0.80 |
+|   CARRY4                 |    <0.001 |       25 |     13300 |            0.19 |
+|   Register               |    <0.001 |      535 |    106400 |            0.50 |
+|   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
-|   Others                 |    <0.001 |      291 |       --- |             --- |
+|   Others                 |    <0.001 |      105 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |       10 |     53200 |            0.02 |
 |   BUFR                   |     0.000 |        1 |        88 |            1.14 |
-| Signals                  |     0.007 |     5184 |       --- |             --- |
-| Block RAM                |     0.014 |       58 |       140 |           41.43 |
+| Signals                  |     0.001 |      925 |       --- |             --- |
 | MMCM                     |     0.114 |        2 |         4 |           50.00 |
 | PLL                      |     0.107 |        1 |         4 |           25.00 |
-| DSPs                     |    <0.001 |        7 |       220 |            3.18 |
 | I/O                      |     0.032 |       22 |       125 |           17.60 |
-| Static Power             |     0.110 |          |           |                 |
-| Total                    |     0.399 |          |           |                 |
+| Static Power             |     0.107 |          |           |                 |
+| Total                    |     0.368 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.056 |       0.046 |      0.010 |
+| Vccint    |       1.000 |     0.029 |       0.020 |      0.008 |
 | Vccaux    |       1.800 |     0.145 |       0.134 |      0.011 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -88,7 +86,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.001 |      0.003 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -142,8 +140,6 @@ Table of Contents
 +-----------------------+---------------------------------+-----------------+
 | Clock                 | Domain                          | Constraint (ns) |
 +-----------------------+---------------------------------+-----------------+
-| MemClk_clk_wiz_0      | cw_ref/inst/MemClk_clk_wiz_0    |            20.0 |
-| MemClk_clk_wiz_0_1    | cw_ref/inst/MemClk_clk_wiz_0    |            20.0 |
 | RefClk200_clk_wiz_0   | cw_ref/inst/RefClk200_clk_wiz_0 |             5.0 |
 | RefClk200_clk_wiz_0_1 | cw_ref/inst/RefClk200_clk_wiz_0 |             5.0 |
 | clkfbout_clk_wiz_0    | cw_ref/inst/clkfbout_clk_wiz_0  |             8.0 |
@@ -159,203 +155,75 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------------------------------+-----------+
-| Name                                         | Power (W) |
-+----------------------------------------------+-----------+
-| edge_detector_filter                         |     0.289 |
-|   addresser                                  |    <0.001 |
-|   cw_ref                                     |     0.108 |
-|     inst                                     |     0.108 |
-|   des                                        |    <0.001 |
-|   edges_matrix                               |     0.017 |
-|     U0                                       |     0.017 |
-|       inst_blk_mem_gen                       |     0.017 |
-|         gnbram.gnativebmg.native_blk_mem_gen |     0.017 |
-|           valid.cstr                         |     0.017 |
-|             bindec_a.bindec_inst_a           |     0.000 |
-|             bindec_b.bindec_inst_b           |    <0.001 |
-|             has_mux_b.B                      |     0.001 |
-|             ramloop[0].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[10].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[11].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[12].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[13].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[14].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[15].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[16].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[17].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[18].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[19].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[1].ram.r                 |     0.001 |
-|               prim_noinit.ram                |     0.001 |
-|             ramloop[20].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[21].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[22].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[23].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[24].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[25].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[26].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[27].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[28].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[29].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[2].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[30].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[31].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[32].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[33].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[34].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[35].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[36].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[37].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[38].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[39].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[3].ram.r                 |     0.001 |
-|               prim_noinit.ram                |     0.001 |
-|             ramloop[40].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[41].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[42].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[43].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[44].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[45].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[46].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[47].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[48].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[49].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[4].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[50].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[51].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[52].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[53].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[54].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[55].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[56].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[57].ram.r                |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[5].ram.r                 |     0.001 |
-|               prim_noinit.ram                |     0.001 |
-|             ramloop[6].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[7].ram.r                 |     0.001 |
-|               prim_noinit.ram                |     0.001 |
-|             ramloop[8].ram.r                 |    <0.001 |
-|               prim_noinit.ram                |    <0.001 |
-|             ramloop[9].ram.r                 |     0.001 |
-|               prim_noinit.ram                |     0.001 |
-|   ema                                        |     0.002 |
-|   filter                                     |    <0.001 |
-|   hdmiin                                     |     0.098 |
-|     DataDecoders[0].DecoderX                 |     0.011 |
-|       ChannelBondX                           |    <0.001 |
-|         pFIFO_reg_0_31_0_5                   |    <0.001 |
-|         pFIFO_reg_0_31_6_9                   |    <0.001 |
-|       InputSERDES_X                          |     0.010 |
-|       PhaseAlignX                            |    <0.001 |
-|       SyncBaseOvf                            |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|       SyncBaseRst                            |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|     DataDecoders[1].DecoderX                 |     0.011 |
-|       ChannelBondX                           |    <0.001 |
-|         pFIFO_reg_0_31_0_5                   |    <0.001 |
-|         pFIFO_reg_0_31_6_9                   |    <0.001 |
-|       InputSERDES_X                          |     0.010 |
-|       PhaseAlignX                            |    <0.001 |
-|       SyncBaseOvf                            |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|       SyncBaseRst                            |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|     DataDecoders[2].DecoderX                 |     0.011 |
-|       ChannelBondX                           |    <0.001 |
-|         pFIFO_reg_0_31_0_5                   |    <0.001 |
-|         pFIFO_reg_0_31_6_9                   |    <0.001 |
-|       InputSERDES_X                          |     0.010 |
-|       PhaseAlignX                            |    <0.001 |
-|       SyncBaseOvf                            |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|       SyncBaseRst                            |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|     GenerateBUFG.ResyncToBUFG_X              |    <0.001 |
-|     GenerateDDC.DDC_EEPROM                   |     0.002 |
-|       I2C_SlaveController                    |     0.002 |
-|         GlitchF_SCL                          |    <0.001 |
-|         GlitchF_SDA                          |    <0.001 |
-|         SyncSCL                              |    <0.001 |
-|         SyncSDA                              |    <0.001 |
-|     LockLostReset                            |     0.000 |
-|       SyncAsyncx                             |     0.000 |
-|     TMDS_ClockingX                           |     0.061 |
-|       LockLostReset                          |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|       MMCM_LockSync                          |    <0.001 |
-|       RdyLostReset                           |    <0.001 |
-|         SyncAsyncx                           |    <0.001 |
-|   hdmiout                                    |     0.059 |
-|     ClockGenInternal.ClockGenX               |     0.055 |
-|       LockLostReset                          |     0.000 |
-|         SyncAsyncx                           |     0.000 |
-|       PLL_LockSyncAsync                      |     0.000 |
-|     ClockSerializer                          |    <0.001 |
-|     DataEncoders[0].DataEncoder              |     0.003 |
-|     DataEncoders[0].DataSerializer           |    <0.001 |
-|     DataEncoders[1].DataEncoder              |    <0.001 |
-|     DataEncoders[1].DataSerializer           |    <0.001 |
-|     DataEncoders[2].DataEncoder              |    <0.001 |
-|     DataEncoders[2].DataSerializer           |    <0.001 |
-|     LockLostReset                            |     0.000 |
-|       SyncAsyncx                             |     0.000 |
-|   merger                                     |     0.004 |
-|   scl_io                                     |     0.000 |
-|   sda_io                                     |     0.000 |
-+----------------------------------------------+-----------+
++------------------------------------+-----------+
+| Name                               | Power (W) |
++------------------------------------+-----------+
+| edge_detector_filter               |     0.262 |
+|   cw_ref                           |     0.108 |
+|     inst                           |     0.108 |
+|   hdmiin                           |     0.096 |
+|     DataDecoders[0].DecoderX       |     0.011 |
+|       ChannelBondX                 |    <0.001 |
+|         pFIFO_reg_0_31_0_5         |    <0.001 |
+|         pFIFO_reg_0_31_6_9         |    <0.001 |
+|       InputSERDES_X                |     0.010 |
+|       PhaseAlignX                  |    <0.001 |
+|       SyncBaseOvf                  |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|       SyncBaseRst                  |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|     DataDecoders[1].DecoderX       |     0.011 |
+|       ChannelBondX                 |    <0.001 |
+|         pFIFO_reg_0_31_0_5         |    <0.001 |
+|         pFIFO_reg_0_31_6_9         |    <0.001 |
+|       InputSERDES_X                |     0.010 |
+|       PhaseAlignX                  |    <0.001 |
+|       SyncBaseOvf                  |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|       SyncBaseRst                  |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|     DataDecoders[2].DecoderX       |     0.011 |
+|       ChannelBondX                 |    <0.001 |
+|         pFIFO_reg_0_31_0_5         |    <0.001 |
+|         pFIFO_reg_0_31_6_9         |    <0.001 |
+|       InputSERDES_X                |     0.010 |
+|       PhaseAlignX                  |    <0.001 |
+|       SyncBaseOvf                  |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|       SyncBaseRst                  |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|     GenerateBUFG.ResyncToBUFG_X    |    <0.001 |
+|     GenerateDDC.DDC_EEPROM         |     0.002 |
+|       I2C_SlaveController          |     0.002 |
+|         GlitchF_SCL                |    <0.001 |
+|         GlitchF_SDA                |    <0.001 |
+|         SyncSCL                    |    <0.001 |
+|         SyncSDA                    |    <0.001 |
+|     LockLostReset                  |     0.000 |
+|       SyncAsyncx                   |     0.000 |
+|     TMDS_ClockingX                 |     0.061 |
+|       LockLostReset                |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|       MMCM_LockSync                |    <0.001 |
+|       RdyLostReset                 |    <0.001 |
+|         SyncAsyncx                 |    <0.001 |
+|   hdmiout                          |     0.057 |
+|     ClockGenInternal.ClockGenX     |     0.055 |
+|       LockLostReset                |     0.000 |
+|         SyncAsyncx                 |     0.000 |
+|       PLL_LockSyncAsync            |     0.000 |
+|     ClockSerializer                |    <0.001 |
+|     DataEncoders[0].DataEncoder    |     0.000 |
+|     DataEncoders[0].DataSerializer |    <0.001 |
+|     DataEncoders[1].DataEncoder    |    <0.001 |
+|     DataEncoders[1].DataSerializer |    <0.001 |
+|     DataEncoders[2].DataEncoder    |    <0.001 |
+|     DataEncoders[2].DataSerializer |    <0.001 |
+|     LockLostReset                  |     0.000 |
+|       SyncAsyncx                   |     0.000 |
+|   merger                           |    <0.001 |
+|   scl_io                           |     0.000 |
+|   sda_io                           |     0.000 |
++------------------------------------+-----------+
 
 

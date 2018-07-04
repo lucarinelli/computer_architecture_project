@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun 24 00:45:44 2018
+# Process ID: 15400
+# Current directory: C:/Users/rinel/Desktop/computer_architecture_project/test_debug_core/test_debug_core.runs/synth_1
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: C:/Users/rinel/Desktop/computer_architecture_project/test_debug_core/test_debug_core.runs/synth_1/main.vds
+# Journal file: C:/Users/rinel/Desktop/computer_architecture_project/test_debug_core/test_debug_core.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace
