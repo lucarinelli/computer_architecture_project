@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Jul  2 17:52:55 2018
-| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Fri Jul  6 01:46:12 2018
+| Host         : SATANASSO running 64-bit unknown
 | Command      : report_clock_utilization -file edge_detector_filter_clock_utilization_routed.rpt
 | Design       : edge_detector_filter
 | Device       : 7z020-clg400
@@ -92,9 +92,9 @@ Table of Contents
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2500 |    0 |  1000 |    0 |    60 |    0 |    30 |    0 |    60 |
 | X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    8 |  3200 |    2 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    4 |    12 |    1 |     4 |    0 |     2 |    1 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    6 |    50 |    0 |    50 |  488 |  2600 |  160 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X1Y1              |    4 |    12 |    1 |     4 |    0 |     2 |    1 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    6 |    50 |    0 |    50 |  494 |  2600 |  138 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    8 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |   14 |  2600 |    6 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X1Y2              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |    8 |  2600 |    8 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -198,8 +198,8 @@ All Modules
 +----+----+-----+
 |    | X0 | X1  |
 +----+----+-----+
-| Y2 |  0 |  14 |
-| Y1 |  0 |  44 |
+| Y2 |  0 |   8 |
+| Y1 |  0 |  50 |
 | Y0 |  0 |   9 |
 +----+----+-----+
 
@@ -294,7 +294,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------+
 | g0        | n/a   | BUFR/O          | None       |         290 |               0 | 281 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | hdmiin/TMDS_ClockingX/oSyncStages_reg[1] |
 | g1        | n/a   | BUFGCTRL/O      | None       |         164 |               0 | 163 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cw_ref/inst/RefClk200                    |
-| g3        | n/a   | BUFG/O          | None       |          44 |               0 |  44 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK   |
+| g3        | n/a   | BUFG/O          | None       |          50 |               0 |  50 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK   |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -320,7 +320,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
-| g3        | n/a   | BUFG/O          | None       |          14 |               0 | 14 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK            |
+| g3        | n/a   | BUFG/O          | None       |           8 |               0 |  8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | hdmiin/GenerateBUFG.ResyncToBUFG_X/CLK            |
 | g4        | n/a   | BUFG/O          | None       |           8 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | hdmiout/ClockGenInternal.ClockGenX/PixelClk_BUFG  |
 | g5        | n/a   | BUFG/O          | None       |           8 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | hdmiout/ClockGenInternal.ClockGenX/SerialClk_BUFG |
 | g6        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   1 |       0 | cw_ref/inst/clkfbout_buf_clk_wiz_0                |

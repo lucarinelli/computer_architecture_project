@@ -17,56 +17,54 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.cache/wt [current_project]
-set_property parent.project_path C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.xpr [current_project]
+set_property webtalk.parent_dir /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.cache/wt [current_project]
+set_property parent.project_path /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.cache/ip [current_project]
+set_property ip_output_repo /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/DVI_Constants.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/DVI_Constants.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ChannelBond.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/ClockGen.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/GlitchFilter.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TWI_SlaveCtl.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ResyncToBUFG.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsyncReset.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncBase.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/rgb2gray.vhd
-  C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/DVI_Constants.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/DVI_Constants.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ChannelBond.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/ClockGen.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/GlitchFilter.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TWI_SlaveCtl.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ResyncToBUFG.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsyncReset.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncBase.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/rgb2gray.vhd
+  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd
 }
-read_ip -quiet C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc]
+set_property used_in_implementation false [get_files -all /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -76,8 +74,8 @@ set_property used_in_implementation false [get_files -all c:/Users/rinel/Desktop
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc
-set_property used_in_implementation false [get_files C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]
+read_xdc /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc
+set_property used_in_implementation false [get_files /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

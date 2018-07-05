@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Wed Jun 13 21:53:18 2018
-// Host        : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+// Date        : Thu Jul  5 19:03:19 2018
+// Host        : SATANASSO running 64-bit unknown
 // Command     : write_verilog -force -mode synth_stub
-//               C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
+//               /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
 // Design      : clk_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

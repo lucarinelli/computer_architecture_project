@@ -1,6 +1,6 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc rfile:../../../dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc rfile:../../../dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { sysclk }]; #IO_L13P_T2_MRCC_35 Sch=sysclk
+set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [ get_ports { sysclk }]; #IO_L13P_T2_MRCC_35 Sch=sysclk
 set_property src_info {type:XDC file:1 line:46 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { led[0] }]; #IO_L6N_T0_VREF_34 Sch=led[0]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]

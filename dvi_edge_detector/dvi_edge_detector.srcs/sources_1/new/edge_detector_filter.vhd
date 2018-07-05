@@ -244,15 +244,17 @@ architecture Behavioral of edge_detector_filter is
             REFILL_AT_INDEX : natural := 63;
             BLOCK_NUM : natural := 60
         );
-        Port ( vsync : in STD_LOGIC;
-               hsync : in STD_LOGIC;
-               de : in STD_LOGIC;
-               mem_d_in : in STD_LOGIC_VECTOR (127 downto 0);
-               pixel_clock : in STD_LOGIC;
-               mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
-               mem_ren : out STD_LOGIC;
-               rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
-               rgb_out : out STD_LOGIC_VECTOR (23 downto 0));
+        Port (
+            vsync : in STD_LOGIC;
+            hsync : in STD_LOGIC;
+            de : in STD_LOGIC;
+            mem_d_in : in STD_LOGIC_VECTOR (127 downto 0);
+            pixel_clock : in STD_LOGIC;
+            mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
+            mem_ren : out STD_LOGIC;
+            rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
+            rgb_out : out STD_LOGIC_VECTOR (23 downto 0)
+        );
     end component;
     
     signal s_grey_vid : std_logic_vector(7 downto 0) := (others=>'0');

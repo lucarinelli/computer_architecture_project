@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Mon Jul  2 17:52:53 2018
-| Host             : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date             : Fri Jul  6 01:46:10 2018
+| Host             : SATANASSO running 64-bit unknown
 | Command          : report_power -file edge_detector_filter_power_routed.rpt -pb edge_detector_filter_power_summary_routed.pb -rpx edge_detector_filter_power_routed.rpx
 | Design           : edge_detector_filter
 | Device           : xc7z020clg400-1
@@ -52,7 +52,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        8 |       --- |             --- |
+| Clocks                   |     0.006 |        8 |       --- |             --- |
 | Slice Logic              |     0.002 |     1255 |       --- |             --- |
 |   LUT as Logic           |     0.001 |      427 |     53200 |            0.80 |
 |   CARRY4                 |    <0.001 |       25 |     13300 |            0.19 |
@@ -62,7 +62,7 @@ Table of Contents
 |   Others                 |    <0.001 |      105 |       --- |             --- |
 |   F7/F8 Muxes            |    <0.001 |       10 |     53200 |            0.02 |
 |   BUFR                   |     0.000 |        1 |        88 |            1.14 |
-| Signals                  |     0.001 |      925 |       --- |             --- |
+| Signals                  |     0.001 |      894 |       --- |             --- |
 | MMCM                     |     0.114 |        2 |         4 |           50.00 |
 | PLL                      |     0.107 |        1 |         4 |           25.00 |
 | I/O                      |     0.032 |       22 |       125 |           17.60 |

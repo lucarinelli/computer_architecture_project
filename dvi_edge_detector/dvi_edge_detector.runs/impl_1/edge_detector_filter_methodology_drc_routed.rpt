@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Jul  2 17:52:52 2018
-| Host         : DESKTOP-0KG3I12 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Fri Jul  6 01:46:09 2018
+| Host         : SATANASSO running 64-bit unknown
 | Command      : report_methodology -file edge_detector_filter_methodology_drc_routed.rpt -pb edge_detector_filter_methodology_drc_routed.pb -rpx edge_detector_filter_methodology_drc_routed.rpx
 | Design       : edge_detector_filter
 | Device       : xc7z020clg400-1
@@ -2249,7 +2249,7 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ */SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '5' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc (Line: 13)
+Current XDC: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc (Line: 13)
 Related violations: <none>
 
 

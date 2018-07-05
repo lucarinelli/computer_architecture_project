@@ -51,9 +51,11 @@ begin
     process(rst,inc)
     begin
         if rst='1' then
-                count <= 0;
+            count <= 0;
+            value <= (others=>'0');
         elsif rising_edge(inc) then
             count <= count + 1;
+            value <= std_logic_vector(to_unsigned(count, bit_size));
         end if;
     end process;
 

@@ -60,8 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -71,15 +69,15 @@ set rc [catch {
   create_project -in_memory -part xc7z020clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.cache/wt [current_project]
-  set_property parent.project_path C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.xpr [current_project]
-  set_property ip_output_repo C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.cache/ip [current_project]
+  set_property webtalk.parent_dir /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.cache/wt [current_project]
+  set_property parent.project_path /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.xpr [current_project]
+  set_property ip_output_repo /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.dcp
-  read_ip -quiet C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  read_xdc C:/Users/rinel/Desktop/computer_architecture_project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc
+  add_files -quiet /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.dcp
+  read_ip -quiet /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_xdc /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc
   link_design -top edge_detector_filter -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
