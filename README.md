@@ -1,14 +1,20 @@
 # Computer Architecture Project
-This is the git repository containing most of the work done by Andrea Fanti and Luca Rinelli for the Computer Architecture course project. We are using a PYNQ-Z1 by Digilent, based on the Xilinx Zynq-7000.
+This is the git repository containing most of the work done by Andrea Fanti and
+Luca Rinelli for the Computer Architecture course project. We are using a
+PYNQ-Z1 by Digilent, based on the Xilinx Zynq-7000.
 
 ## "Real-time" edge detection (HDMI/DVI passthrough) 
-The goal is to take the stream from the HDMI IN, retransmit it on the HDMI OUT in real time and at the same time perform the edge detection using Sobel operator, the result of the edge detection are showed on the frame immediately after the one on which it is computed. See the folder __dvi_edge_detector__.
+The goal is to take the stream from the HDMI IN, retransmit it on the HDMI OUT
+in real time and at the same time perform the edge detection using Sobel
+operator, the result of the edge detection are showed on the frame immediately
+after the one on which it is computed. See the folder __dvi_edge_detector__.
 * State: correcting warnings on gate clocks, no signal on the monitor
 
 ## Sub projects index
 Look for a readme file inside the project folders to more detailed explanation
 * __hdmi_out_test__, simple hdmi out test with colors (and an easter egg!)
-* __test_hdmi_filter__, simple negative filter on an hdmi input that is then transmitted in output real-time
+* __test_hdmi_filter__, simple negative filter on an hdmi input that is then
+  transmitted in output real-time
 * others... not all working or completed!
 
 # Generic guide to program the board (to be moved probably)
@@ -76,8 +82,8 @@ the boot mode is selected by the jumper JP4
 JP5 controls from where the power arrives (microUSB or J18)
 
 #### PROBLEMS ####
-* connecting to the `jupyter_notebooks` via firefox doesn't work (as of 05/2018),
-  use chrome
+* connecting to the `jupyter_notebooks` via firefox doesn't work
+  (as of 05/2018),use chrome
 * the chip become very hot when booted in SD mode (the CPU works a lot)
 	- a non-electrically-conductive dissipator can be used to solve this
 
