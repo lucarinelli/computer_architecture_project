@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Fri Jul  6 01:46:06 2018
+| Date         : Tue Jul 10 00:50:01 2018
 | Host         : SATANASSO running 64-bit unknown
 | Command      : report_drc -file edge_detector_filter_drc_routed.rpt -pb edge_detector_filter_drc_routed.pb -rpx edge_detector_filter_drc_routed.rpx
 | Design       : edge_detector_filter
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 2
 +----------+----------+--------------------+------------+
 | Rule     | Severity | Description        | Violations |
 +----------+----------+--------------------+------------+
-| PDRC-153 | Warning  | Gated clock check  | 3          |
+| PDRC-153 | Warning  | Gated clock check  | 1          |
 | ZPS7-1   | Warning  | PS7 block required | 1          |
 +----------+----------+--------------------+------------+
 
@@ -36,17 +36,7 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net merger/next_reg[state] is a gated clock net sourced by a combinational pin merger/next_reg_reg[state][2]_i_2/O, cell merger/next_reg_reg[state][2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net merger/next_reg_reg[buff_index][6]_i_2_n_1 is a gated clock net sourced by a combinational pin merger/next_reg_reg[buff_index][6]_i_2/O, cell merger/next_reg_reg[buff_index][6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net merger/rgb_out_reg_reg[16]_i_2_n_1 is a gated clock net sourced by a combinational pin merger/rgb_out_reg_reg[16]_i_2/O, cell merger/rgb_out_reg_reg[16]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net merger/next_reg_reg[state]__0_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin merger/next_reg_reg[state]__0_LDC_i_1/O, cell merger/next_reg_reg[state]__0_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 ZPS7-1#1 Warning

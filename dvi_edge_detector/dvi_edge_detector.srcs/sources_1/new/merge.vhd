@@ -98,7 +98,7 @@ begin
     mem_raddr<=mem_raddr_reg;
     mem_ren<=mem_ren_reg;
     
-    state_machine_proc: process(curr_reg.state,vsync,hsync) begin
+    state_machine_proc: process(curr_reg.state, vsync, hsync) begin
         case curr_reg.state is
             when WAIT_FOR_VSYNC =>
                 if vsync='0' then
@@ -134,7 +134,7 @@ begin
                         --rgb_out_reg <= rgb_in;                    
                     --end if;
                     
-                    if curr_reg.x mod 20 < 10 then
+                    if (curr_reg.x mod 20) < 10 then
                         rgb_out_reg <= "000000000000000011111111";
                     else 
                         rgb_out_reg <= "111111110000000000000000";

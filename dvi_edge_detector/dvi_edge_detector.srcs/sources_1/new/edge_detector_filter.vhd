@@ -235,26 +235,22 @@ architecture Behavioral of edge_detector_filter is
         );
     end component;
     
-    component merge
+   component merge_v2
         Generic (
             WIDTH : natural := 1920;
             HEIGHT : natural := 1080;
-            BUFF_SIZE : natural := 128;
             MEM_ADDR_SIZE : natural := 14;
-            REFILL_AT_INDEX : natural := 63;
             BLOCK_NUM : natural := 60
         );
-        Port (
-            vsync : in STD_LOGIC;
-            hsync : in STD_LOGIC;
-            de : in STD_LOGIC;
-            mem_d_in : in STD_LOGIC_VECTOR (127 downto 0);
-            pixel_clock : in STD_LOGIC;
-            mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
-            mem_ren : out STD_LOGIC;
-            rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
-            rgb_out : out STD_LOGIC_VECTOR (23 downto 0)
-        );
+        Port ( vsync : in STD_LOGIC;
+               hsync : in STD_LOGIC;
+               de : in STD_LOGIC;
+               mem_d_in : in STD_LOGIC_VECTOR (127 downto 0);
+               pixel_clock : in STD_LOGIC;
+               mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
+               mem_ren : out STD_LOGIC;
+               rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
+               rgb_out : out STD_LOGIC_VECTOR (23 downto 0));
     end component;
     
     signal s_grey_vid : std_logic_vector(7 downto 0) := (others=>'0');
@@ -262,9 +258,9 @@ architecture Behavioral of edge_detector_filter is
     signal s_bicolor: std_logic := '0';
     signal s_bicolor_ready : std_logic := '0';
     
-    signal s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
-    signal elaborated_s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0');
-    signal s_vid_pVDE : std_logic :='0';
+    signal s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0'); -- original rgb
+    signal elaborated_s_vid_pData : std_logic_vector(23 downto 0) := (others=>'0'); -- rgb after merger
+    signal s_vid_pVDE : std_logic :='0';    -- display enable
     signal s_vid_pHSync : std_logic:='0';
     signal s_vid_pVSync : std_logic:='1';
     signal s_PixelClk : std_logic:='0'; --pixel-clock recovered from the DVI interface
@@ -361,24 +357,22 @@ begin
             doutb => s_mem_doutb
         );
         
-    merger: merge
+    merger: merge_v2
         Generic map(
             WIDTH => 1920,
             HEIGHT => 1080,
-            BUFF_SIZE => 128,
             MEM_ADDR_SIZE => 14,
-            REFILL_AT_INDEX => 63,
             BLOCK_NUM => 60
         )
         Port map( vsync => s_vid_pVSync,
-               hsync => s_vid_pHSync,
-               de => s_vid_pVDE,
-               mem_d_in => s_mem_doutb,
-               pixel_clock => s_PixelClk,
-               mem_raddr => s_mem_addrb,
-               mem_ren => s_mem_ren,
-               rgb_in => s_vid_pData,
-               rgb_out => elaborated_s_vid_pData
+            hsync => s_vid_pHSync,
+            de => s_vid_pVDE,
+            mem_d_in => s_mem_doutb,
+            pixel_clock => s_PixelClk,
+            mem_raddr => s_mem_addrb,
+            mem_ren => s_mem_ren,
+            rgb_in => s_vid_pData,
+            rgb_out => elaborated_s_vid_pData
        );
     
     --elaborated_s_vid_pData <= s_grey_vid&s_grey_vid&s_grey_vid;
@@ -386,11 +380,11 @@ begin
     
     cw_ref: clk_wiz_0
             Port map(
-                RefClk200 => s_RefClk,
-                MemClk => s_MemClk,
+                RefClk200 => s_RefClk,  -- 200MHz
+                MemClk => s_MemClk, -- 50 MHz
                 --Status and control signals
                 reset => '0',
-                sysclk => sysclk
+                sysclk => sysclk    -- 125 MHz of the board
             );
 
     hdmiout: rgb2dvi

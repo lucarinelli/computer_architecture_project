@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri Jul  6 01:22:40 2018
-# Process ID: 13835
+# Start of session at: Tue Jul 10 00:46:18 2018
+# Process ID: 20323
 # Current directory: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1
 # Command line: vivado -log edge_detector_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source edge_detector_filter.tcl
 # Log file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.vds
@@ -15,16 +15,16 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13845 
+INFO: Helper process launched with PID 20332 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1293.918 ; gain = 87.000 ; free physical = 7246 ; free virtual = 16883
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1293.918 ; gain = 86.000 ; free physical = 10213 ; free virtual = 18685
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:128]
 WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:161]
 WARNING: [Synth 8-1565] actual for formal port potherchrdy is neither a static name nor a globally static expression [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:182]
 WARNING: [Synth 8-1565] actual for formal port potherchvld is neither a static name nor a globally static expression [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:183]
 INFO: [Synth 8-638] synthesizing module 'edge_detector_filter' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:74]
-INFO: [Synth 8-3491] module 'rgb2gray' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/rgb2gray.vhd:34' bound to instance 'filter' of component 'rgb2gray' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:301]
+INFO: [Synth 8-3491] module 'rgb2gray' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/rgb2gray.vhd:34' bound to instance 'filter' of component 'rgb2gray' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:297]
 INFO: [Synth 8-638] synthesizing module 'rgb2gray' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/rgb2gray.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'rgb2gray' (1#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/rgb2gray.vhd:42]
 	Parameter counter_bit_size bound to: 11 - type: integer 
@@ -32,7 +32,7 @@ INFO: [Synth 8-256] done synthesizing module 'rgb2gray' (1#1) [/mnt/condivisione
 	Parameter WIDTH bound to: 1920 - type: integer 
 	Parameter RES_HEIGHT bound to: 1080 - type: integer 
 	Parameter THRESHOLD bound to: 4900 - type: integer 
-INFO: [Synth 8-3491] module 'edge_matrix_applier' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:33' bound to instance 'ema' of component 'edge_matrix_applier' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:308]
+INFO: [Synth 8-3491] module 'edge_matrix_applier' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:33' bound to instance 'ema' of component 'edge_matrix_applier' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:304]
 INFO: [Synth 8-638] synthesizing module 'edge_matrix_applier' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:53]
 	Parameter counter_bit_size bound to: 11 - type: integer 
 	Parameter DEPTH bound to: 4 - type: integer 
@@ -43,43 +43,45 @@ WARNING: [Synth 8-614] signal 'grey' is read in the process but is not in the se
 WARNING: [Synth 8-614] signal 'ram' is read in the process but is not in the sensitivity list [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:195]
 INFO: [Synth 8-256] done synthesizing module 'edge_matrix_applier' (2#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:53]
 	Parameter WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'deserializer' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd:34' bound to instance 'des' of component 'deserializer' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:325]
+INFO: [Synth 8-3491] module 'deserializer' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd:34' bound to instance 'des' of component 'deserializer' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:321]
 INFO: [Synth 8-638] synthesizing module 'deserializer' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd:48]
 	Parameter WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'deserializer' (3#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd:48]
 	Parameter BLOCK_NUM bound to: 60 - type: integer 
-INFO: [Synth 8-3491] module 'memory_addr_calc' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:34' bound to instance 'addresser' of component 'memory_addr_calc' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:338]
+INFO: [Synth 8-3491] module 'memory_addr_calc' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:34' bound to instance 'addresser' of component 'memory_addr_calc' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:334]
 INFO: [Synth 8-638] synthesizing module 'memory_addr_calc' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:47]
 	Parameter BLOCK_NUM bound to: 60 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'memory_addr_calc' (4#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:47]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-13835-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'edges_matrix' of component 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:351]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-13835-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-20323-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'edges_matrix' of component 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:347]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-20323-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:20]
 	Parameter WIDTH bound to: 1920 - type: integer 
 	Parameter HEIGHT bound to: 1080 - type: integer 
-	Parameter BUFF_SIZE bound to: 128 - type: integer 
 	Parameter MEM_ADDR_SIZE bound to: 14 - type: integer 
-	Parameter REFILL_AT_INDEX bound to: 63 - type: integer 
 	Parameter BLOCK_NUM bound to: 60 - type: integer 
-INFO: [Synth 8-3491] module 'merge' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:34' bound to instance 'merger' of component 'merge' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:364]
-INFO: [Synth 8-638] synthesizing module 'merge' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:54]
+INFO: [Synth 8-3491] module 'merge_v2' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:34' bound to instance 'merger' of component 'merge_v2' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:360]
+INFO: [Synth 8-638] synthesizing module 'merge_v2' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:54]
 	Parameter WIDTH bound to: 1920 - type: integer 
 	Parameter HEIGHT bound to: 1080 - type: integer 
-	Parameter BUFF_SIZE bound to: 128 - type: integer 
 	Parameter MEM_ADDR_SIZE bound to: 14 - type: integer 
-	Parameter REFILL_AT_INDEX bound to: 63 - type: integer 
 	Parameter BLOCK_NUM bound to: 60 - type: integer 
-WARNING: [Synth 8-614] signal 'next_reg' is read in the process but is not in the sensitivity list [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:101]
-WARNING: [Synth 8-614] signal 'de' is read in the process but is not in the sensitivity list [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:101]
-WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[streaming] was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:183]
-WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[loading] was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:183]
-INFO: [Synth 8-256] done synthesizing module 'merge' (5#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:54]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-13835-SATANASSO/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'cw_ref' of component 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:387]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-13835-SATANASSO/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-226] default block is never used [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:95]
+WARNING: [Synth 8-614] signal 'curr_reg' is read in the process but is not in the sensitivity list [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element load_row_reg was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:90]
+WARNING: [Synth 8-6014] Unused sequential element load_first_reg was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:89]
+WARNING: [Synth 8-6014] Unused sequential element load_row_reg was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:90]
+WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[y] was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:163]
+WARNING: [Synth 8-5787] Register next_reg_reg[state] in module merge_v2 is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:91]
+WARNING: [Synth 8-5787] Register next_reg_reg[x] in module merge_v2 is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:91]
+WARNING: [Synth 8-3848] Net mem_raddr in module/entity merge_v2 does not have driver. [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:48]
+WARNING: [Synth 8-3848] Net mem_ren in module/entity merge_v2 does not have driver. [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'merge_v2' (5#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:54]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-20323-SATANASSO/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'cw_ref' of component 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:381]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-20323-SATANASSO/realtime/clk_wiz_0_stub.vhdl:16]
 	Parameter kGenerateSerialClk bound to: 1 - type: bool 
 	Parameter kClkPrimitive bound to: MMCM - type: string 
 	Parameter kClkRange bound to: 1 - type: integer 
 	Parameter kRstActiveHigh bound to: 1 - type: bool 
-INFO: [Synth 8-3491] module 'rgb2dvi' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd:61' bound to instance 'hdmiout' of component 'rgb2dvi' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:396]
+INFO: [Synth 8-3491] module 'rgb2dvi' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd:61' bound to instance 'hdmiout' of component 'rgb2dvi' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:390]
 INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd:89]
 	Parameter kGenerateSerialClk bound to: 1 - type: bool 
 	Parameter kClkPrimitive bound to: MMCM - type: string 
@@ -226,7 +228,7 @@ INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (11#1) [/mnt/condivisione
 	Parameter kEdidFileName bound to: 900p_edid.data - type: string 
 	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
 	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'dvi2rgb' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:64' bound to instance 'hdmiin' of component 'dvi2rgb' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:423]
+INFO: [Synth 8-3491] module 'dvi2rgb' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:64' bound to instance 'hdmiin' of component 'dvi2rgb' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:417]
 INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:110]
 	Parameter kEmulateDDC bound to: 1 - type: bool 
 	Parameter kRstActiveHigh bound to: 1 - type: bool 
@@ -428,14 +430,14 @@ INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (20#1) [/mnt/condivi
 INFO: [Synth 8-226] default block is never used [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd:201]
 INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (21#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd:85]
 INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (22#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:110]
-INFO: [Synth 8-3491] module 'IOBUF' declared at '/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659' bound to instance 'sda_io' of component 'iobuf' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:469]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659' bound to instance 'sda_io' of component 'iobuf' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:463]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (23#1) [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659]
-INFO: [Synth 8-3491] module 'IOBUF' declared at '/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659' bound to instance 'scl_io' of component 'iobuf' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:477]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659' bound to instance 'scl_io' of component 'iobuf' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:471]
 INFO: [Synth 8-256] done synthesizing module 'edge_detector_filter' (24#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:74]
 WARNING: [Synth 8-3917] design edge_detector_filter has port hdmi_rx_hpd driven by constant 1
 WARNING: [Synth 8-3331] design dvi2rgb has unconnected port aRst_n
@@ -443,104 +445,104 @@ WARNING: [Synth 8-3331] design dvi2rgb has unconnected port pRst_n
 WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port SerialClk
 WARNING: [Synth 8-3331] design TMDS_Encoder has unconnected port aRst
 WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[127]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[126]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[125]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[124]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[123]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[122]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[121]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[120]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[119]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[118]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[117]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[116]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[115]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[114]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[113]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[112]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[111]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[110]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[109]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[108]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[107]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[106]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[105]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[104]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[103]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[102]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[101]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[100]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[99]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[98]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[97]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[96]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[95]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[94]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[93]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[92]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[91]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[90]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[89]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[88]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[87]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[86]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[85]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[84]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[83]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[82]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[81]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[80]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[79]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[78]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[77]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[76]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[75]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[74]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[73]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[72]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[71]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[70]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[69]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[68]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[67]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[66]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[65]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[64]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[63]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[62]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[61]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[60]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[59]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[58]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[57]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[56]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[55]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[54]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[53]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[52]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[51]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[50]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[49]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[48]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[47]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[46]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[45]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[44]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[43]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[42]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[41]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[40]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[39]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[38]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[37]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[36]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[35]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[34]
-WARNING: [Synth 8-3331] design merge has unconnected port mem_d_in[33]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[13]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[12]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[11]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[10]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[9]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[8]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[7]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[6]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[5]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[4]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[3]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[2]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[1]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_raddr[0]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_ren
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[127]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[126]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[125]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[124]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[123]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[122]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[121]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[120]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[119]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[118]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[117]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[116]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[115]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[114]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[113]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[112]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[111]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[110]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[109]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[108]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[107]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[106]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[105]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[104]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[103]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[102]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[101]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[100]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[99]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[98]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[97]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[96]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[95]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[94]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[93]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[92]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[91]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[90]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[89]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[88]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[87]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[86]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[85]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[84]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[83]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[82]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[81]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[80]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[79]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[78]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[77]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[76]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[75]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[74]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[73]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[72]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[71]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[70]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[69]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[68]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[67]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[66]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[65]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[64]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[63]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[62]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[61]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[60]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[59]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[58]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[57]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[56]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[55]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[54]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[53]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[52]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[51]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[50]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[49]
+WARNING: [Synth 8-3331] design merge_v2 has unconnected port mem_d_in[48]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1834.348 ; gain = 627.430 ; free physical = 7229 ; free virtual = 16867
+Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1834.348 ; gain = 626.430 ; free physical = 10194 ; free virtual = 18666
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -553,10 +555,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1834.348 ; gain = 627.430 ; free physical = 7235 ; free virtual = 16873
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1834.348 ; gain = 626.430 ; free physical = 10199 ; free virtual = 18671
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1834.348 ; gain = 627.430 ; free physical = 7235 ; free virtual = 16873
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1834.348 ; gain = 626.430 ; free physical = 10199 ; free virtual = 18671
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -565,10 +567,10 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'cw_ref'
-Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'cw_ref'
 Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'edges_matrix'
 Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'edges_matrix'
+Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'cw_ref'
+Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'cw_ref'
 Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]
 Finished Parsing XDC File [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/edge_detector_filter_propImpl.xdc].
@@ -579,26 +581,26 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1882.371 ; gain = 0.000 ; free physical = 6970 ; free virtual = 16608
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1882.371 ; gain = 0.000 ; free physical = 9936 ; free virtual = 18408
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 7053 ; free virtual = 16691
+Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 10016 ; free virtual = 18488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 7053 ; free virtual = 16691
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 10016 ; free virtual = 18488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property IO_BUFFER_TYPE = NONE for sysclk. (constraint file  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk. (constraint file  /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
-Applied set_property DONT_TOUCH = true for cw_ref. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for edges_matrix. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cw_ref. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 7053 ; free virtual = 16691
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 10018 ; free virtual = 18491
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:207]
 INFO: [Synth 8-5546] ROM "next_reg[state]" won't be mapped to RAM because it is too sparse
@@ -611,11 +613,7 @@ INFO: [Synth 8-5546] ROM "ram_reg[0,4]" won't be mapped to RAM because it is too
 INFO: [Synth 8-5544] ROM "ram_reg[1,0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ram_reg[2,0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ram_reg[3,0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-3936] Found unconnected internal register 'internal_reg' and it is trimmed from '32' to '31' bits. [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd:60]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:102]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:98]
-INFO: [Synth 8-5546] ROM "next_reg[x_block_n]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "mem_ren_reg" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3936] Found unconnected internal register 'internal_reg' and it is trimmed from '32' to '31' bits. [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/deserializer.vhd:61]
 INFO: [Synth 8-802] inferred FSM for state register 'pState_reg' in module 'PhaseAlign'
 INFO: [Synth 8-5546] ROM "pCtlTknOvf" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "pDelayOvf" won't be mapped to RAM because it is too sparse
@@ -681,15 +679,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'ycomp_reg' [/mnt/condivisio
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[y]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:110]
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[filling]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:110]
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:110]
-WARNING: [Synth 8-327] inferring latch for variable 'mem_raddr_reg_reg' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:98]
-WARNING: [Synth 8-327] inferring latch for variable 'mem_ren_reg_reg' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:99]
-WARNING: [Synth 8-327] inferring latch for variable 'rgb_out_reg_reg' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:96]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[state]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[y]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x_block_n]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[buff_index]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge.vhd:105]
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'fsm1399B9C00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'fsm1798F4400'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -712,7 +702,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sState_reg' using encoding 'one-hot' in module 'EEPROM_8b'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 7044 ; free virtual = 16683
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:01:06 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 10009 ; free virtual = 18482
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -726,14 +716,13 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     31 Bit       Adders := 2     
-	   2 Input     14 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 1     
 	   5 Input     11 Bit       Adders := 4     
 	   3 Input     11 Bit       Adders := 4     
-	   2 Input     11 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 2     
 	   3 Input     10 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 5     
-	   2 Input      6 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 3     
 	   3 Input      5 Bit       Adders := 9     
 	   4 Input      5 Bit       Adders := 3     
 	   2 Input      5 Bit       Adders := 16    
@@ -746,30 +735,29 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 3     
 	               31 Bit    Registers := 1     
-	               24 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
 	               16 Bit    Registers := 1     
-	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 3     
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 2     
 	               10 Bit    Registers := 9     
 	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 9     
-	                7 Bit    Registers := 5     
-	                6 Bit    Registers := 5     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 4     
 	                5 Bit    Registers := 16    
 	                4 Bit    Registers := 12    
-	                3 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 25    
-	                1 Bit    Registers := 126   
+	                1 Bit    Registers := 129   
 +---RAMs : 
 	              320 Bit         RAMs := 3     
 +---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 	   5 Input     31 Bit        Muxes := 3     
-	   2 Input     24 Bit        Muxes := 1     
-	   6 Input     14 Bit        Muxes := 1     
-	   6 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 6     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 4     
 	  10 Input     11 Bit        Muxes := 2     
-	   6 Input     11 Bit        Muxes := 1     
 	  12 Input     11 Bit        Muxes := 3     
 	   4 Input     10 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 12    
@@ -780,22 +768,19 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 7     
 	   5 Input      8 Bit        Muxes := 3     
 	 129 Input      8 Bit        Muxes := 1     
-	   6 Input      7 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 3     
-	   6 Input      6 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 6     
 	   2 Input      5 Bit        Muxes := 12    
 	  11 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 7     
 	   4 Input      4 Bit        Muxes := 1     
-	   7 Input      3 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 15    
 	  10 Input      2 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 11    
 	   2 Input      1 Bit        Muxes := 129   
 	  10 Input      1 Bit        Muxes := 21    
-	   6 Input      1 Bit        Muxes := 7     
 	  12 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 10    
 	   3 Input      1 Bit        Muxes := 4     
@@ -843,6 +828,8 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 3     
 	               31 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 Module memory_addr_calc 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -851,32 +838,18 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
-Module merge 
+Module merge_v2 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     14 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
-	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     24 Bit        Muxes := 1     
-	   6 Input     14 Bit        Muxes := 1     
-	   6 Input     12 Bit        Muxes := 1     
-	   6 Input     11 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 2     
-	   6 Input      7 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 2     
-	   6 Input      6 Bit        Muxes := 2     
-	   7 Input      3 Bit        Muxes := 1     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 3     
-	   6 Input      1 Bit        Muxes := 7     
 Module SyncAsync 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1062,12 +1035,6 @@ DSP Report: operator bicolor2 is absorbed into DSP bicolor2.
 DSP Report: Generating DSP bicolor1, operation Mode is: PCIN+A*B.
 DSP Report: operator bicolor1 is absorbed into DSP bicolor1.
 DSP Report: operator bicolor2 is absorbed into DSP bicolor1.
-INFO: [Synth 8-5546] ROM "mem_ren_reg" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_reg[x_block_n]" won't be mapped to RAM because it is too sparse
-DSP Report: Generating DSP mem_raddr_reg1, operation Mode is: A*(B:0x3c).
-DSP Report: operator mem_raddr_reg1 is absorbed into DSP mem_raddr_reg1.
-DSP Report: Generating DSP mem_raddr_reg1, operation Mode is: A*(B:0x3c).
-DSP Report: operator mem_raddr_reg1 is absorbed into DSP mem_raddr_reg1.
 INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:115]
 INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:149]
 INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
@@ -1119,27 +1086,39 @@ DSP Report: register addresser/addr_reg is absorbed into DSP addresser/addr_reg.
 DSP Report: operator addresser/addr0 is absorbed into DSP addresser/addr_reg.
 DSP Report: operator addresser/addr1 is absorbed into DSP addresser/addr_reg.
 WARNING: [Synth 8-3917] design edge_detector_filter has port hdmi_rx_hpd driven by constant 1
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[15]' (LD) to 'merger/rgb_out_reg_reg[14]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[9]' (LD) to 'merger/rgb_out_reg_reg[14]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[11]' (LD) to 'merger/rgb_out_reg_reg[14]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[10]' (LD) to 'merger/rgb_out_reg_reg[14]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[12]' (LD) to 'merger/rgb_out_reg_reg[14]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[14]' (LD) to 'merger/rgb_out_reg_reg[13]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[13]' (LD) to 'merger/rgb_out_reg_reg[8]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[7]' (LD) to 'merger/rgb_out_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[1]' (LD) to 'merger/rgb_out_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[3]' (LD) to 'merger/rgb_out_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[2]' (LD) to 'merger/rgb_out_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[4]' (LD) to 'merger/rgb_out_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[6]' (LD) to 'merger/rgb_out_reg_reg[5]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[5]' (LD) to 'merger/rgb_out_reg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[23]' (LD) to 'merger/rgb_out_reg_reg[16]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[17]' (LD) to 'merger/rgb_out_reg_reg[16]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[19]' (LD) to 'merger/rgb_out_reg_reg[16]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[18]' (LD) to 'merger/rgb_out_reg_reg[16]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[20]' (LD) to 'merger/rgb_out_reg_reg[16]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[22]' (LD) to 'merger/rgb_out_reg_reg[16]'
-INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg_reg[21]' (LD) to 'merger/rgb_out_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][0]' (FD_1) to 'merger/next_reg_reg[x][1]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][1]' (FD_1) to 'merger/next_reg_reg[x][2]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][6]' (FD_1) to 'merger/next_reg_reg[x][2]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][5]' (FD_1) to 'merger/next_reg_reg[x][2]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][3]' (FD_1) to 'merger/next_reg_reg[x][2]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][2]' (FD_1) to 'merger/next_reg_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][4]' (FD_1) to 'merger/next_reg_reg[x][7]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][7]' (FD_1) to 'merger/next_reg_reg[x][8]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][8]' (FD_1) to 'merger/next_reg_reg[x][9]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][9]' (FD_1) to 'merger/next_reg_reg[x][10]'
+INFO: [Synth 8-3886] merging instance 'merger/next_reg_reg[x][11]' (FD_1) to 'merger/next_reg_reg[x][10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (merger/\next_reg_reg[x][10] )
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[7]' (FDE) to 'merger/rgb_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[1]' (FDE) to 'merger/rgb_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[3]' (FDE) to 'merger/rgb_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[2]' (FDE) to 'merger/rgb_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[4]' (FDE) to 'merger/rgb_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[6]' (FDE) to 'merger/rgb_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[5]' (FDE) to 'merger/rgb_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[15]' (FDE) to 'merger/rgb_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[9]' (FDE) to 'merger/rgb_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[11]' (FDE) to 'merger/rgb_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[10]' (FDE) to 'merger/rgb_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[12]' (FDE) to 'merger/rgb_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[14]' (FDE) to 'merger/rgb_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[13]' (FDE) to 'merger/rgb_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[23]' (FDE) to 'merger/rgb_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[17]' (FDE) to 'merger/rgb_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[19]' (FDE) to 'merger/rgb_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[18]' (FDE) to 'merger/rgb_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[20]' (FDE) to 'merger/rgb_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[22]' (FDE) to 'merger/rgb_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'merger/rgb_out_reg[21]' (FDE) to 'merger/rgb_out_reg[16]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]'
@@ -1210,19 +1189,9 @@ INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[3]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
 INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[7]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[6]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[5]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[4]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[3]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[2]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
-INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[1]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[2]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (hdmiout/\DataEncoders[2].DataEncoder/n1q_m_2_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (next_reg_reg[x][10]) is unused and will be removed from module merge_v2.
 WARNING: [Synth 8-3332] Sequential element (DataEncoders[0].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
 WARNING: [Synth 8-3332] Sequential element (DataEncoders[1].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
 WARNING: [Synth 8-3332] Sequential element (DataEncoders[2].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module rgb2dvi.
@@ -1231,7 +1200,7 @@ WARNING: [Synth 8-3332] Sequential element (DataDecoders[2].DecoderX/PhaseAlignX
 WARNING: [Synth 8-3332] Sequential element (DataDecoders[1].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
 WARNING: [Synth 8-3332] Sequential element (DataDecoders[0].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module dvi2rgb.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6977 ; free virtual = 16653
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:20 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9980 ; free virtual = 18457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1256,8 +1225,6 @@ DSP: Preliminary Mapping  Report (see note below)
 |edge_matrix_applier | PCIN+A*B     | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |edge_matrix_applier | A*B          | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |edge_matrix_applier | PCIN+A*B     | 11     | 11     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|merge               | A*(B:0x3c)   | 12     | 7      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|merge               | A*(B:0x3c)   | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |memory_addr_calc    | C+A*(B:0x3c) | 12     | 7      | 6      | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
 +--------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
@@ -1278,13 +1245,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'cw_ref/MemClk' to pin 'cw
 INFO: [Synth 8-5578] Moved timing constraint from pin 'cw_ref/RefClk200' to pin 'cw_ref/bbstub_RefClk200/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:34 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6838 ; free virtual = 16462
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:34 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9806 ; free virtual = 18283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:35 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6834 ; free virtual = 16458
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:35 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9802 ; free virtual = 18279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1312,7 +1279,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:36 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6838 ; free virtual = 16462
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:36 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9797 ; free virtual = 18273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1336,7 +1303,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6837 ; free virtual = 16461
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9796 ; free virtual = 18272
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1349,7 +1316,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6837 ; free virtual = 16461
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9796 ; free virtual = 18272
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1361,25 +1328,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6837 ; free virtual = 16461
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9796 ; free virtual = 18272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6837 ; free virtual = 16461
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9796 ; free virtual = 18272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6837 ; free virtual = 16461
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9796 ; free virtual = 18272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6837 ; free virtual = 16461
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9796 ; free virtual = 18272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1402,45 +1369,46 @@ Report Cell Usage:
 |3     |BUFG                 |     2|
 |4     |BUFIO                |     1|
 |5     |BUFR                 |     1|
-|6     |CARRY4               |    90|
-|7     |DSP48E1              |     6|
+|6     |CARRY4               |    93|
+|7     |DSP48E1              |     4|
 |8     |DSP48E1_2            |     1|
 |9     |IDELAYCTRL           |     1|
 |10    |IDELAYE2             |     3|
 |11    |ISERDESE2            |     3|
 |12    |ISERDESE2_1          |     3|
-|13    |LUT1                 |    53|
-|14    |LUT2                 |   210|
-|15    |LUT3                 |   191|
-|16    |LUT4                 |   163|
-|17    |LUT5                 |   498|
-|18    |LUT6                 |   545|
+|13    |LUT1                 |    55|
+|14    |LUT2                 |   244|
+|15    |LUT3                 |   171|
+|16    |LUT4                 |   156|
+|17    |LUT5                 |   488|
+|18    |LUT6                 |   537|
 |19    |MMCME2_ADV           |     2|
 |20    |MUXF7                |    11|
 |21    |OSERDESE2            |     4|
 |22    |OSERDESE2_1          |     4|
 |23    |RAM32M               |     6|
-|24    |FDCE                 |    10|
-|25    |FDPE                 |    28|
-|26    |FDRE                 |   698|
-|27    |FDSE                 |    34|
-|28    |LD                   |   313|
-|29    |IBUFDS               |     4|
-|30    |IOBUF                |     2|
-|31    |OBUF                 |     3|
-|32    |OBUFDS               |     4|
+|24    |FDCE                 |    23|
+|25    |FDPE                 |    29|
+|26    |FDRE                 |   677|
+|27    |FDSE                 |    33|
+|28    |LD                   |   256|
+|29    |LDC                  |     1|
+|30    |IBUFDS               |     4|
+|31    |IOBUF                |     2|
+|32    |OBUF                 |     3|
+|33    |OBUFDS               |     4|
 +------+---------------------+------+
 
 Report Instance Areas: 
 +------+-------------------------------------+-----------------------------+------+
 |      |Instance                             |Module                       |Cells |
 +------+-------------------------------------+-----------------------------+------+
-|1     |top                                  |                             |  3025|
-|2     |  addresser                          |memory_addr_calc             |    24|
-|3     |  des                                |deserializer                 |   128|
-|4     |  ema                                |edge_matrix_applier          |  1320|
+|1     |top                                  |                             |  2953|
+|2     |  des                                |deserializer                 |   129|
+|3     |  addresser                          |memory_addr_calc             |    24|
+|4     |  ema                                |edge_matrix_applier          |  1350|
 |5     |  filter                             |rgb2gray                     |    48|
-|6     |  hdmiin                             |dvi2rgb                      |  1053|
+|6     |  hdmiin                             |dvi2rgb                      |  1050|
 |7     |    \DataDecoders[0].DecoderX        |TMDS_Decoder                 |   267|
 |8     |      ChannelBondX                   |ChannelBond_27               |    60|
 |9     |      InputSERDES_X                  |InputSERDES_28               |     4|
@@ -1465,7 +1433,7 @@ Report Instance Areas:
 |28    |        SyncAsyncx                   |SyncAsync__parameterized1_19 |     2|
 |29    |      SyncBaseRst                    |SyncBase__parameterized0     |     3|
 |30    |        SyncAsyncx                   |SyncAsync_18                 |     2|
-|31    |    \GenerateBUFG.ResyncToBUFG_X     |ResyncToBUFG                 |    64|
+|31    |    \GenerateBUFG.ResyncToBUFG_X     |ResyncToBUFG                 |    61|
 |32    |    \GenerateDDC.DDC_EEPROM          |EEPROM_8b                    |   161|
 |33    |      I2C_SlaveController            |TWI_SlaveCtl                 |   109|
 |34    |        GlitchF_SCL                  |GlitchFilter                 |    12|
@@ -1494,30 +1462,31 @@ Report Instance Areas:
 |57    |    \DataEncoders[2].DataSerializer  |OutputSERDES_4               |     3|
 |58    |    LockLostReset                    |ResetBridge                  |     2|
 |59    |      SyncAsyncx                     |SyncAsync                    |     2|
-|60    |  merger                             |merge                        |   219|
+|60    |  merger                             |merge_v2                     |   118|
 +------+-------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6837 ; free virtual = 16461
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9796 ; free virtual = 18272
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 219 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 1882.371 ; gain = 627.430 ; free physical = 6901 ; free virtual = 16524
-Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 675.453 ; free physical = 6901 ; free virtual = 16524
+Synthesis finished with 0 errors, 0 critical warnings and 227 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:11 . Memory (MB): peak = 1882.371 ; gain = 626.430 ; free physical = 9859 ; free virtual = 18336
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1882.371 ; gain = 674.453 ; free physical = 9859 ; free virtual = 18336
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 449 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 394 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 321 instances were transformed.
+  A total of 265 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
-  LD => LDCE: 313 instances
+  LD => LDCE: 256 instances
+  LDC => LDCE: 1 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-302 Infos, 179 Warnings, 0 Critical Warnings and 0 Errors encountered.
+298 Infos, 177 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:41 . Memory (MB): peak = 1882.371 ; gain = 702.914 ; free physical = 6907 ; free virtual = 16531
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:40 . Memory (MB): peak = 1882.371 ; gain = 701.914 ; free physical = 9880 ; free virtual = 18357
 INFO: [Common 17-1381] The checkpoint '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file edge_detector_filter_utilization_synth.rpt -pb edge_detector_filter_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1906.383 ; gain = 0.000 ; free physical = 6907 ; free virtual = 16531
-INFO: [Common 17-206] Exiting Vivado at Fri Jul  6 01:24:32 2018...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1906.383 ; gain = 0.000 ; free physical = 9880 ; free virtual = 18357
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 10 00:48:09 2018...

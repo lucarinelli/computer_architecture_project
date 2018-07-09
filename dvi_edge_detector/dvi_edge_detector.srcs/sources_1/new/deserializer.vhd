@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Fanti Andrea
 -- 
 -- Create Date: 05/27/2018 10:41:26 PM
 -- Design Name: Very ignorant deserializer
@@ -9,11 +9,11 @@
 -- Target Devices: 
 -- Tool Versions: 
 -- Description: 
--- 
+--  puts data in a shift register one bit at a time, transmit out when register is full
+--  NOTE: data is written out **only** when the register is filled, there isn't a force flush command
 -- Dependencies: 
 -- 
--- Revision:
--- Revision 0.01 - File Created
+-- Revision 0.95 : working, but without reset
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity deserializer is
     Generic(
-        WIDTH : natural := 32
+        WIDTH : natural := 32   -- data width
     );
     Port (
         d_in : in std_logic;
@@ -41,7 +41,7 @@ entity deserializer is
         d_out_valid : out std_logic := '0';
         reset : in std_logic;
         pixel_clock : in std_logic;
-        d_in_valid : in std_logic
+        d_in_valid : in std_logic   -- basically an enable
     );
 end deserializer;
 
@@ -54,27 +54,31 @@ architecture Behavioral of deserializer is
 begin
     process(pixel_clock, d_in_valid, reset)
     begin
-        if rising_edge(pixel_clock) and reset = '0' then
-            if d_in_valid='1' then
-                if fill_level(WIDTH-1) = '1' then   -- this bit has to be written out together with the others
-                    d_out <= internal(WIDTH-2 downto 0) & d_in;
+        if reset = '0' then
+            if rising_edge(pixel_clock) then
+                if d_in_valid='1' then
+                    if fill_level(WIDTH-1) = '1' then   -- this bit has to be written out together with the others
+                        d_out <= internal(WIDTH-2 downto 0) & d_in;
+                    else
+                        internal <= internal(WIDTH-2 downto 0) & d_in;
+                    end if;
+                    fill_level_next <= fill_level(WIDTH-2 downto 0) & fill_level(WIDTH-1);
                 else
-                    internal <= internal(WIDTH-2 downto 0) & d_in;
+                    fill_level_next <= fill_level_init;  -- d_in not valid, reset fill level
                 end if;
-                fill_level_next <= fill_level(WIDTH-2 downto 0) & fill_level(WIDTH-1);
-            else
-                fill_level_next <= fill_level_init;  -- d_in not valid, reset fill level
             end if;
+        else    -- reset = 1
+            fill_level_next <= fill_level_init;
         end if;
     end process;
     
-    process (reset)
-    begin
-        if reset ='1' then
-            --fill_level_next <= fill_level_init;
-            report "you should really write some code here";
-        end if;
-    end process;
+--    process (reset)
+--    begin
+--        if reset ='1' then
+--            --fill_level_next <= fill_level_init;
+--            report "you should really write some code here";
+--        end if;
+--    end process;
     
     process (pixel_clock)
     begin

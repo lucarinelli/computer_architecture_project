@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu Jul  5 19:03:19 2018
+// Date        : Mon Jul  9 23:20:56 2018
 // Host        : SATANASSO running 64-bit unknown
 // Command     : write_verilog -force -mode synth_stub
 //               /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
