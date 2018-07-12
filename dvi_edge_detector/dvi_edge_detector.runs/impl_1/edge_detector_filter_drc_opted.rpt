@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Tue Jul 10 00:49:22 2018
+| Date         : Thu Jul 12 22:43:44 2018
 | Host         : SATANASSO running 64-bit unknown
 | Command      : report_drc -file edge_detector_filter_drc_opted.rpt -pb edge_detector_filter_drc_opted.pb -rpx edge_detector_filter_drc_opted.rpx
 | Design       : edge_detector_filter

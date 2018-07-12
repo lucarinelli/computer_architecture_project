@@ -33,8 +33,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity edge_detector_filter is
     Port (
-        
-        led : out std_logic_vector(1 downto 0);
+        -- board's led (used to display operativity)
+        led : out std_logic_vector(3 downto 0);
         
         -- DVI 1.0 TMDS video interface
         hdmi_tx_clk_p : out std_logic;
@@ -292,7 +292,9 @@ architecture Behavioral of edge_detector_filter is
 begin
 
     led(0) <= s_vid_pVDE;
-    led(1) <= not s_vid_pVDE;
+    led(1) <= s_vid_pHSync;
+    led(2) <= s_vid_pVSync;
+    led(3) <= s_vid_pVDE and s_vid_pHSync;
 
     filter: rgb2gray
         Port map(

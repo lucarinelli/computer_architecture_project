@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd" \
+"../../../../dvi_edge_detector.srcs/sim_1/new/merge_v2_tb.vhd" \
+
+# Do not sort compile order
+nosort
