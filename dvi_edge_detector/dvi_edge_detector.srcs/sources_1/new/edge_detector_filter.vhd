@@ -237,20 +237,23 @@ architecture Behavioral of edge_detector_filter is
     
    component merge_v2
         Generic (
-            WIDTH : natural := 1920;
-            HEIGHT : natural := 1080;
-            MEM_ADDR_SIZE : natural := 14;
-            BLOCK_NUM : natural := 60
+            WIDTH : natural := 1600;
+            HEIGHT : natural := 900;
+            DBUS_SIZE : natural := 128;
+            MEM_ADDR_SIZE : natural := 14
         );
-        Port ( vsync : in STD_LOGIC;
-               hsync : in STD_LOGIC;
-               de : in STD_LOGIC;
-               mem_d_in : in STD_LOGIC_VECTOR (127 downto 0);
-               pixel_clock : in STD_LOGIC;
-               mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
-               mem_ren : out STD_LOGIC;
-               rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
-               rgb_out : out STD_LOGIC_VECTOR (23 downto 0));
+        Port (
+            vsync : in STD_LOGIC;
+            hsync : in STD_LOGIC;
+            de : in STD_LOGIC;
+            mem_d_in : in STD_LOGIC_VECTOR (DBUS_SIZE-1 downto 0);
+            pixel_clock : in STD_LOGIC;
+            mem_clk : in std_logic;
+            mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
+            mem_ren : out STD_LOGIC;
+            rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
+            rgb_out : out STD_LOGIC_VECTOR (23 downto 0)
+        );
     end component;
     
     signal s_grey_vid : std_logic_vector(7 downto 0) := (others=>'0');
@@ -268,7 +271,7 @@ architecture Behavioral of edge_detector_filter is
     signal s_SerialClk : std_logic:='0'; -- 5x PixelClk
     
     signal s_RefClk : std_logic:='0'; --200 MHz reference clock for IDELAYCTRL, reset, lock monitoring etc.
-    signal s_MemClk : std_logic:='0'; --150? MHz
+    signal s_MemClk : std_logic:='0'; --50 MHz
     
     signal s_bicolor_deser : std_logic_vector(31 downto 0) := (others=>'0');
     signal s_bicolor_deser_valid : std_logic := '0';
@@ -361,23 +364,22 @@ begin
         
     merger: merge_v2
         Generic map(
-            WIDTH => 1920,
-            HEIGHT => 1080,
-            MEM_ADDR_SIZE => 14,
-            BLOCK_NUM => 60
+            WIDTH => 1600,
+            HEIGHT => 900,
+            DBUS_SIZE => 128,
+            MEM_ADDR_SIZE => 14
         )
         Port map( vsync => s_vid_pVSync,
             hsync => s_vid_pHSync,
             de => s_vid_pVDE,
             mem_d_in => s_mem_doutb,
             pixel_clock => s_PixelClk,
+            mem_clk => s_MemClk,
             mem_raddr => s_mem_addrb,
             mem_ren => s_mem_ren,
             rgb_in => s_vid_pData,
             rgb_out => elaborated_s_vid_pData
        );
-    
-    --elaborated_s_vid_pData <= s_grey_vid&s_grey_vid&s_grey_vid;
     
     
     cw_ref: clk_wiz_0
@@ -403,11 +405,11 @@ begin
             TMDS_Data_n => hdmi_tx_d_n,
             
             -- Auxiliary signals 
-            aRst => s_aRst, --asynchronous reset; must be reset when RefClk is not within spec
-            aRst_n => aRst_n, --asynchronous reset; must be reset when RefClk is not within spec
+            aRst => '0', --asynchronous reset; must be reset when RefClk is not within spec
+            aRst_n => '1', --asynchronous reset; must be reset when RefClk is not within spec
             
             -- Video in
-            vid_pData => elaborated_s_vid_pData,--s_vid_pData,--(others=>'1'),--elaborated_s_vid_pData,
+            vid_pData => elaborated_s_vid_pData,--elaborated_s_vid_pData,
             vid_pVDE => s_vid_pVDE,
             vid_pHSync => s_vid_pHSync,
             vid_pVSync => s_vid_pVSync,
@@ -436,8 +438,8 @@ begin
             
             -- Auxiliary signals 
             RefClk => s_RefClk, --200 MHz reference clock for IDELAYCTRL, reset, lock monitoring etc.
-            aRst => s_aRst, --asynchronous reset; must be reset when RefClk is not within spec
-            aRst_n => aRst_n, --asynchronous reset; must be reset when RefClk is not within spec
+            aRst => '0', --asynchronous reset; must be reset when RefClk is not within spec
+            aRst_n => '1', --asynchronous reset; must be reset when RefClk is not within spec
             
             -- Video out
             vid_pData => s_vid_pData,

@@ -46,9 +46,9 @@ entity deserializer is
 end deserializer;
 
 architecture Behavioral of deserializer is
-    constant fill_level_init : std_logic_vector (WIDTH-1 downto 0) := std_logic_vector(to_unsigned(1, WIDTH)); -- "000...1"
+    constant fill_level_init : std_logic_vector (WIDTH-1 downto 0) := std_logic_vector(to_unsigned(1, WIDTH)); -- "000...01"
     
-    signal internal: std_logic_vector (WIDTH-1 downto 0) := (others => '0');
+    signal internal: std_logic_vector (WIDTH-2 downto 0) := (others => '0'); -- -2  and not -1 because actually the msb is never needed
     signal fill_level : std_logic_vector (WIDTH-1 downto 0) := fill_level_init; -- bit=1 in position that is currently being filled
     signal fill_level_next : std_logic_vector (WIDTH-1 downto 0) := fill_level_init;
 begin
@@ -60,7 +60,7 @@ begin
                     if fill_level(WIDTH-1) = '1' then   -- this bit has to be written out together with the others
                         d_out <= internal(WIDTH-2 downto 0) & d_in;
                     else
-                        internal <= internal(WIDTH-2 downto 0) & d_in;
+                        internal <= internal(WIDTH-3 downto 0) & d_in;
                     end if;
                     fill_level_next <= fill_level(WIDTH-2 downto 0) & fill_level(WIDTH-1);
                 else

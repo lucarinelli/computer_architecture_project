@@ -33,27 +33,30 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity merge_v2 is
     Generic (
-        WIDTH : natural := 1920;
-        HEIGHT : natural := 1080;
-        --BUFF_SIZE : natural := 128;
+        WIDTH : natural := 1600;
+        HEIGHT : natural := 900;
+        DBUS_SIZE : natural := 128;
         MEM_ADDR_SIZE : natural := 14
-        --REFILL_AT_INDEX : natural := 63;
-        --BLOCK_NUM : natural := 60
     );
-    Port ( vsync : in STD_LOGIC;
-           hsync : in STD_LOGIC;
-           de : in STD_LOGIC;
-           mem_d_in : in STD_LOGIC_VECTOR (127 downto 0);
-           pixel_clock : in STD_LOGIC;
-           mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
-           mem_ren : out STD_LOGIC;
-           rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
-           rgb_out : out STD_LOGIC_VECTOR (23 downto 0));
+    Port (
+        vsync : in STD_LOGIC;
+        hsync : in STD_LOGIC;
+        de : in STD_LOGIC;
+        mem_d_in : in STD_LOGIC_VECTOR (DBUS_SIZE-1 downto 0);
+        pixel_clock : in STD_LOGIC;
+        
+        mem_clk : in std_logic;
+        mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
+        mem_ren : out STD_LOGIC := '1';
+        
+        rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
+        rgb_out : out STD_LOGIC_VECTOR (23 downto 0)
+    );
 end merge_v2;
 
 architecture Behavioral of merge_v2 is
     type state_type is (
---      WAIT_FOR_VSYNC, -- loads the next row of elaborated video
+--      WAIT_FOR_VSYNC,
         WAIT_FOR_DE,   -- when de = '1', just output the what is in the buffer 
         WAIT_FOR_HSYNC -- loads the next row of elaborated video
     );
@@ -70,18 +73,49 @@ architecture Behavioral of merge_v2 is
         y => 0
     );
     
+    
+    component loader is
+        generic(
+            -- RAM-dependent
+            ABUS_WIDTH : natural := MEM_ADDR_SIZE;
+            DBUS_WIDTH : natural := DBUS_SIZE;
+            DOUT_WIDTH : natural := WIDTH
+        );
+        port (
+            clk : in STD_LOGIC;
+            load : in STD_LOGIC;
+            load_first : in STD_LOGIC;
+            abus : out STD_LOGIC_VECTOR (ABUS_WIDTH-1 downto 0);
+            dbus : in STD_LOGIC_VECTOR (DBUS_WIDTH-1 downto 0);
+            ren : out STD_LOGIC;
+            dout : out STD_LOGIC_VECTOR (DOUT_WIDTH-1 downto 0)
+        );
+    end component;
+    
+    
     signal curr_reg, next_reg : reg_type := reg_type_def;
     
-    -- signals that go to the loader
-    -- TODO: program a loader that loads a pixel row from memory whenever load_row goes to 1 (load the first one when also load_first is high)
+    -- signals that go to/from the loader
     signal load_first : std_logic := '0';
     signal load_row : std_logic := '0';
     signal curr_width : natural range 1 to 1920 := WIDTH; -- fullHD maximum supported   | these should be implemented if we want to support multiple resolutions
-    signal new_width : natural range 1 to 1920 := WIDTH; --                             |
+    signal new_width : natural range 1 to 1920 := WIDTH;  --                            |
     signal buff : std_logic_vector(WIDTH-1 to 0);   -- loaded by the loader, contains the elaborated bits from the filter
     
 begin
-
+--------------- used components ---------------
+    row_loader : loader
+        port map(
+            clk => mem_clk,
+            load => load_row,
+            load_first => load_first,
+            abus => mem_raddr,
+            dbus => mem_d_in,
+            ren => mem_ren,
+            dout => buff
+        );
+        
+--------------- processes ---------------
     state_machine_proc: process(pixel_clock, de, vsync, hsync)
     begin
         if rising_edge(pixel_clock) then
@@ -100,47 +134,33 @@ begin
                             next_reg.x <= curr_reg.x+1;
                             
                             -- TODO : UNCOMMENT THE FOLLOWING...
-    --                            if buff(curr_reg.x) = '1' then
-    --                                rgb_out <= (others=>'1');
-    --                            else
-    --                                rgb_out <= (others=>'0');
-    --                            end if;
-                            -- ... and erase this, which is a test
-                            if curr_reg.x < 100 then
-                                if (curr_reg.x mod 20) < 10 then
-                                    rgb_out <= "000000000000000011111111";
-                                else
-                                    rgb_out <= "111111110000000000000000";
-                                end if;
+                            if buff(curr_reg.x) = '1' then
+                                rgb_out <= (others=>'1');
                             else
-                                if (curr_reg.x mod 40) < 20 then
-                                    rgb_out <= "000000001111111100000000";
-                                else
-                                    rgb_out <= "111111110000000000000000";
-                                end if;
+                                rgb_out <= rgb_in;
                             end if;
+                            -- ... and erase this, which is a test
+--                            if curr_reg.x < 100 then
+--                                if (curr_reg.x mod 20) < 10 then
+--                                    rgb_out <= "000000000000000011111111";
+--                                else
+--                                    rgb_out <= "111111110000000000000000";
+--                                end if;
+--                            else
+--                                if (curr_reg.x mod 40) < 20 then
+--                                    rgb_out <= "000000001111111100000000";
+--                                else
+--                                    rgb_out <= "111111110000000000000000";
+--                                end if;
+--                            end if;
                             
                         elsif curr_reg.x > 0 then -- ("and de='0'" implicit), checking if the video stream has finished being transmitted
-                            -- fun fact: place > 4 to have a completely black screen!
                             next_reg.state <= WAIT_FOR_HSYNC;
                             load_row <= '0';
                             load_first <= '0';
                         end if;
-        
-            -- this should be an alternative to the "elsif" above except it starts the loading of the line slightly after
-                    -- when hsync goes to 1 we load the next row from memory and wait for the video stream to start.
-                    -- we don't do that immediately so we are sure the loader has time to sense that load_row went to 0
---                    if hsync = '1' then
---                        next_reg.state <= WAIT_FOR_HSYNC;
---                        load_row <= '0';
---                        load_first <= '0';
---                    end if;
-                
                     when WAIT_FOR_HSYNC =>
-                        -- use this \/ if you use the alternative to the "elsif"
-                        --if rising_edge(pixel_clock) and hsync = '0' then -- wait until hsync goes to 0 again
                         if hsync = '1' then
-                        --if rising_edge(pixel_clock) and hsync = '1' then -- last hope, we sacrifice the useless y variable to have a bigger time interval
                             load_row <= '1'; -- we load something also during the first part of vertical blanking, but who cares (it'll be overwritten)
                             next_reg.x <= 0;
                             --next_reg.y <= curr_reg.y + 1; why should we care about the y
