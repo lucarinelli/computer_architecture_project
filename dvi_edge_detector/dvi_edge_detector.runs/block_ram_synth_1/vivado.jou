@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jul 18 19:58:39 2018
+# Process ID: 4152
+# Current directory: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/block_ram_synth_1
+# Command line: vivado -log block_ram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_ram.tcl
+# Log file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/block_ram_synth_1/block_ram.vds
+# Journal file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/block_ram_synth_1/vivado.jou
+#-----------------------------------------------------------
+source block_ram.tcl -notrace

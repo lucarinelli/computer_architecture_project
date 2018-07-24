@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Mon Jul 16 22:20:28 2018
+| Date         : Mon Jul 16 22:48:47 2018
 | Host         : SATANASSO running 64-bit unknown
 | Command      : report_utilization -file edge_detector_filter_utilization_synth.rpt -pb edge_detector_filter_utilization_synth.pb
 | Design       : edge_detector_filter

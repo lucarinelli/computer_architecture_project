@@ -116,6 +116,7 @@ begin
         );
         
 --------------- processes ---------------
+
     state_machine_proc: process(pixel_clock, de, vsync, hsync)
     begin
         if rising_edge(pixel_clock) then

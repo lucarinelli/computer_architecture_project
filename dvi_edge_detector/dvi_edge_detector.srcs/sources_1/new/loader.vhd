@@ -52,7 +52,7 @@ entity loader is
         load : in STD_LOGIC;
         load_first : in STD_LOGIC;
         -- to be connected to RAM
-        abus : out STD_LOGIC_VECTOR (ABUS_WIDTH-1 downto 0);
+        abus : out STD_LOGIC_VECTOR (ABUS_WIDTH-1 downto 0) := (others=>'0');
         dbus : in STD_LOGIC_VECTOR (DBUS_WIDTH-1 downto 0);
         ren : out STD_LOGIC; -- read enable
         --

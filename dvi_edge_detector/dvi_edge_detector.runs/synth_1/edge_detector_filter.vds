@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Mon Jul 16 22:18:33 2018
-# Process ID: 27587
+# Start of session at: Mon Jul 16 22:46:53 2018
+# Process ID: 28330
 # Current directory: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1
 # Command line: vivado -log edge_detector_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source edge_detector_filter.tcl
 # Log file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 27596 
+INFO: Helper process launched with PID 28358 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1293.910 ; gain = 87.000 ; free physical = 9732 ; free virtual = 18758
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1293.914 ; gain = 87.000 ; free physical = 9488 ; free virtual = 18683
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:128]
 WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:161]
@@ -52,8 +52,8 @@ INFO: [Synth 8-3491] module 'memory_addr_calc' declared at '/mnt/condivisione/BA
 INFO: [Synth 8-638] synthesizing module 'memory_addr_calc' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:47]
 	Parameter BLOCK_NUM bound to: 60 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'memory_addr_calc' (4#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/memory_addr_calc.vhd:47]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-27587-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'edges_matrix' of component 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:352]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-27587-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-28330-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'edges_matrix' of component 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-28330-SATANASSO/realtime/blk_mem_gen_0_stub.vhdl:20]
 	Parameter WIDTH bound to: 1600 - type: integer 
 	Parameter HEIGHT bound to: 900 - type: integer 
 	Parameter DBUS_SIZE bound to: 128 - type: integer 
@@ -67,20 +67,20 @@ INFO: [Synth 8-638] synthesizing module 'merge_v2' [/mnt/condivisione/BACKUPS/ba
 	Parameter ABUS_WIDTH bound to: 14 - type: integer 
 	Parameter DBUS_WIDTH bound to: 128 - type: integer 
 	Parameter DOUT_WIDTH bound to: 1600 - type: integer 
-INFO: [Synth 8-3491] module 'loader' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:42' bound to instance 'row_loader' of component 'loader' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:107]
+INFO: [Synth 8-3491] module 'loader' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:42' bound to instance 'row_loader' of component 'loader' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:109]
 INFO: [Synth 8-638] synthesizing module 'loader' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:63]
 	Parameter ABUS_WIDTH bound to: 14 - type: integer 
 	Parameter DBUS_WIDTH bound to: 128 - type: integer 
 	Parameter DOUT_WIDTH bound to: 1600 - type: integer 
 WARNING: [Synth 8-614] signal 'loaded' is read in the process but is not in the sensitivity list [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:73]
 INFO: [Synth 8-256] done synthesizing module 'loader' (5#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:63]
-WARNING: [Synth 8-3919] null assignment ignored [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:115]
-INFO: [Synth 8-226] default block is never used [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:130]
-WARNING: [Synth 8-6014] Unused sequential element next_reg_reg[y] was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:126]
-WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[y] was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:130]
+WARNING: [Synth 8-3919] null assignment ignored [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:117]
+INFO: [Synth 8-226] default block is never used [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:135]
+WARNING: [Synth 8-6014] Unused sequential element next_reg_reg[y] was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:131]
+WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[y] was removed.  [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:135]
 INFO: [Synth 8-256] done synthesizing module 'merge_v2' (6#1) [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:57]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-27587-SATANASSO/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'cw_ref' of component 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:385]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-27587-SATANASSO/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-28330-SATANASSO/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'cw_ref' of component 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_detector_filter.vhd:385]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-28330-SATANASSO/realtime/clk_wiz_0_stub.vhdl:16]
 	Parameter kGenerateSerialClk bound to: 1 - type: bool 
 	Parameter kClkPrimitive bound to: MMCM - type: string 
 	Parameter kClkRange bound to: 1 - type: integer 
@@ -452,7 +452,7 @@ WARNING: [Synth 8-3331] design rgb2dvi has unconnected port aRst_n
 WARNING: [Synth 8-3331] design edge_matrix_applier has unconnected port hsync
 WARNING: [Synth 8-3331] design edge_detector_filter has unconnected port aRst_n
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1833.340 ; gain = 626.430 ; free physical = 9712 ; free virtual = 18739
+Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1833.344 ; gain = 626.430 ; free physical = 9479 ; free virtual = 18656
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -465,10 +465,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1833.340 ; gain = 626.430 ; free physical = 9719 ; free virtual = 18745
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1833.344 ; gain = 626.430 ; free physical = 9486 ; free virtual = 18662
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1833.340 ; gain = 626.430 ; free physical = 9719 ; free virtual = 18745
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1833.344 ; gain = 626.430 ; free physical = 9486 ; free virtual = 18662
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -493,16 +493,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.363 ; gain = 0.000 ; free physical = 9448 ; free virtual = 18474
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1881.367 ; gain = 0.000 ; free physical = 9202 ; free virtual = 18378
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9529 ; free virtual = 18556
+Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9297 ; free virtual = 18473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9529 ; free virtual = 18556
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9297 ; free virtual = 18473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -512,7 +512,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk. (constraint file  /mnt
 Applied set_property DONT_TOUCH = true for cw_ref. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for edges_matrix. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9531 ; free virtual = 18558
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9299 ; free virtual = 18475
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:207]
 INFO: [Synth 8-5546] ROM "next_reg[state]" won't be mapped to RAM because it is too sparse
@@ -591,7 +591,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[y]' [/mnt/cond
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[filling]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:110]
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg_reg[x]' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/edge_matrix_applier.vhd:110]
 WARNING: [Synth 8-327] inferring latch for variable 'ren_reg' [/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:77]
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'fsm102A2F700'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'fsm1154DA700'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -614,7 +614,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sState_reg' using encoding 'one-hot' in module 'EEPROM_8b'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:01:07 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9519 ; free virtual = 18547
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:51 ; elapsed = 00:01:06 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9285 ; free virtual = 18462
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1132,7 +1132,7 @@ INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBo
 INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
 INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:23 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9488 ; free virtual = 18522
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:22 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9246 ; free virtual = 18429
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1177,13 +1177,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'cw_ref/MemClk' to pin 'cw
 INFO: [Synth 8-5578] Moved timing constraint from pin 'cw_ref/RefClk200' to pin 'cw_ref/bbstub_RefClk200/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9332 ; free virtual = 18366
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:36 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9088 ; free virtual = 18271
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9330 ; free virtual = 18364
+Finished Timing Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:36 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9086 ; free virtual = 18269
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1226,7 +1226,7 @@ INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBo
 INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[3]'
 INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[4]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9323 ; free virtual = 18357
+Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9080 ; free virtual = 18263
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1250,7 +1250,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:21 ; elapsed = 00:01:40 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9322 ; free virtual = 18355
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9079 ; free virtual = 18262
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1263,7 +1263,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:40 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9322 ; free virtual = 18355
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9079 ; free virtual = 18262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1275,25 +1275,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:21 ; elapsed = 00:01:40 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9322 ; free virtual = 18356
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9079 ; free virtual = 18262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:21 ; elapsed = 00:01:40 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9322 ; free virtual = 18356
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9079 ; free virtual = 18262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:21 ; elapsed = 00:01:40 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9322 ; free virtual = 18356
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9079 ; free virtual = 18262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:21 ; elapsed = 00:01:40 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9322 ; free virtual = 18356
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9079 ; free virtual = 18262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1413,11 +1413,11 @@ Report Instance Areas:
 |61    |    row_loader                       |loader                       |    69|
 +------+-------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:21 ; elapsed = 00:01:40 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9322 ; free virtual = 18356
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9079 ; free virtual = 18262
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1661 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 1881.363 ; gain = 626.430 ; free physical = 9385 ; free virtual = 18418
-Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:01:41 . Memory (MB): peak = 1881.363 ; gain = 674.453 ; free physical = 9385 ; free virtual = 18418
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 1881.367 ; gain = 626.430 ; free physical = 9142 ; free virtual = 18325
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1881.367 ; gain = 674.453 ; free physical = 9142 ; free virtual = 18325
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 392 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1433,8 +1433,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 224 Infos, 178 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:43 . Memory (MB): peak = 1881.363 ; gain = 701.914 ; free physical = 9389 ; free virtual = 18422
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:42 . Memory (MB): peak = 1881.367 ; gain = 701.914 ; free physical = 9144 ; free virtual = 18327
 INFO: [Common 17-1381] The checkpoint '/mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/edge_detector_filter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file edge_detector_filter_utilization_synth.rpt -pb edge_detector_filter_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1905.375 ; gain = 0.000 ; free physical = 9391 ; free virtual = 18425
-INFO: [Common 17-206] Exiting Vivado at Mon Jul 16 22:20:28 2018...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1905.379 ; gain = 0.000 ; free physical = 9146 ; free virtual = 18330
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 16 22:48:47 2018...
