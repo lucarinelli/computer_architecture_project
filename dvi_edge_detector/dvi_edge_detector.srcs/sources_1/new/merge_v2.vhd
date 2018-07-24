@@ -22,6 +22,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+library myram;
+use myram.loader;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
@@ -47,7 +50,7 @@ entity merge_v2 is
         
         mem_clk : in std_logic;
         mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
-        mem_ren : out STD_LOGIC := '1';
+        mem_ren : out STD_LOGIC;
         
         rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
         rgb_out : out STD_LOGIC_VECTOR (23 downto 0)
@@ -74,25 +77,6 @@ architecture Behavioral of merge_v2 is
     );
     
     
-    component loader is
-        generic(
-            -- RAM-dependent
-            ABUS_WIDTH : natural := MEM_ADDR_SIZE;
-            DBUS_WIDTH : natural := DBUS_SIZE;
-            DOUT_WIDTH : natural := WIDTH
-        );
-        port (
-            clk : in STD_LOGIC;
-            load : in STD_LOGIC;
-            load_first : in STD_LOGIC;
-            abus : out STD_LOGIC_VECTOR (ABUS_WIDTH-1 downto 0);
-            dbus : in STD_LOGIC_VECTOR (DBUS_WIDTH-1 downto 0);
-            ren : out STD_LOGIC;
-            dout : out STD_LOGIC_VECTOR (DOUT_WIDTH-1 downto 0)
-        );
-    end component;
-    
-    
     signal curr_reg, next_reg : reg_type := reg_type_def;
     
     -- signals that go to/from the loader
@@ -104,7 +88,13 @@ architecture Behavioral of merge_v2 is
     
 begin
 --------------- used components ---------------
-    row_loader : loader
+    row_loader : entity myram.loader
+        generic map(
+            -- RAM-dependent
+            ABUS_WIDTH => MEM_ADDR_SIZE,
+            DBUS_WIDTH => DBUS_SIZE,
+            DOUT_WIDTH => WIDTH
+        )
         port map(
             clk => mem_clk,
             load => load_row,
@@ -114,7 +104,7 @@ begin
             ren => mem_ren,
             dout => buff
         );
-        
+
 --------------- processes ---------------
 
     state_machine_proc: process(pixel_clock, de, vsync, hsync)
@@ -134,7 +124,7 @@ begin
                             -- updating horizontal indexes
                             next_reg.x <= curr_reg.x+1;
                             
-                            -- TODO : UNCOMMENT THE FOLLOWING...
+--                            -- TODO : UNCOMMENT THE FOLLOWING...
                             if buff(curr_reg.x) = '1' then
                                 rgb_out <= (others=>'1');
                             else

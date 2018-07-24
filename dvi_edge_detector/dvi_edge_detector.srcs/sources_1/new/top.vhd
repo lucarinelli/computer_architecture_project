@@ -28,9 +28,12 @@ use mydvi.merge_v2;
 --library myram;
 --use myram.block_ram;
 
-library digilent;
-use digilent.rgb2dvi;
-use digilent.dvi2rgb;
+--library digilent;
+--use digilent.rgb2dvi;
+--use digilent.dvi2rgb;
+library xil_defaultlib;
+use xil_defaultlib.rgb2dvi;
+use xil_defaultlib.dvi2rgb;
 
 --library xil_defaultlib;
 --use xil_defaultlib.clk_wiz_0;
@@ -63,7 +66,7 @@ entity top is
         dvi_rx_d_n : in STD_LOGIC_VECTOR (2 downto 0);
         --DDC channel to transmit EDID
         dvi_rx_sda : inout STD_LOGIC;
-        dvi_rx_sdc : inout STD_LOGIC;
+        dvi_rx_scl : inout STD_LOGIC;
         --
         dvi_rx_hpd : out STD_LOGIC := '1'; -- hot plug detect
         
@@ -125,7 +128,7 @@ architecture Behavioral of top is
         );
     end component;
     
-    -- constants --
+    -------------------------------- CONSTANTS --------------------------------
     --resolution
     constant RES_X : natural := 1600;
     constant RES_Y : natural := 900;
@@ -135,7 +138,7 @@ architecture Behavioral of top is
     constant WDBUS_WIDTH : natural := 32;
     constant WABUS_WIDTH : natural := 16;
     
-    ---- signals ----
+    -------------------------------- SIGNALS --------------------------------
     -- clocks
     signal mem_clk, pix_clk, ref_clk : std_logic;
     signal serial_clk : std_logic; -- used internally by rgb2dvi and dvi2rgb
@@ -145,8 +148,10 @@ architecture Behavioral of top is
     signal mem_rdbus : std_logic_vector(RDBUS_WIDTH-1 downto 0);
     signal mem_wdbus : std_logic_vector(WDBUS_WIDTH-1 downto 0);
     -- abus
-    signal mem_rabus : std_logic_vector(RDBUS_WIDTH-1 downto 0);
-    signal mem_wabus : std_logic_vector(WDBUS_WIDTH-1 downto 0);
+    signal mem_rabus : std_logic_vector(RABUS_WIDTH-1 downto 0);
+    signal mem_wabus : std_logic_vector(WABUS_WIDTH-1 downto 0);
+    -- enables
+    signal mem_wen, mem_ren : std_logic; -- write enable, read enable
     
     -- dvi/hdmi interface
     signal rgb : std_logic_vector(23 downto 0);
@@ -174,13 +179,13 @@ begin
             systemClock => sysclk -- 125 MHz
         );
     
-    hdmiin : entity digilent.dvi2rgb
+    hdmiin : entity xil_defaultlib.dvi2rgb
         generic map(
             kEmulateDDC => true, --will emulate a DDC EEPROM with basic EDID, if set to yes 
             kRstActiveHigh => true, --true, if active-high; false, if active-low
             kAddBUFG => true, --true, if PixelClk should be re-buffered with BUFG 
             kClkRange => 2,  -- MULT_F = kClkRange*5 (choose >=120MHz=1, >=60MHz=2, >=40MHz=3)
-            kEdidFileName =>  "900p_edid.data",  -- Select EDID file to use
+            kEdidFileName =>  "/home/andrea/polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/900p_edid.data",  -- Select EDID file to use
             kIDLY_TapValuePs => 78, --delay in ps per tap
             kIDLY_TapWidth => 5 --number of bits for IDELAYE2 tap counter   
         )
@@ -213,7 +218,7 @@ begin
             pRst_n => reset_n
         );
     
-    hdmiout : entity digilent.rgb2dvi
+    hdmiout : entity xil_defaultlib.rgb2dvi
         generic map(
             kGenerateSerialClk => false, -- we already have it from dvi2rgb (TODO check if this work)
             kClkPrimitive => "MMCM", -- "MMCM" or "PLL" to instantiate, if kGenerateSerialClk true
@@ -239,24 +244,67 @@ begin
         );
     
     bicolor_framebuffer : block_ram
-        PORT (
-            clka : IN STD_LOGIC;
-            wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-            addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-            dina : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-            clkb : IN STD_LOGIC;
-            enb : IN STD_LOGIC;
-            addrb : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
-            doutb : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
+        port map (
+            -- write port
+            clka => mem_clk,
+            wea(0) => mem_wen,
+            addra => mem_wabus,
+            dina => mem_wdbus,
+            -- read port
+            clkb => mem_clk,
+            enb => mem_ren,
+            addrb => mem_rabus,
+            doutb => mem_rdbus
+        );
+    
+    merger : entity mydvi.merge_v2
+        Generic map (
+            WIDTH => RES_X,
+            HEIGHT => RES_Y,
+            DBUS_SIZE => RDBUS_WIDTH,
+            MEM_ADDR_SIZE => RABUS_WIDTH
+        )
+        Port map (
+            vsync => vsync,
+            hsync => hsync,
+            de => vde,
+            mem_d_in => mem_rdbus,
+            pixel_clock => pix_clk,
+            
+            mem_clk => mem_clk,
+            mem_raddr => mem_rabus,
+            mem_ren => mem_ren,
+            
+            rgb_in => rgb,
+            rgb_out => elaborated_rgb
+        );
+    
+    sda_io: IOBUF
+        Port map(
+            I => DDC_SDA_O,
+            IO => dvi_rx_sda,
+            O => DDC_SDA_I,
+            T => DDC_SDA_T
         );
         
+    scl_io: IOBUF
+        Port map(
+            I => DDC_SCL_O,
+            IO => dvi_rx_scl,
+            O => DDC_SCL_I,
+            T => DDC_SCL_T
+        );
+    
+    -- temporary code --
+    --elaborated_rgb <= rgb;
+    --
+    
     -- TODO :
-    --  + metti lo stesso clock alle due porte della RAM
+    --  . metti lo stesso clock alle due porte della RAM
     --  + prova a collegare la ram al merger e vedere se nella sintesi rimane collegato
-    --  + fai in modo che rgb2dvi e dvi2rgb riescano a trovare tutti i .vhd che gli servono (li puoi filtrare da "Hierarchy" con il
-    --    pulsantino ? nella parte alta
     --  + collega il resto
     --  + risolvi i bug
-    --  + finisci il progetto 
+    --  + finisci il progetto
+    --  + festeggia
     
 end Behavioral;

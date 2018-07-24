@@ -1,0 +1,1225 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jul 24 18:24:45 2018
+# Process ID: 8216
+# Current directory: /home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/top.vds
+# Journal file: /home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8230 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1293.914 ; gain = 86.000 ; free physical = 9464 ; free virtual = 18363
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:128]
+WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:161]
+WARNING: [Synth 8-1565] actual for formal port potherchrdy is neither a static name nor a globally static expression [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:182]
+WARNING: [Synth 8-1565] actual for formal port potherchvld is neither a static name nor a globally static expression [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'top' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:77]
+INFO: [Synth 8-3491] module 'clk_wiz' declared at '/home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8216-SATANASSO/realtime/clk_wiz_stub.vhdl:5' bound to instance 'clock_wizard' of component 'clk_wiz' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz' [/home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8216-SATANASSO/realtime/clk_wiz_stub.vhdl:16]
+INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:110]
+	Parameter kEmulateDDC bound to: 1 - type: bool 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+	Parameter kAddBUFG bound to: 1 - type: bool 
+	Parameter kClkRange bound to: 2 - type: integer 
+	Parameter kEdidFileName bound to: /home/andrea/polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/900p_edid.data - type: string 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Clocking' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:75]
+	Parameter kClkRange bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsyncReset.vhd:72]
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsyncReset.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (1#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (2#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsyncReset.vhd:72]
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-113] binding component instance 'IDelayCtrlX' to cell 'IDELAYCTRL' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:118]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:132]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 12.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'MMCME2_ADV' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:173]
+INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:232]
+	Parameter BUFR_DIVIDE bound to: 5 - type: string 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (2#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (3#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Clocking.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Decoder' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:96]
+	Parameter kCtlTknCount bound to: 128 - type: integer 
+	Parameter kTimeoutMs bound to: 50 - type: integer 
+	Parameter kRefClkFrqMHz bound to: 200 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'InputSERDES' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd:85]
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+	Parameter kParallelWidth bound to: 10 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd:92]
+	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
+	Parameter DELAY_SRC bound to: IDATAIN - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: VARIABLE - type: string 
+	Parameter IDELAY_VALUE bound to: 0 - type: integer 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_DATAIN_INVERTED bound to: 1'b0 
+	Parameter IS_IDATAIN_INVERTED bound to: 1'b0 
+	Parameter PIPE_SEL bound to: FALSE - type: string 
+	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: float 
+	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
+INFO: [Synth 8-113] binding component instance 'InputDelay' to cell 'IDELAYE2' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd:102]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISERDESE2' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd:130]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DeserializerSlave' to cell 'ISERDESE2' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (4#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/InputSERDES.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SyncBase' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncBase.vhd:74]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (4#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncBase' (5#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'SyncBase__parameterized0' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncBase.vhd:74]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (5#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'PhaseAlign' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd:95]
+	Parameter kUseFastAlgorithm bound to: 0 - type: bool 
+	Parameter kCtlTknCount bound to: 128 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element pTkn0FlagQ_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd:172]
+WARNING: [Synth 8-6014] Unused sequential element pTkn1FlagQ_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd:173]
+WARNING: [Synth 8-6014] Unused sequential element pTkn2FlagQ_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd:174]
+WARNING: [Synth 8-6014] Unused sequential element pTkn3FlagQ_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd:175]
+WARNING: [Synth 8-6014] Unused sequential element pDelayFastOvf_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd:209]
+INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (6#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/PhaseAlign.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'ChannelBond' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (7#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (8#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'ResyncToBUFG' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ResyncToBUFG.vhd:78]
+INFO: [Synth 8-113] binding component instance 'InstBUFG' to cell 'BUFG' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ResyncToBUFG.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'ResyncToBUFG' (9#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/ResyncToBUFG.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'EEPROM_8b' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd:85]
+	Parameter kSampleClkFreqInMHz bound to: 200 - type: integer 
+	Parameter kSlaveAddress bound to: 7'b1010000 
+	Parameter kAddrBits bound to: 7 - type: integer 
+	Parameter kWritable bound to: 0 - type: bool 
+	Parameter kInitFileName bound to: /home/andrea/polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/900p_edid.data - type: string 
+INFO: [Synth 8-638] synthesizing module 'TWI_SlaveCtl' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TWI_SlaveCtl.vhd:87]
+	Parameter SLAVE_ADDRESS bound to: 8'b10100000 
+	Parameter kSampleClkFreqInMHz bound to: 200 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "gray" *) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TWI_SlaveCtl.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'GlitchFilter' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/GlitchFilter.vhd:69]
+	Parameter kNoOfPeriodsToFilter bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (10#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/GlitchFilter.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (11#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TWI_SlaveCtl.vhd:87]
+INFO: [Synth 8-226] default block is never used [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (12#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/EEPROM_8b.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (13#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/dvi2rgb.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'rgb2dvi' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd:89]
+	Parameter kGenerateSerialClk bound to: 0 - type: bool 
+	Parameter kClkPrimitive bound to: MMCM - type: string 
+	Parameter kClkRange bound to: 1 - type: integer 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'OutputSERDES' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:76]
+	Parameter kParallelWidth bound to: 10 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'OutputBuffer' to cell 'OBUFDS' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:83]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerMaster' to cell 'OSERDESE2' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:92]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-113] binding component instance 'SerializerSlave' to cell 'OSERDESE2' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'OutputSERDES' (14#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Encoder' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Encoder' (15#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'rgb2dvi' (16#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/rgb2dvi.vhd:89]
+INFO: [Synth 8-3491] module 'block_ram' declared at '/home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8216-SATANASSO/realtime/block_ram_stub.vhdl:5' bound to instance 'bicolor_framebuffer' of component 'block_ram' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'block_ram' [/home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/.Xil/Vivado-8216-SATANASSO/realtime/block_ram_stub.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'merge_v2' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:60]
+	Parameter WIDTH bound to: 1600 - type: integer 
+	Parameter HEIGHT bound to: 900 - type: integer 
+	Parameter DBUS_SIZE bound to: 64 - type: integer 
+	Parameter MEM_ADDR_SIZE bound to: 15 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'loader' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:63]
+	Parameter ABUS_WIDTH bound to: 15 - type: integer 
+	Parameter DBUS_WIDTH bound to: 64 - type: integer 
+	Parameter DOUT_WIDTH bound to: 1600 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'loader' (17#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/loader.vhd:63]
+WARNING: [Synth 8-3919] null assignment ignored [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:105]
+INFO: [Synth 8-226] default block is never used [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:121]
+WARNING: [Synth 8-6014] Unused sequential element next_reg_reg[y] was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:117]
+WARNING: [Synth 8-6014] Unused sequential element curr_reg_reg[y] was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:121]
+INFO: [Synth 8-256] done synthesizing module 'merge_v2' (18#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:60]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659' bound to instance 'sda_io' of component 'iobuf' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:282]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (19#1) [/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/mnt/maxtor/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:22659' bound to instance 'scl_io' of component 'iobuf' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:290]
+WARNING: [Synth 8-3848] Net led in module/entity top does not have driver. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:52]
+WARNING: [Synth 8-3848] Net dvi_tx_clk_n in module/entity top does not have driver. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:56]
+WARNING: [Synth 8-3848] Net mem_wen in module/entity top does not have driver. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:154]
+WARNING: [Synth 8-3848] Net mem_wabus in module/entity top does not have driver. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:152]
+WARNING: [Synth 8-3848] Net mem_wdbus in module/entity top does not have driver. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:149]
+INFO: [Synth 8-256] done synthesizing module 'top' (20#1) [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/top.vhd:77]
+WARNING: [Synth 8-3917] design top has port dvi_rx_hpd driven by constant 1
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1599]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1598]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1597]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1596]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1595]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1594]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1593]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1592]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1591]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1590]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1589]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1588]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1587]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1586]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1585]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1584]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1583]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1582]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1581]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1580]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1579]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1578]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1577]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1576]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1575]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1574]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1573]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1572]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1571]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1570]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1569]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1568]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1567]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1566]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1565]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1564]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1563]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1562]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1561]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1560]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1559]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1558]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1557]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1556]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1555]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1554]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1553]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1552]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1551]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1550]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1549]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1548]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1547]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1546]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1545]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1544]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1543]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1542]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1541]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1540]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1539]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1538]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1537]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1536]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1535]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1534]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1533]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1532]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1531]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1530]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1529]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1528]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1527]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1526]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1525]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1524]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1523]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1522]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1521]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1520]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1519]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1518]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1517]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1516]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1515]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1514]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1513]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1512]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1511]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1510]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1509]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1508]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1507]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1506]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1505]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1504]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1503]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1502]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1501]
+WARNING: [Synth 8-3331] design loader has unconnected port dout[1500]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1339.523 ; gain = 131.609 ; free physical = 9473 ; free virtual = 18372
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dvi_tx_clk_p with 1st driver pin 'OutputSERDES:/OutputBuffer/O' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dvi_tx_clk_p with 2nd driver pin 'OutputSERDES:/OutputBuffer/OB' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:83]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1339.523 ; gain = 131.609 ; free physical = 9473 ; free virtual = 18373
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1339.523 ; gain = 131.609 ; free physical = 9473 ; free virtual = 18373
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/block_ram/block_ram/block_ram_in_context.xdc] for cell 'bicolor_framebuffer'
+Finished Parsing XDC File [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/block_ram/block_ram/block_ram_in_context.xdc] for cell 'bicolor_framebuffer'
+Parsing XDC File [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'clock_wizard'
+Finished Parsing XDC File [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'clock_wizard'
+Parsing XDC File [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_clk_n'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:179]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_clk_p'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:180]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_d_n[0]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:181]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_d_p[0]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:182]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_d_n[1]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:183]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_d_p[1]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:184]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_d_n[2]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:185]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_d_p[2]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:186]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_hpd'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:187]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_scl'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:188]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_rx_sda'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:189]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_clk_n'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:194]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_clk_p'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:195]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_d_n[0]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:196]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_d_p[0]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:197]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_d_n[1]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:198]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_d_p[1]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:199]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_d_n[2]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:200]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_d_p[2]'. [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc:201]
+Finished Parsing XDC File [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/constrs_1/imports/docs/PYNQ-Z1_C.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1709.477 ; gain = 0.000 ; free physical = 9199 ; free virtual = 18099
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9279 ; free virtual = 18179
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9279 ; free virtual = 18179
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sysclk. (constraint file  /home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk. (constraint file  /home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for bicolor_framebuffer. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clock_wizard. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9281 ; free virtual = 18181
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'pState_reg' in module 'PhaseAlign'
+INFO: [Synth 8-5546] ROM "pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pDelayOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "pDelayWaitOvf" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pTkn0Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pCtlTknRst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pEyeOpenEn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pIDLY_LD" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pIDLY_INC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pAligned" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pError" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pFoundJtrFlag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "pStateNxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pStateNxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pStateNxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pStateNxt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "pStateNxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pStateNxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pAlignRst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pC0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pVde" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "sOut" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWI_SlaveCtl'
+INFO: [Synth 8-5544] ROM "shiftBitOut" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "nstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "eeprom" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'sState_reg' in module 'EEPROM_8b'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'fsm14BC9C300'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                              000 |                              000
+               staddress |                              011 |                              001
+            stturnaround |                              110 |                              110
+                  stsack |                              100 |                              100
+                  stread |                              001 |                              010
+                  stmack |                              010 |                              101
+                 stwrite |                              111 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWI_SlaveCtl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  stidle |                             0001 |                               00
+                  stread |                             0010 |                               01
+            stregaddress |                             0100 |                               11
+                 stwrite |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sState_reg' using encoding 'one-hot' in module 'EEPROM_8b'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9271 ; free virtual = 18172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 16    
+	   3 Input      5 Bit       Adders := 9     
+	   4 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 5     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 84    
++---Registers : 
+	               24 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 9     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 16    
+	                4 Bit    Registers := 11    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 127   
++---RAMs : 
+	              320 Bit         RAMs := 3     
++---Muxes : 
+	  12 Input     11 Bit        Muxes := 3     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 12    
+	   4 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 7     
+	   5 Input      8 Bit        Muxes := 3     
+	 129 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 12    
+	   2 Input      4 Bit        Muxes := 7     
+	   4 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 15    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 104   
+	  12 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SyncAsync 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module SyncAsync__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module TMDS_Clocking 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module SyncAsync__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module SyncBase 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module SyncBase__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module PhaseAlign 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	  12 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 19    
+	  12 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+Module ChannelBond 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              320 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module TMDS_Decoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module ResyncToBUFG 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module GlitchFilter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module TWI_SlaveCtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 1     
+Module EEPROM_8b 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	 129 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module TMDS_Encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+Module merge_v2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/pC0_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:264]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/pC1_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:265]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[2].DecoderX/pVde_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:266]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/pC0_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:264]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/pC1_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:265]
+WARNING: [Synth 8-6014] Unused sequential element DataDecoders[1].DecoderX/pVde_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/dvi2rgb_v1_7/src/TMDS_Decoder.vhd:266]
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pStateNxt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pStateNxt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pStateNxt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/pC0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DataDecoders[0].DecoderX/pVde" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'DataEncoders[1].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:150]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC0_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:114]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC0_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:148]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_1_reg' into 'DataEncoders[1].DataEncoder/pC0_1_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:115]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pC1_2_reg' into 'DataEncoders[1].DataEncoder/pC0_2_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:149]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_1_reg' into 'DataEncoders[0].DataEncoder/pVde_1_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
+INFO: [Synth 8-4471] merging register 'DataEncoders[2].DataEncoder/pVde_2_reg' into 'DataEncoders[0].DataEncoder/pVde_2_reg' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pC1_1_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pC1_2_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:149]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pVde_1_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[1].DataEncoder/pVde_2_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC0_1_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC0_2_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC1_1_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pC1_2_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:149]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pVde_1_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element DataEncoders[2].DataEncoder/pVde_2_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/TMDS_Encoder.vhd:150]
+WARNING: [Synth 8-6014] Unused sequential element load_row_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element load_first_reg was removed.  [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/new/merge_v2.vhd:101]
+WARNING: [Synth 8-3917] design top has port dvi_rx_hpd driven by constant 1
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[0].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[0].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[2].DataEncoder/n0q_m_2_reg[0]' (FD) to 'hdmiout/DataEncoders[2].DataEncoder/n1q_m_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\hdmiout/DataEncoders[1].DataEncoder/pC0_1_reg )
+INFO: [Synth 8-3886] merging instance 'hdmiout/DataEncoders[1].DataEncoder/pC0_2_reg' (FD) to 'hdmiout/DataEncoders[1].DataEncoder/pC0_1_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\hdmiout/DataEncoders[1].DataEncoder/pC0_1_reg )
+WARNING: [Synth 8-3332] Sequential element (hdmiout/DataEncoders[0].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (hdmiout/DataEncoders[1].DataEncoder/pC0_1_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (hdmiout/DataEncoders[1].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (hdmiout/DataEncoders[2].DataEncoder/cnt_t_3_reg[0]) is unused and will be removed from module top.
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pAllVld_q_reg' (FD) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVld_q_reg'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVld_q_reg' (FD) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pAllVld_q_reg'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pAllVldBgnFlag_reg' (FD) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pAllVldBgnFlag_reg'
+WARNING: [Synth 8-3332] Sequential element (hdmiin/DataDecoders[2].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (hdmiin/DataDecoders[1].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (hdmiin/DataDecoders[0].DecoderX/PhaseAlignX/pDataQ_reg[9]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9247 ; free virtual = 18151
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+--------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                             | Inference | Size (Depth x Width) | Primitives   | 
++------------+--------------------------------------------------------+-----------+----------------------+--------------+
+|top         | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|top         | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|top         | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
++------------+--------------------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_wizard/memoryClock' to pin 'clock_wizard/bbstub_memoryClock/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_wizard/referenceClock' to pin 'clock_wizard/bbstub_referenceClock/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:06 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9116 ; free virtual = 18020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:06 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9114 ; free virtual = 18018
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+--------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                             | Inference | Size (Depth x Width) | Primitives   | 
++------------+--------------------------------------------------------+-----------+----------------------+--------------+
+|top         | hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|top         | hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
+|top         | hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pFIFO_reg | Implied   | 32 x 10              | RAM32M x 2   | 
++------------+--------------------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'hdmiin/DataDecoders[1].DecoderX/ChannelBondX/pRdA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'hdmiin/DataDecoders[2].DecoderX/ChannelBondX/pRdA_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[0]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[1]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[2]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[3]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg_rep[4]' (FDRE) to 'hdmiin/DataDecoders[0].DecoderX/ChannelBondX/pRdA_reg[4]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:07 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9112 ; free virtual = 18015
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin wea[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin addra[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[31]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[30]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[29]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[28]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[27]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[26]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[25]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[24]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[19]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[18]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[17]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[16]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module bicolor_framebuffer has unconnected pin dina[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9106 ; free virtual = 18010
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dvi_tx_clk_p with 1st driver pin 'hdmiout/ClockSerializer/OutputBuffer/O' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:83]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net dvi_tx_clk_p with 2nd driver pin 'hdmiout/ClockSerializer/OutputBuffer/OB' [/home/andrea/dvi_edge_detector/dvi_edge_detector.srcs/sources_1/imports/sources_1/imports/Desktop/rgb2dvi_v1_2/src/OutputSERDES.vhd:83]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9105 ; free virtual = 18009
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9099 ; free virtual = 18003
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9099 ; free virtual = 18003
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9101 ; free virtual = 18004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9101 ; free virtual = 18004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz       |         1|
+|2     |block_ram     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |block_ram_bbox_1 |     1|
+|2     |clk_wiz_bbox_0   |     1|
+|3     |BUFG             |     1|
+|4     |BUFIO            |     1|
+|5     |BUFR             |     1|
+|6     |CARRY4           |    21|
+|7     |IDELAYCTRL       |     1|
+|8     |IDELAYE2         |     3|
+|9     |ISERDESE2        |     3|
+|10    |ISERDESE2_1      |     3|
+|11    |LUT1             |    28|
+|12    |LUT2             |    69|
+|13    |LUT3             |   117|
+|14    |LUT4             |   106|
+|15    |LUT5             |   115|
+|16    |LUT6             |   226|
+|17    |MMCME2_ADV       |     1|
+|18    |MUXF7            |     8|
+|19    |OSERDESE2        |     4|
+|20    |OSERDESE2_1      |     4|
+|21    |RAM32M           |     6|
+|22    |FDCE             |    10|
+|23    |FDPE             |    22|
+|24    |FDRE             |   622|
+|25    |FDSE             |    27|
+|26    |IBUFDS           |     4|
+|27    |IOBUF            |     2|
+|28    |OBUF             |     1|
+|29    |OBUFDS           |     4|
+|30    |OBUFT            |     5|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+-----------------------------+------+
+|      |Instance                             |Module                       |Cells |
++------+-------------------------------------+-----------------------------+------+
+|1     |top                                  |                             |  1482|
+|2     |  hdmiin                             |dvi2rgb                      |  1016|
+|3     |    \DataDecoders[0].DecoderX        |TMDS_Decoder                 |   265|
+|4     |      ChannelBondX                   |ChannelBond_24               |    58|
+|5     |      InputSERDES_X                  |InputSERDES_25               |     4|
+|6     |      PhaseAlignX                    |PhaseAlign_26                |   140|
+|7     |      SyncBaseOvf                    |SyncBase_27                  |     9|
+|8     |        SyncAsyncx                   |SyncAsync__parameterized1_30 |     2|
+|9     |      SyncBaseRst                    |SyncBase__parameterized0_28  |     3|
+|10    |        SyncAsyncx                   |SyncAsync_29                 |     2|
+|11    |    \DataDecoders[1].DecoderX        |TMDS_Decoder_5               |   261|
+|12    |      ChannelBondX                   |ChannelBond_17               |    56|
+|13    |      InputSERDES_X                  |InputSERDES_18               |     4|
+|14    |      PhaseAlignX                    |PhaseAlign_19                |   141|
+|15    |      SyncBaseOvf                    |SyncBase_20                  |     9|
+|16    |        SyncAsyncx                   |SyncAsync__parameterized1_23 |     2|
+|17    |      SyncBaseRst                    |SyncBase__parameterized0_21  |     3|
+|18    |        SyncAsyncx                   |SyncAsync_22                 |     2|
+|19    |    \DataDecoders[2].DecoderX        |TMDS_Decoder_6               |   257|
+|20    |      ChannelBondX                   |ChannelBond                  |    54|
+|21    |      InputSERDES_X                  |InputSERDES                  |     4|
+|22    |      PhaseAlignX                    |PhaseAlign                   |   139|
+|23    |      SyncBaseOvf                    |SyncBase                     |     9|
+|24    |        SyncAsyncx                   |SyncAsync__parameterized1    |     2|
+|25    |      SyncBaseRst                    |SyncBase__parameterized0     |     3|
+|26    |        SyncAsyncx                   |SyncAsync_16                 |     2|
+|27    |    \GenerateBUFG.ResyncToBUFG_X     |ResyncToBUFG                 |    32|
+|28    |    \GenerateDDC.DDC_EEPROM          |EEPROM_8b                    |   162|
+|29    |      I2C_SlaveController            |TWI_SlaveCtl                 |   110|
+|30    |        GlitchF_SCL                  |GlitchFilter                 |    12|
+|31    |        GlitchF_SDA                  |GlitchFilter_13              |    12|
+|32    |        SyncSCL                      |SyncAsync_14                 |     3|
+|33    |        SyncSDA                      |SyncAsync_15                 |     3|
+|34    |    LockLostReset                    |ResetBridge_7                |     2|
+|35    |      SyncAsyncx                     |SyncAsync_12                 |     2|
+|36    |    TMDS_ClockingX                   |TMDS_Clocking                |    37|
+|37    |      LockLostReset                  |ResetBridge_8                |     4|
+|38    |        SyncAsyncx                   |SyncAsync_11                 |     3|
+|39    |      MMCM_LockSync                  |SyncAsync__parameterized0    |     4|
+|40    |      RdyLostReset                   |ResetBridge_9                |     3|
+|41    |        SyncAsyncx                   |SyncAsync_10                 |     2|
+|42    |  hdmiout                            |rgb2dvi                      |   333|
+|43    |    ClockSerializer                  |OutputSERDES                 |     3|
+|44    |    \DataEncoders[0].DataEncoder     |TMDS_Encoder                 |   112|
+|45    |    \DataEncoders[0].DataSerializer  |OutputSERDES_0               |     3|
+|46    |    \DataEncoders[1].DataEncoder     |TMDS_Encoder_1               |   103|
+|47    |    \DataEncoders[1].DataSerializer  |OutputSERDES_2               |     3|
+|48    |    \DataEncoders[2].DataEncoder     |TMDS_Encoder_3               |   103|
+|49    |    \DataEncoders[2].DataSerializer  |OutputSERDES_4               |     3|
+|50    |    LockLostReset                    |ResetBridge                  |     3|
+|51    |      SyncAsyncx                     |SyncAsync                    |     2|
+|52    |  merger                             |merge_v2                     |    57|
++------+-------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9101 ; free virtual = 18004
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 51 critical warnings and 99 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 1709.477 ; gain = 131.609 ; free physical = 9157 ; free virtual = 18061
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:08 . Memory (MB): peak = 1709.477 ; gain = 501.562 ; free physical = 9157 ; free virtual = 18061
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+183 Infos, 164 Warnings, 53 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:10 . Memory (MB): peak = 1717.484 ; gain = 537.031 ; free physical = 9155 ; free virtual = 18059
+INFO: [Common 17-1381] The checkpoint '/home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1741.496 ; gain = 0.000 ; free physical = 9155 ; free virtual = 18059
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 24 18:26:06 2018...
