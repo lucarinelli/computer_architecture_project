@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Tue Jul 24 18:26:06 2018
+| Date         : Tue Jul 24 20:40:30 2018
 | Host         : SATANASSO running 64-bit unknown
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  543 |     0 |     53200 |  1.02 |
-|   LUT as Logic             |  519 |     0 |     53200 |  0.98 |
+| Slice LUTs*                |  517 |     0 |     53200 |  0.97 |
+|   LUT as Logic             |  493 |     0 |     53200 |  0.93 |
 |   LUT as Memory            |   24 |     0 |     17400 |  0.14 |
 |     LUT as Distributed RAM |   24 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  681 |     0 |    106400 |  0.64 |
-|   Register as Flip Flop    |  681 |     0 |    106400 |  0.64 |
+| Slice Registers            |  605 |     0 |    106400 |  0.57 |
+|   Register as Flip Flop    |  605 |     0 |    106400 |  0.57 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |    8 |     0 |     26600 |  0.03 |
+| F7 Muxes                   |    9 |     0 |     26600 |  0.03 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -59,7 +59,7 @@ Table of Contents
 | 22    |          Yes |           - |          Set |
 | 10    |          Yes |           - |        Reset |
 | 27    |          Yes |         Set |            - |
-| 622   |          Yes |       Reset |            - |
+| 546   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,28 +152,28 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |  622 |        Flop & Latch |
-| LUT6       |  226 |                 LUT |
-| LUT3       |  117 |                 LUT |
-| LUT5       |  115 |                 LUT |
-| LUT4       |  106 |                 LUT |
-| LUT2       |   69 |                 LUT |
+| FDRE       |  546 |        Flop & Latch |
+| LUT6       |  211 |                 LUT |
+| LUT5       |  106 |                 LUT |
+| LUT3       |  105 |                 LUT |
+| LUT4       |   97 |                 LUT |
+| LUT2       |   70 |                 LUT |
 | RAMD32     |   36 |  Distributed Memory |
-| LUT1       |   27 |                 LUT |
 | FDSE       |   27 |        Flop & Latch |
+| LUT1       |   26 |                 LUT |
 | FDPE       |   22 |        Flop & Latch |
-| CARRY4     |   21 |          CarryLogic |
+| CARRY4     |   18 |          CarryLogic |
 | RAMS32     |   12 |  Distributed Memory |
 | FDCE       |   10 |        Flop & Latch |
+| MUXF7      |    9 |               MuxFx |
 | OSERDESE2  |    8 |                  IO |
-| MUXF7      |    8 |               MuxFx |
-| OBUFT      |    7 |                  IO |
 | ISERDESE2  |    6 |                  IO |
+| OBUF       |    5 |                  IO |
 | OBUFDS     |    4 |                  IO |
 | IBUFDS     |    4 |                  IO |
 | IDELAYE2   |    3 |                  IO |
+| OBUFT      |    2 |                  IO |
 | IBUF       |    2 |                  IO |
-| OBUF       |    1 |                  IO |
 | MMCME2_ADV |    1 |               Clock |
 | IDELAYCTRL |    1 |                  IO |
 | BUFR       |    1 |               Clock |

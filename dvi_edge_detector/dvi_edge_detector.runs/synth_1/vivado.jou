@@ -2,11 +2,11 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue Jul 24 18:24:45 2018
-# Process ID: 8216
-# Current directory: /home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1
+# Start of session at: Tue Jul 24 20:39:10 2018
+# Process ID: 1380
+# Current directory: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: /home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/top.vds
-# Journal file: /home/andrea/dvi_edge_detector/dvi_edge_detector.runs/synth_1/vivado.jou
+# Log file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/top.vds
+# Journal file: /mnt/condivisione/BACKUPS/backup_polito/computer_architecture/project/dvi_edge_detector/dvi_edge_detector.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace

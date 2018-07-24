@@ -49,6 +49,7 @@ use xil_defaultlib.dvi2rgb;
 
 entity top is
     Port (
+        --mem_ren|vde|vsync|hsync
         led : out STD_LOGIC_VECTOR (3 downto 0);
         -- output dvi/hdmi --
         --clock
@@ -228,7 +229,7 @@ begin
         port map(
             -- TMDS link
             TMDS_Clk_p => dvi_tx_clk_p,
-            TMDS_Clk_n => dvi_tx_clk_p,
+            TMDS_Clk_n => dvi_tx_clk_n,
             TMDS_Data_p => dvi_tx_d_p,
             TMDS_Data_n => dvi_tx_d_n,
             -- Auxiliary signals 
@@ -294,6 +295,11 @@ begin
             O => DDC_SCL_I,
             T => DDC_SCL_T
         );
+    
+    led(0) <= hsync;
+    led(1) <= vsync;
+    led(2) <= vde;
+    led(3) <= mem_ren;
     
     -- temporary code --
     --elaborated_rgb <= rgb;

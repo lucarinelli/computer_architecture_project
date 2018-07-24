@@ -45,12 +45,12 @@ entity merge_v2 is
         vsync : in STD_LOGIC;
         hsync : in STD_LOGIC;
         de : in STD_LOGIC;
-        mem_d_in : in STD_LOGIC_VECTOR (DBUS_SIZE-1 downto 0);
         pixel_clock : in STD_LOGIC;
         
+        mem_ren : out STD_LOGIC;
         mem_clk : in std_logic;
         mem_raddr : out STD_LOGIC_VECTOR (MEM_ADDR_SIZE-1 downto 0);
-        mem_ren : out STD_LOGIC;
+        mem_d_in : in STD_LOGIC_VECTOR (DBUS_SIZE-1 downto 0);
         
         rgb_in : in STD_LOGIC_VECTOR (23 downto 0);
         rgb_out : out STD_LOGIC_VECTOR (23 downto 0)
@@ -84,7 +84,7 @@ architecture Behavioral of merge_v2 is
     signal load_row : std_logic := '0';
     signal curr_width : natural range 1 to 1920 := WIDTH; -- fullHD maximum supported   | these should be implemented if we want to support multiple resolutions
     signal new_width : natural range 1 to 1920 := WIDTH;  --                            |
-    signal buff : std_logic_vector(WIDTH-1 to 0);   -- loaded by the loader, contains the elaborated bits from the filter
+    signal buff : std_logic_vector(WIDTH-1 downto 0); -- loaded by the loader, contains the elaborated bits from the filter
     
 begin
 --------------- used components ---------------
